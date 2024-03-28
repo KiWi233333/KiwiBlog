@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vitepress dev config",
-    "build": "vitepress build config",
-    "pre": "vitepress preview config"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "pre": "vitepress preview docs"
   },
   "keywords": [],
   "author": "",
