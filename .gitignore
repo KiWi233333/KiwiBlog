@@ -1,2 +1,5 @@
 node_modules/**
-.vscode/**
+
+config/.vitepress/dist/**
+
+config/.vitepress/cache/**
