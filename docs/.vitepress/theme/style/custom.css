@@ -1,0 +1,61 @@
+/* var.css */
+/* :root {
+  --vp-c-brand-1: #18794e;
+  --vp-c-brand-2: #299764;
+  --vp-c-brand-3: #30a46c;
+}
+
+.dark {
+  --vp-c-brand-1: #3dd68c;
+  --vp-c-brand-2: #30a46c;
+  --vp-c-brand-3: #298459;
+} */
+
+/* stylelint-disable no-duplicate-selectors */
+:root {
+  --font-family: "Alimama";
+  font-family: var(--font-family);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+span {
+  line-height: 100%;
+}
+
+/* 页面 */
+html,
+body {
+  min-width: fit-content;
+  max-width: 100%;
+  min-height: 100vh;
+  font-family: var(--font-family), Helvetica, sans-serif;
+}
+
+/* 字体 */
+@font-face {
+  font-display: swap;
+  font-family: Alimama;
+  src: url("/Alimama.woff2") format("woff2");
+}
+@media screen and (width <= 768px) {
+  html {
+    font-size: 14px; /* 当前屏幕尺寸除以划分的等份:320/15 */
+  }
+}
+
+@media screen and (width >= 750px) {
+  html {
+    font-size: 16px; /* 当前屏幕尺寸除以划分的等份:720/15 */
+  }
+}
+

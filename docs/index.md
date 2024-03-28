@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "Kiwi Blog"
-  text: "A Kiwi2333' a blog."
-  tagline: My great project tagline
+  name: "Kiwi2333"
+  text: "A Oy blog 🎉!"
+  tagline: 
   actions:
     - theme: brand
       text: Markdown Examples

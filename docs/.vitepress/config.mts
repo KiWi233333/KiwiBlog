@@ -6,6 +6,10 @@ import { sidebar } from './theme-config/sidebar'
 export default defineConfig({
   title: "Kiwi Blog",
   description: "Kiwi2333' blog🎉！",
+  //fav图标
+  head: [
+    ['link',{ rel: 'icon', href: '/logo.png'}],
+  ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // 导航

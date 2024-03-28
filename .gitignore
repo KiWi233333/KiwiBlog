@@ -1,5 +1,5 @@
 node_modules/**
 
-config/.vitepress/dist/**
+docs/.vitepress/dist/**
 
-config/.vitepress/cache/**
+docs/.vitepress/cache/**
