@@ -18,11 +18,11 @@ features:
   - title: 极物圈社区商城
     icon: { src: "https://jiwu.kiwi2333.top/logo.png"}
     link: https://jiwu.kiwi2333.top/
-    details: 极物圈是一个综合性平台，集商城、ai聊天、沟通、社区功能于一体的平台。
+    details: 极物圈，是一个集商城、ai聊天、沟通、社区功能于一体的平台。
     
   - title: MSI GS66黑苹果
     icon: { src: "https://www.apple.com/favicon.ico"}
-    link: https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore
+    link: https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore/releases/tag/1.0.1
     details: 微星GS66黑苹果EFI文件 OC-Hackintosh-opencore
     
   - title: 简约博客
