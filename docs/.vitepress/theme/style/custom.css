@@ -59,7 +59,14 @@ body {
   }
 }
 
+.VPNav { 
+  backdrop-filter: blur(12px);
+  border: 0px;
+}
 
-.dark
-.VPNavBar.home.top img{ 
+
+/* 搜索 */
+#local-search {
+  margin-left: auto;
+  transform: scale(0.85);
 }
