@@ -8,12 +8,11 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: 最新一章
-      link: /
+      text: 前端
+      link: /前端/Css/签名动画svg-2024.03.30
     - theme: alt
       text: 其他文章
-      link: /前端/Css/签名动画svg - 2024.03.30
-
+      link: /其他/开始
 
 features: 
   - title: 极物圈社区商城
