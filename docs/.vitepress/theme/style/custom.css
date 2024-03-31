@@ -36,10 +36,11 @@ span {
 html,
 body {
   min-width: fit-content;
+  transition: background-color 300ms !important;
   max-width: 100%;
   min-height: 100vh;
   font-family: var(--font-family), Helvetica, sans-serif;
-}
+} 
 
 /* 字体 */
 @font-face {
@@ -59,9 +60,14 @@ body {
   }
 }
 
-.VPNav { 
+.VPNav .home { 
+  background-color: #86868610 !important;
   backdrop-filter: blur(12px);
-  border: 0px;
+}
+
+.VPNav .home.top { 
+  background-color: transparent !important;
+  backdrop-filter: blur(0);
 }
 
 

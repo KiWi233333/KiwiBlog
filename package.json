@@ -13,6 +13,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@vite-pwa/vitepress": "^0.4.0",
+    "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.0.1",
     "vue": "^3.4.21"
   }
