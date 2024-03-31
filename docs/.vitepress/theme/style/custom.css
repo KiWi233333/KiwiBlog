@@ -1,17 +1,3 @@
-/* var.css */
-/* :root {
-  --vp-c-brand-1: #18794e;
-  --vp-c-brand-2: #299764;
-  --vp-c-brand-3: #30a46c;
-}
-
-.dark {
-  --vp-c-brand-1: #3dd68c;
-  --vp-c-brand-2: #30a46c;
-  --vp-c-brand-3: #298459;
-} */
-
-/* stylelint-disable no-duplicate-selectors */
 :root {
   --font-family: "Alimama";
   font-family: var(--font-family);
@@ -36,11 +22,12 @@ span {
 html,
 body {
   min-width: fit-content;
-  transition: background-color 300ms !important;
-  max-width: 100%;
-  min-height: 100vh;
+  transition: 300ms !important;
+  transition-property: background-color, color;
   font-family: var(--font-family), Helvetica, sans-serif;
-} 
+  scroll-behavior: smooth;
+}
+
 
 /* 字体 */
 @font-face {
@@ -60,19 +47,31 @@ body {
   }
 }
 
-.VPNav .home { 
+.VPNav .home {
   background-color: #86868610 !important;
   backdrop-filter: blur(12px);
 }
 
-.VPNav .home.top { 
+.VPNav .home.top {
   background-color: transparent !important;
   backdrop-filter: blur(0);
 }
-
-
+/* 
+.VPNavBar .content-body {
+  display: flex !important;
+  justify-content: right;
+  width: 100%;
+} */
 /* 搜索 */
-#local-search {
+#local-search { 
   margin-left: auto;
-  transform: scale(0.85);
+  transform: scale(0.84);
+}
+#local-search button {
+  border-radius: 4rem;
+  padding: 0.8rem 1rem;
+}
+
+#local-search .DocSearch-Button-Keys {
+  border-radius: 4rem;
 }
