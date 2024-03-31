@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Kiwi2333"
-  text: "每天多做好一点 🎉!"
+  text: 个人博客 | Self Blog
   tagline: 
   actions:
     - theme: brand
@@ -12,7 +12,8 @@ hero:
       link: /
     - theme: alt
       text: 其他文章
-      link: /
+      link: /前端/Css/签名动画svg - 2024.03.30
+
 
 features: 
   - title: 极物圈社区商城
@@ -34,4 +35,3 @@ features:
     icon: 🛠
     details: 正在建设...
 ---
-
