@@ -39,13 +39,16 @@ export default withPwa(defineConfig({
   appearance: "dark",
   // markdown
   markdown: {
+    image: {
+      lazyLoading: true
+    }
   },
   // vite
   vite: {
     plugins: [
       AutoSidebar({
         path: "/docs",
-        ignoreList: ['.vitepress/**']
+        ignoreList: ['/docs.vitepress/**', '/docs.vitepress/*']
       })
     ]
   },

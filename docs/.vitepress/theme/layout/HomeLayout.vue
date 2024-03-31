@@ -1,25 +1,28 @@
 <!--.vitepress/theme/MyLayout.vue-->
 <!-- https://vitepress.dev/guide/extending-default-theme#using-view-transitions-api -->
 <script setup>
-import DefaultTheme from 'vitepress/theme' 
+import DefaultTheme from 'vitepress/theme';
 import NavBarTitle from './NavBarTitle.vue';
+import PwaInstallBtn from './PwaInstallBtn.vue';
 
-const { Layout } = DefaultTheme
-
+const { Layout } = DefaultTheme; 
 </script>
 
 <template>
-  <Layout> 
-    <template #nav-bar-title-after> 
-      <NavBarTitle/>
+  <Layout>
+    <template #nav-bar-title-after>
+      <NavBarTitle class="add-button" />
     </template>
-    <template #home-hero-image> 
-      <NavBarTitle/>
+    <template #home-hero-image>
+      <NavBarTitle />
+    </template>
+    <template #nav-bar-content-after>
+      <PwaInstallBtn />
     </template>
   </Layout>
 </template>
 
-<style >
+<style>
   @keyframes logo-anim {
     0% {
       stroke-dashoffset: 1px;
