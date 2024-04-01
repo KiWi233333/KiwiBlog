@@ -3,16 +3,19 @@
 layout: home
 
 hero:
-  name: "Kiwi2333"
-  text: 个人博客 | Self Blog
+  name: Kiwi2333
+  text: "<span class='mark2' style=''>个人博客 | Self Blog</span>"
   tagline: 
   actions:
     - theme: brand
-      text: 前端
-      link: /前端/Css/签名动画svg-2024.03.30
-    - theme: alt
-      text: 其他文章
+      text: 开始 🎨
       link: /其他/开始
+    - theme: alt
+      text: 前端
+      link: /前端/Css/签名动画svg
+    - theme: alt
+      text: 后端
+      link: 后端/Java/Java基础/Java基础-面向对象
 
 features: 
   - title: 极物圈社区商城
