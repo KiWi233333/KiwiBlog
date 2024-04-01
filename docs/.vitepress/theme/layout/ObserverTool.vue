@@ -5,6 +5,7 @@ import { nextTick, } from 'vue';
 
 
 const obsever = () => {
+  if (!IntersectionObserver) return
   // 当对象进入窗体可视范围 IntersectionObserver
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(item => {

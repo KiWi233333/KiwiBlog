@@ -1,0 +1,194 @@
+:root {
+  --font-family: "Alimama";
+  font-family: var(--font-family);
+  --border-default: 1px solid #b9b9b910;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a {
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+span {
+  line-height: 100%;
+}
+
+/* 页面 */
+html,
+body {
+  min-width: fit-content;
+  font-family: var(--font-family), Helvetica, sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* 字体 */
+@font-face {
+  font-display: swap;
+  font-family: Alimama;
+  src: url("/Alimama.woff2") format("woff2");
+}
+@media screen and (width <= 768px) {
+  html {
+    font-size: 14px; /* 当前屏幕尺寸除以划分的等份:320/15 */
+  }
+}
+
+@media screen and (width >= 750px) {
+  html {
+    font-size: 16px; /* 当前屏幕尺寸除以划分的等份:720/15 */
+  }
+}
+.VPNav {
+  opacity: 0;
+  transition: all 0.3s !important;
+  transform: translateY(-100%);
+}
+html:hover .VPNav {
+  opacity: 1;
+  transform: translateY(0);
+  background-color: 0;
+
+  .home {
+    background-color: transparent !important;
+    backdrop-filter: blur(12px);
+    .top {
+      border: 1px solid #b9b9b910;
+      background-color: #c0c0c010 !important;
+      backdrop-filter: blur(0);
+    }
+  }
+}
+
+/* 搜索 */
+#local-search {
+  margin-left: auto;
+  transform: scale(0.84);
+  button {
+    border-radius: 4rem;
+    padding: 0.8rem 1rem;
+  }
+  .DocSearch-Button-Keys {
+    border-radius: 4rem;
+  }
+}
+#VPContent > div > div.VPHero.has-image.VPHomeHero > div > div.main > p {
+  margin: 0.5em 0 0.2em 0;
+}
+
+/* 渐进动画 */
+@keyframes keywords-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+[data-fade] {
+  --lv: 0;
+  --delay: 120ms;
+  --start: 0ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-fade] {
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+}
+
+[data-fade-controller="false"] [data-fade] {
+  animation: none;
+}
+
+#VPContent .VPHero.has-image.VPHomeHero .main {
+  & > h1 {
+    --lv: 0;
+    --delay: 120ms;
+    --start: 0ms;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+  .actions {
+    --lv: 1;
+    --delay: 120ms;
+    --start: 0ms;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+    .VPButton {
+      border: 1px solid #b9b9b910;
+      padding: 1rem;
+      line-height: 0;
+    }
+  }
+}
+#VPContent .VPHomeFeatures {
+  --delay: 120ms;
+  --start: 0ms;
+  .item:nth-child(1) {
+    --lv: 3;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+  .item:nth-child(2) {
+    --lv: 4;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+  .item:nth-child(3) {
+    --lv: 5;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+  .item:nth-child(4) {
+    --lv: 6;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+  .item:nth-child(5) {
+    --lv: 7;
+    animation: keywords-enter 0.6s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+}
+
+/* VPHomeFeatures */
+.VPHomeFeatures .VPFeature {
+  border-color: #b9b9b910;
+  &:hover {
+    box-shadow: var(--default-shadow);
+  }
+}
+
+/* 段落 */
+.data-fades > * {
+  --lv: 0;
+  --delay: 120ms;
+  --start: 0ms;
+  animation: keywords-enter 1s both 1;
+  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+}
+
+@for $i from 1 through 20 {
+  .data-fades > *:nth-child(#{$i}) {
+    --lv: #{$i};
+  }
+}
+
+.card-default {
+  background-color: #e4e4e410;
+  backdrop-filter: blur(1rem);
+  border: 1px solid #b9b9b927;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px;
+}
