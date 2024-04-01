@@ -1,8 +1,9 @@
-<script setup>
-import { onMounted } from 'vue';
-
+<script setup lang="ts">
+import { onMounted, ref } from 'vue';
 let deferredPrompt;
+const isInstalled = ref<boolean>(false);
 onMounted(() => {
+  isInstalled.value = !!navigator.serviceWorker.controller;
   window.addEventListener('beforeinstallprompt', e => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
@@ -28,7 +29,7 @@ function onInstall() {
 </script>
 
 <template>
-  <div @click="onInstall" style="cursor:pointer;padding-left: 1em;opacity: 0.8;">
+  <div @click="onInstall" v-if="!isInstalled" style="cursor:pointer;padding-left: 1em;opacity: 0.8;">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24">
       <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <path fill="none" stroke-dasharray="14" stroke-dashoffset="14" d="M6 19h12">
