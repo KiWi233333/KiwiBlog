@@ -8,7 +8,7 @@ hero:
   tagline: 
   actions:
     - theme: brand
-      text: 开始 🎨
+      text:  开始🎨
       link: /其他/开始
     - theme: alt
       text: 前端
