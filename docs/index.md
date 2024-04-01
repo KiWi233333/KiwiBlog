@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: Kiwi2333
-  text: "<span class='mark2' style=''>个人博客 | Self Blog</span>"
+  text: "<div class='mark2'  data-fade style='--lv: 1;'>个人博客 | Self Blog</div>"
   tagline: 
   actions:
     - theme: brand

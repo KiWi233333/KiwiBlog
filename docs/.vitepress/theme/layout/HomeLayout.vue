@@ -52,7 +52,9 @@ const { Layout } = DefaultTheme
       <NavBarTitle class="add-button" />
     </template>
     <template #home-hero-image>
-      <NavBarTitle />
+      <div data-fade style='--lv: 2;width: 100%;'>
+        <NavBarTitle style="margin: auto;" />
+      </div>
     </template>
     <template #nav-bar-content-after>
       <PwaInstallBtn />
@@ -64,6 +66,7 @@ const { Layout } = DefaultTheme
 </template>
 
 <style>
+
 /* // 关闭所有动画渐变保证变化的流畅 */
 html.stop-transition * {
   transition: none !important;
