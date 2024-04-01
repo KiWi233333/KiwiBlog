@@ -121,7 +121,7 @@ title: "1.签名动画svg"
 </svg>
 </div>
 
-<style> 
+<style scoped> 
   @keyframes logo-anim {
     0% {
       stroke-dashoffset: 1px;
