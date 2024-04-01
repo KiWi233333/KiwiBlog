@@ -46,13 +46,12 @@ body {
   }
 }
 .VPNav {
-  opacity: 0;
-  transition: all 0.3s !important;
-  transform: translateY(-100%);
+  opacity: 0.7;
+  transition: opacity 0.3s !important;
 }
 html:hover .VPNav {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
   background-color: 0;
 
   .home {
