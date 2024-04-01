@@ -121,7 +121,7 @@ title: "1.签名动画svg"
 </svg>
 </div>
 
-<style scoped> 
+<style scoped>
   @keyframes logo-anim {
     0% {
       stroke-dashoffset: 1px;
@@ -153,7 +153,7 @@ title: "1.签名动画svg"
       stroke-dasharray: 0 3000%;
     }
   }
-  #logo-anim, 
+  #logo-anim,
   #logo-anim path{
     fill: transparent;
     transition: all 0.4s ease-in-out;
@@ -165,4 +165,3 @@ title: "1.签名动画svg"
     animation-delay: 0s;
   }
 </style>
-

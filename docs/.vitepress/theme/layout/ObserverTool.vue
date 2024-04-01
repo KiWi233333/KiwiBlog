@@ -1,11 +1,10 @@
 <template>
 </template>
 <script setup lang="ts">
-import { nextTick, onMounted } from 'vue';
+import { nextTick, } from 'vue';
 
-onMounted(()=>{
-  nextTick(()=>{
-    // 划线特效
+
+const obsever = () => {
   // 当对象进入窗体可视范围 IntersectionObserver
   let observer = new IntersectionObserver((entries, observer) => {
     entries.forEach(item => {
@@ -37,10 +36,12 @@ onMounted(()=>{
   document.querySelectorAll('.animatejs').forEach(item => {
     observerAnimate.observe(item)
   })
-  })
+}
+nextTick(() => {
+  obsever()
 })
 </script>
-<style> 
+<style>
 
 :root {
   --text-mark-color: #60ffaf;

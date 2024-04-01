@@ -16,18 +16,18 @@ export default withPwa(defineConfig({
     en: langEN
   },
   themeConfig: {
+
     sidebar: {},
     // https://vitepress.dev/reference/default-theme-config
     logo: "",
     socialLinks: [
       { icon: 'github', link: 'https://github.com/KiWi233333/blog' }
     ],
+    search: {
+      provider: 'local',
+    },
     // header标题
     siteTitle: false,
-    //本地搜索
-    search: {
-      provider: 'local'
-    },
   },
   //fav图标
   head: [
@@ -46,17 +46,14 @@ export default withPwa(defineConfig({
   // vite
   vite: {
     plugins: [
-      AutoSidebar({
-        path: "/docs",
-        ignoreList: ['/docs.vitepress/**', '/docs.vitepress/*']
-      })
+      AutoSidebar()
     ]
   },
   vue: {
   },
   // 站点地图
   sitemap: {
-    hostname: 'https://blog.kiwi233.top'
+    hostname: 'https://blog.kiwi233.top/'
   },
 }))
 
