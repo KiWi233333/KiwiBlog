@@ -1,7 +1,7 @@
 <template>
 </template>
 <script setup lang="ts">
-import { nextTick, } from 'vue';
+import { nextTick, onMounted, } from 'vue';
 
 
 const obsever = () => {
@@ -38,8 +38,10 @@ const obsever = () => {
     observerAnimate.observe(item)
   })
 }
-nextTick(() => {
-  obsever()
+onMounted(() => {
+  nextTick(() => {
+    obsever()
+  })
 })
 </script>
 <style>
