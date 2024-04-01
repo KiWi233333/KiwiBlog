@@ -68,6 +68,7 @@ const projectList = ref<CardItem[]>([
 </script>
 <style scoped lang="scss">
 .content {
+  width: 100%;
   margin: 4rem auto;
   width: 100%;
   display: grid;
@@ -161,7 +162,7 @@ const projectList = ref<CardItem[]>([
     grid-template-columns: 1fr;
 
     .left.card-df {
-      position: relative;
+      position: static;
       background-color: transparent;
       border: 0;
       margin: auto;
@@ -170,6 +171,12 @@ const projectList = ref<CardItem[]>([
         border-radius: 50%;
       }
     }
+.right {
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
   }
 }
 </style>
