@@ -17,5 +17,8 @@
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.0.1",
     "vue": "^3.4.21"
+  },
+  "dependencies": {
+    "sass": "^1.72.0"
   }
 }
