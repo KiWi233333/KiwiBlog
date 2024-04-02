@@ -21,10 +21,10 @@ devDependencies:
     version: 0.59.0-beta.1(postcss@8.4.38)(rollup@2.79.1)(vite@5.2.6)
   vite-plugin-vitepress-auto-sidebar:
     specifier: ^1.6.3
-    version: 1.6.3(eslint@8.57.0)(typescript@5.4.3)(vite@5.2.6)(vitepress@1.0.1)
+    version: 1.6.3(eslint@8.57.0)(typescript@5.4.3)(vite@5.2.6)(vitepress@1.0.2)
   vitepress:
-    specifier: ^1.0.1
-    version: 1.0.1(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3)
+    specifier: ^1.0.2
+    version: 1.0.2(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3)
   vue:
     specifier: ^3.4.21
     version: 3.4.21(typescript@5.4.3)
@@ -4844,7 +4844,7 @@ packages:
       - supports-color
     dev: true
 
-  /vite-plugin-vitepress-auto-sidebar@1.6.3(eslint@8.57.0)(typescript@5.4.3)(vite@5.2.6)(vitepress@1.0.1):
+  /vite-plugin-vitepress-auto-sidebar@1.6.3(eslint@8.57.0)(typescript@5.4.3)(vite@5.2.6)(vitepress@1.0.2):
     resolution: {integrity: sha512-2ZP8lNWsJDO05N1UqY041ALmWJetgDIRtlRiZBbkz+6JbdEKMNIYM2zJDI5GFfmjTFSOY1ECzNPjhZ16l5bPzw==}
     peerDependencies:
       vite: ^5.0.10
@@ -4853,7 +4853,7 @@ packages:
       '@typescript-eslint/parser': 5.62.0(eslint@8.57.0)(typescript@5.4.3)
       picocolors: 1.0.0
       vite: 5.2.6(sass@1.72.0)
-      vitepress: 1.0.1(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3)
+      vitepress: 1.0.2(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3)
     transitivePeerDependencies:
       - eslint
       - supports-color
@@ -4896,8 +4896,8 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitepress@1.0.1(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3):
-    resolution: {integrity: sha512-eNr5pOBppYUUjEhv8S0S2t9Tv95LQ6mMeHj6ivaGwfHxpov70Vduuwl/QQMDRznKDSaP0WKV7a82Pb4JVOaqEw==}
+  /vitepress@1.0.2(@algolia/client-search@4.23.2)(postcss@8.4.38)(sass@1.72.0)(search-insights@2.13.0)(typescript@5.4.3):
+    resolution: {integrity: sha512-bEj9yTEdWyewJFOhEREZF+mXuAgOq27etuJZT6DZSp+J3XpQstXMJc5piSVwhZBtuj8OfA0iXy+jdP1c71KMYQ==}
     hasBin: true
     peerDependencies:
       markdown-it-mathjax3: ^4

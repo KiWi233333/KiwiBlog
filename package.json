@@ -17,7 +17,7 @@
     "@vite-pwa/vitepress": "^0.4.0",
     "unocss": "0.59.0-beta.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
-    "vitepress": "^1.0.1",
+    "vitepress": "^1.0.2",
     "vue": "^3.4.21"
   },
   "dependencies": {
