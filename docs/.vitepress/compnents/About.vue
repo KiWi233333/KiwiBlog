@@ -19,6 +19,12 @@ const projectList = ref<CardItem[]>([
     details: "极物圈，是一个集商城、ai聊天、沟通、社区功能于一体的平台。"
   },
   {
+    title: "Jiwu聊天应用",
+    icon: "i-solar:ghost-bold p-4",
+    link: "https://github.com/KiWi233333/jiwu-mall-chat-electron",
+    details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的桌面应用。"
+  },
+  {
     title: "MSI",
     icon: "https://www.apple.com/favicon.ico",
     link: "https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore/releases/tag/1.0.1",
@@ -41,8 +47,8 @@ const projectList = ref<CardItem[]>([
         <img src="/logo.png" style='--lv: 0;' data-fade class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
         <!-- 联系 -->
-        <div class="contact" style='--lv: 2;' data-fade>
-          <small class="email flex">
+        <div class="contact border-default border-0 border-y-1px py-2" style='--lv: 2;' data-fade>
+          <small class="email flex ">
             📧 <a href="mailto:kiwi2333@qq.com">kiwi2333@qq.com</a>
           </small>
         </div>
@@ -58,8 +64,8 @@ const projectList = ref<CardItem[]>([
       </div>
     </div>
     <!-- 右侧 -->
-    <div data-fade class="right card-default card-df " data-fades style='--lv: 1;'>
-      <div data-fades>
+    <div data-fade class="right card-default card-df ">
+      <div data-fades style='--lv: 1;'>
         <h1>About Me
           <NavBarTitle class="kiwi" />
         </h1>
@@ -84,6 +90,9 @@ const projectList = ref<CardItem[]>([
           <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
         </div>
       </div>
+      <a href="/blog" class="card-default p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
+        Go！</a>
+
     </div>
   </div>
 </template>

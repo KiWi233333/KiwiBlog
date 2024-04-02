@@ -35,37 +35,8 @@ export default defineConfig({
     ["absolute-center-center", "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"],
   ],
   rules: [
-    // 文字
-    [/^el-color-(\w*)$/, ([_, color]) => ({ color: `var(--el-color-${color})` })],
-    [/^el-bg-(\w*)$/, ([_, color]) => ({ "background-color": `var(--el-color-${color})` })],
-    // 文字按钮
-    [/^btn-(\w*)$/, ([_, color]) => ({
-      "--at-apply": `transition-300 cursor-pointer rounded-4px hover:text-[var(--el-color-${color})] `,
-    })],
-    // 文字背景按钮
-    [/^btn-(\w*)-bg$/, ([_, color]) => ({
-      "--at-apply": `transition-300 cursor-pointer rounded-4px hover:(text-white bg-[var(--el-color-${color})) `,
-    })],
-    // 文字按钮
-    [/^btn-(\w*)-plain$/, ([_, color]) => ({
-      "--at-apply": `transition-300 cursor-pointer rounded-4px hover:text-[var(--el-color-${color})] `,
-    })],
-    // 文字按钮组
-    [/^group-btn-(\w*)$/, ([_, color]) => ({
-      "--at-apply": `transition-300 cursor-pointer rounded-4px group-hover:text-[var(--el-color-${color})] `,
-    })],
   ],
   theme: {
-    // ...
-    colors: {
-      theme: {
-        primary: "var(--el-color-primary)",
-      }, // class="text-very-cool"
-      tip: {
-        main: "var(--el-color-primary)", // class="--el-color-primary"
-        green: "hsla(var(--hue, 217), 78%, 51%)", // class="bg-brand-primary"
-      },
-    },
   },
   presets: [
     presetUno(),

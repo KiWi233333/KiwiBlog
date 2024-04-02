@@ -3,13 +3,12 @@ import { onMounted, ref } from 'vue';
 let deferredPrompt;
 const isInstalled = ref<boolean>(false);
 onMounted(() => {
-  isInstalled.value = !!navigator.serviceWorker.controller;
+  isInstalled.value = Boolean(navigator.serviceWorker.controller);
   window.addEventListener('beforeinstallprompt', e => {
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
     // 保存事件
     deferredPrompt = e;
-    isInstalled.value = false;
   });
 });
 
@@ -23,6 +22,7 @@ function onInstall() {
   deferredPrompt?.userChoice?.then(choiceResult => {
     // 同意
     if (choiceResult.outcome === 'accepted') {
+      isInstalled.value = true;
     } else {
     }
   });

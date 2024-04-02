@@ -110,7 +110,9 @@ html:hover .VPNav {
 
 // 渐入动画
 /* 段落 */
-.VPDoc .content-container *,
+#VPContent .aside-container .VPDocAsideOutline .content,
+#VPContent > div > div > div.content > div > main > div > *,
+#VPSidebarNav .VPSidebarItem > *,
 [data-fades] > * {
   --lv: 0;
   --delay: 120ms;
@@ -120,6 +122,7 @@ html:hover .VPNav {
 }
 
 @for $i from 1 through 20 {
+  #VPContent > div > div > div.content > div > main > div > *:nth-child(#{$i}),
   [data-fades] > *:nth-child(#{$i}) {
     --lv: #{$i};
   }

@@ -58,3 +58,37 @@ body {
     background-color: none !important;
   }
 }
+
+
+
+
+// 全局滚动条
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  background-color: #fbfbfc00;
+}
+
+/* 定义滚动条轨道 内部
+  内阴影+圆角 */
+::-webkit-scrollbar-track {
+  background-color: #fbfbfc00;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 4px rgb(0 0 0 / 20%);
+}
+
+.dark ::-webkit-scrollbar-track {
+  background-color: #252525;
+}
+
+/* 定义滑块
+  内阴影+圆角 */
+::-webkit-scrollbar-thumb {
+  background-color: #252525;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 4px rgb(134 134 134 / 20%);
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background-color: rgb(85 85 85);
+}
