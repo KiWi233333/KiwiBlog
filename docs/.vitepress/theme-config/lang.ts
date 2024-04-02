@@ -7,7 +7,7 @@ export const langCN: any = {
     returnToTopLabel: "返回顶部",
     nav: [
       { text: "首页", link: "/" },
-      { text: "博客", link: "/self" },
+      { text: "博客 | Blogs", link: "/blog" },
     ],
     //页脚
     footer: {

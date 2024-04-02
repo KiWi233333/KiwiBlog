@@ -38,11 +38,11 @@ const obsever = () => {
     observerAnimate.observe(item)
   })
 }
-onMounted(() => {
-  nextTick(() => {
-    obsever()
-  })
-})
+// onMounted(() => {
+//   nextTick(() => {
+//     obsever()
+//   })
+// })
 </script>
 <style>
 

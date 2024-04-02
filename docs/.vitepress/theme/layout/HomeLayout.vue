@@ -6,6 +6,7 @@ import { nextTick, provide } from 'vue'
 import PwaInstallBtn from './PwaInstallBtn.vue';
 import ObserverTool from './ObserverTool.vue';
 import NavBarTitle from './NavBarTitle.vue';
+import BackTop from './BackTop.vue';
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -61,6 +62,7 @@ const { Layout } = DefaultTheme
     </template>
     <template #layout-bottom>
       <ObserverTool />
+      <BackTop />
     </template>
   </Layout>
 </template>
