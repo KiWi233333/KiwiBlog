@@ -12,7 +12,7 @@ hero:
       link: /其他/开始
     - theme: alt
       text: 前端
-      link: /前端/Css/签名动画svg
+      link: /前端/Css/1.签名动画svg
     - theme: alt
       text: 后端
       link: 后端/Java/Java基础/Java基础-面向对象

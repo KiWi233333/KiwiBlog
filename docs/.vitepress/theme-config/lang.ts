@@ -1,13 +1,13 @@
 export const langCN: any = {
   label: '简体中文',
-  lang: 'zn',
+  lang: 'zh-CN',
   themeConfig: {
     darkModeSwitchLabel: "黑暗/白天",
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     nav: [
       { text: "首页", link: "/" },
-      { text: "个人", link: "/self" },
+      { text: "博客", link: "/self" },
     ],
     //页脚
     footer: {
