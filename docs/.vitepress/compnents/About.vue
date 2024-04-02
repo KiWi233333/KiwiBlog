@@ -71,7 +71,7 @@ const projectList = ref<CardItem[]>([
       </h1>
       <p>💻 正在学习的独立开发者</p>
       <p>🧠 有创意点子就会尝试</p>
-      <p>🐵 喜欢美食和旅游</p>
+      <p>🏫 Guangdong</p>
       <!-- 最近在做什么 -->
       <h2>What have I been doing</h2>
       <div data-fades class="project-list">
