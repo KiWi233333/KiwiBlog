@@ -1,49 +1,16 @@
-<template>
-  <div class="content">
-    <!-- 左侧 -->
-    <div data-fade class="left card-default card-df">
-      <div class="top">
-        <img src="/logo.png" style='--lv: 0;' data-fade class="avatar" alt="头像">
-        <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
-        <div class="links">
-          <a href="https://github.com/KiWi233333" target="_blank">
-            <img src="/github.png" alt="github">
-          </a>
-          <a href="https://space.bilibili.com/37574787" target="_blank">
-            <img src="/bilibili.png" alt="bilibili">
-          </a>
-        </div>
-      </div>
-    </div>
-    <!-- 右侧 -->
-    <div data-fade class="right card-default card-df data-fades" style='--lv: 1;'>
-      <div>
-        <h1 class="border-default">About Me
-          <NavBarTitle class="kiwi" />
-        </h1>
-        <p>💻 正在学习的独立开发者</p>
-        <p>🧠 有创意点子就会尝试</p>
-        <p>🐵 喜欢美食和旅游</p>
-      </div>
-      <div class="data-fades">
-        <h2>What have I been doing</h2>
-      </div>
-      <!-- 项目 -->
-      <div class="data-fades">
-        <h2>Projects</h2>
-        <div class="data-fades project-list">
-          <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
-        </div>
-      </div>
-    </div>
-  </div>
-</template>
 <script setup lang="ts">
 import NavBarTitle from '../theme/layout/NavBarTitle.vue';
 import { selfName } from '../theme-config/constant';
 import DefaultCard, { CardItem } from './DefaultCard.vue';
 import { ref } from 'vue';
-
+// @unocss-include
+const doingList = ref<CardItem[]>([
+  {
+    title: "Web Developer",
+    icon: "i-solar:code-2-bold-duotone ",
+    details: "A Developer with a passion for creating innovative and user-friendly web applications."
+  },
+])
 const projectList = ref<CardItem[]>([
   {
     title: "极物圈社区商城",
@@ -63,9 +30,63 @@ const projectList = ref<CardItem[]>([
     link: "https://blogs.kiwi233.top/",
     details: "H5C3+js+jq+bootstrap5响应式博客简约静态网站"
   },
-]
-)
+])
 </script>
+
+<template>
+  <div class="content">
+    <!-- 左侧 -->
+    <div data-fade class="left card-default card-df">
+      <div class="top">
+        <img src="/logo.png" style='--lv: 0;' data-fade class="avatar" alt="头像">
+        <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
+        <!-- 联系 -->
+        <div class="contact" style='--lv: 2;' data-fade>
+          <small class="email flex">
+            📧 <a href="mailto:kiwi2333@qq.com">kiwi2333@qq.com</a>
+          </small>
+        </div>
+        <!-- 媒体 -->
+        <div class="links data-fade" style='--lv: 2;'>
+          <a href="https://github.com/KiWi233333" target="_blank">
+            <img src="/github.png" alt="github">
+          </a>
+          <a href="https://space.bilibili.com/37574787" target="_blank">
+            <img src="/bilibili.png" alt="bilibili">
+          </a>
+        </div>
+      </div>
+    </div>
+    <!-- 右侧 -->
+    <div data-fade class="right card-default card-df data-fades" style='--lv: 1;'>
+      <div>
+        <h1>About Me
+          <NavBarTitle class="kiwi" />
+        </h1>
+        <p>💻 正在学习的独立开发者</p>
+        <p>🧠 有创意点子就会尝试</p>
+        <p>🐵 喜欢美食和旅游</p>
+      </div>
+      <div>
+        <h2>What have I been doing</h2>
+        <div class="project-list">
+          <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
+            <template #icon>
+              <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
+            </template>
+          </DefaultCard>
+        </div>
+      </div>
+      <!-- 项目 -->
+      <div>
+        <h2>Projects</h2>
+        <div class="project-list">
+          <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
 <style scoped lang="scss">
 .content {
   width: 100%;
@@ -111,6 +132,20 @@ const projectList = ref<CardItem[]>([
       }
     }
 
+    .contact {
+      display: flex;
+      gap: 0.2em;
+      flex-direction: column;
+
+
+      .flex {
+        display: flex;
+        gap: 0.2em;
+      }
+
+    }
+
+    // 链接
     .links {
       border-top: var(--border-default);
       padding: 1em 0 0 0;
@@ -171,12 +206,13 @@ const projectList = ref<CardItem[]>([
         border-radius: 50%;
       }
     }
-.right {
 
-  .project-list {
-    grid-template-columns: 1fr;
-  }
-}
+    .right {
+
+      .project-list {
+        grid-template-columns: 1fr;
+      }
+    }
   }
 }
 </style>

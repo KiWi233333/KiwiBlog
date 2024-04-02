@@ -47,6 +47,22 @@ html:hover .VPNav {
   }
 }
 
+
+/* 段落 */
+.data-fades > * {
+  --lv: 0;
+  --delay: 120ms;
+  --start: 0ms;
+  animation: keywords-enter 1s both 1;
+  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+}
+
+@for $i from 1 through 20 {
+  .data-fades > *:nth-child(#{$i}) {
+    --lv: #{$i};
+  }
+}
+
 [data-fade] {
   --lv: 0;
   --delay: 120ms;
@@ -123,23 +139,8 @@ html:hover .VPNav {
   }
 }
 
-/* 段落 */
-.data-fades > * {
-  --lv: 0;
-  --delay: 120ms;
-  --start: 0ms;
-  animation: keywords-enter 1s both 1;
-  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-}
-
-@for $i from 1 through 20 {
-  .data-fades > *:nth-child(#{$i}) {
-    --lv: #{$i};
-  }
-}
 // 卡片
 .card-default {
-  background-color: #e4e4e410;
   backdrop-filter: blur(1rem);
   border: 1px solid #b9b9b927;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px;

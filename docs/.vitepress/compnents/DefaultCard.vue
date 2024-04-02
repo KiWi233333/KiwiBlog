@@ -6,6 +6,7 @@
     <div class="right">
       <slot name="name">
         <h4>{{ data.title }}</h4>
+        <span v-if="data.active" class="active-dot"></span>
       </slot>
       <slot name="name">
         <small style="opacity: 0.8;">{{ data.details }}</small>
@@ -19,8 +20,9 @@ export interface CardItem {
   link?: boolean | string;
   title?: string;
   details?: string;
+  active?: boolean;
 }
-const props = withDefaults(defineProps<{
+withDefaults(defineProps<{
   data: CardItem
 }>(), {
 });
@@ -43,6 +45,12 @@ const props = withDefaults(defineProps<{
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
   }
 
+  .active-dot {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background: var(--vp-c-indigo-3);
+  }
   a {
     text-decoration: none !important;
     color: inherit;
