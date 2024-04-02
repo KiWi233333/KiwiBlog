@@ -37,7 +37,7 @@ html:hover .VPNav {
 #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
-    --delay: 120ms;
+    --delay: 100ms;
     --start: 0ms;
     animation: keywords-enter 0.6s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
@@ -51,7 +51,7 @@ html:hover .VPNav {
   }
 }
 #VPContent .VPHomeFeatures {
-  --delay: 120ms;
+  --delay: 100ms;
   --start: 0ms;
   .item:nth-child(1) {
     --lv: 3;
@@ -110,9 +110,10 @@ html:hover .VPNav {
 #VPContent .VPDocAsideOutline .content > *,
 #VPContent > div > div > div.content > div > main > div > *,
 #VPSidebarNav .VPSidebarItem > *,
+.prev-next > .pager,
 [data-fades] > * {
   --lv: 0;
-  --delay: 120ms;
+  --delay: 100ms;
   --start: 0ms;
   animation: keywords-enter 0.8s both 1;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
@@ -130,7 +131,7 @@ html:hover .VPNav {
 
 [data-fade] {
   --lv: 0;
-  --delay: 120ms;
+  --delay: 100ms;
   --start: 0ms;
 }
 

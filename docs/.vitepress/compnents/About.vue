@@ -40,7 +40,7 @@ const projectList = ref<CardItem[]>([
 </script>
 
 <template>
-  <div class="content">
+  <div class="content" data-fade>
     <!-- 左侧 -->
     <div data-fades style="--delay: 20ms;" class="left card-default card-df">
       <div class="top">
@@ -71,7 +71,7 @@ const projectList = ref<CardItem[]>([
       </h1>
       <p>💻 正在学习的独立开发者</p>
       <p>🧠 有创意点子就会尝试</p>
-      <p>🏫 Guangdong</p>
+      <p>🏫 分享日常博客</p>
       <!-- 最近在做什么 -->
       <h2>What have I been doing</h2>
       <div data-fades class="project-list">
