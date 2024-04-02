@@ -27,6 +27,15 @@ body {
   min-width: fit-content;
   font-family: var(--font-family), Helvetica, sans-serif;
   scroll-behavior: smooth;
+  a {
+    text-decoration: none !important;
+  }
+  a:active,
+  a:focus,
+  a:valid,
+  a:active {
+    background-color: none !important;
+  }
 }
 
 /* 字体 */
@@ -45,22 +54,7 @@ body {
   html {
     font-size: 16px; /* 当前屏幕尺寸除以划分的等份:720/15 */
   }
-}
-// a标签
-body {
-  a {
-    text-decoration: none !important;
-  }
-  a:active,
-  a:focus,
-  a:valid,
-  a:active {
-    background-color: none !important;
-  }
-}
-
-
-
+} 
 
 // 全局滚动条
 ::-webkit-scrollbar {
