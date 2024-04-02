@@ -6,6 +6,8 @@ import './style/index.scss'
 import './style/init.scss'
 import './style/custom.scss'
 import NavBarTitle from './layout/NavBarTitle.vue'
+import 'uno.css'
+// import 'virtual:unocss-devtools'
 
 export default {
   extends: DefaultTheme,

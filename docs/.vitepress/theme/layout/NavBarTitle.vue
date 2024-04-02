@@ -5,7 +5,7 @@
   <svg width="40%" height="4rem" version="1.0" xmlns="http://www.w3.org/2000/svg" id="logo-anim" stroke-linecap="round"
     stroke-linejoin="round" viewBox="0 0 509.000000 117.000000" preserveAspectRatio="xMidYMid meet">
     <g transform="translate(0.000000,117.000000) scale(0.100000,-0.100000)">
-      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2em" d="M368 1153 c-26 -31 -37 -56 -139 -351 -192 -556 -242 -745 -207 -780
+      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1em" d="M368 1153 c-26 -31 -37 -56 -139 -351 -192 -556 -242 -745 -207 -780
   36 -36 100 7 384 265 l91 83 5 -75 c7 -103 52 -195 115 -235 115 -73 253 -44
   468 98 l90 60 7 -44 c10 -67 37 -106 93 -134 45 -23 61 -25 170 -24 176 0 347
   45 787 205 119 43 219 79 222 79 3 0 13 -26 21 -57 79 -284 124 -297 351 -95
@@ -24,10 +24,10 @@
   361 395 406 31 44 27 88 -8 88 -28 0 -123 -78 -293 -241 -287 -274 -459 -430
   -648 -588 -9 -8 -20 -12 -23 -9 -13 14 97 347 258 776 79 211 90 246 80 267
   -14 29 -33 32 -54 8z" />
-      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2em" d="M1770 790 c-14 -4 -114 -8 -222 -9 -164 -1 -199 -4 -212 -17 -33 -32
+      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1em" d="M1770 790 c-14 -4 -114 -8 -222 -9 -164 -1 -199 -4 -212 -17 -33 -32
   -6 -74 47 -74 18 0 68 4 112 10 44 5 133 14 197 19 131 11 161 21 156 54 -3
   24 -35 31 -78 17z" />
-      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2em" d="M4310 790 c-14 -4 -114 -8 -222 -9 -164 -1 -199 -4 -212 -17 -33 -32
+      <path stroke="var(--vp-c-text-1)" stroke-linecap="round" stroke-linejoin="round" stroke-width="1em" d="M4310 790 c-14 -4 -114 -8 -222 -9 -164 -1 -199 -4 -212 -17 -33 -32
   -6 -74 47 -74 18 0 68 4 112 10 44 5 133 14 197 19 131 11 161 21 156 54 -3
   24 -35 31 -78 17z" />
     </g>

@@ -9,6 +9,7 @@ onMounted(() => {
     e.preventDefault();
     // 保存事件
     deferredPrompt = e;
+    isInstalled.value = false;
   });
 });
 

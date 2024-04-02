@@ -4,6 +4,7 @@ import { withPwa } from '@vite-pwa/vitepress'
 import { appLang, appName } from './theme-config/constant'
 import { langCN, langEN } from './theme-config/lang';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
+import UnoCSS from 'unocss/vite'
 
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
@@ -16,7 +17,6 @@ export default withPwa(defineConfig({
     en: langEN
   },
   themeConfig: {
-
     sidebar: {},
     // https://vitepress.dev/reference/default-theme-config
     logo: "",
@@ -46,14 +46,16 @@ export default withPwa(defineConfig({
   // vite
   vite: {
     plugins: [
-      AutoSidebar()
+      AutoSidebar(),
+
+      UnoCSS(),
     ]
   },
   vue: {
   },
   // 站点地图
   sitemap: {
-    hostname: 'https://blog.kiwi233.top/'
+    hostname: 'https://kiwi233.top/'
   },
 }))
 

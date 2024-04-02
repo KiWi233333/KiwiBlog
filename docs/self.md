@@ -7,7 +7,7 @@ hero:
   text: "<div class='mark2'  data-fade style='--lv: 1;'>个人博客 | Self Blog</div>"
   tagline: 
   actions:
-    - theme: brand
+    - theme: alt
       text:  开始🎨
       link: /其他/开始
     - theme: alt
