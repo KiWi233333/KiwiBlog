@@ -58,8 +58,8 @@ const projectList = ref<CardItem[]>([
       </div>
     </div>
     <!-- 右侧 -->
-    <div data-fade class="right card-default card-df data-fades" style='--lv: 1;'>
-      <div>
+    <div data-fade class="right card-default card-df " data-fades style='--lv: 1;'>
+      <div data-fades>
         <h1>About Me
           <NavBarTitle class="kiwi" />
         </h1>
@@ -67,7 +67,7 @@ const projectList = ref<CardItem[]>([
         <p>🧠 有创意点子就会尝试</p>
         <p>🐵 喜欢美食和旅游</p>
       </div>
-      <div>
+      <div data-fades>
         <h2>What have I been doing</h2>
         <div class="project-list">
           <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
@@ -78,7 +78,7 @@ const projectList = ref<CardItem[]>([
         </div>
       </div>
       <!-- 项目 -->
-      <div>
+      <div data-fades>
         <h2>Projects</h2>
         <div class="project-list">
           <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
