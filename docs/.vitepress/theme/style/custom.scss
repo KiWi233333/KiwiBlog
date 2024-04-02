@@ -34,52 +34,6 @@ html:hover .VPNav {
   margin: 0.5em 0 0.2em 0;
 }
 
-/* 渐进动画 */
-@keyframes keywords-enter {
-  0% {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-
-  to {
-    opacity: 1;
-    transform: none;
-  }
-}
-
-
-/* 段落 */
-.data-fades > * {
-  --lv: 0;
-  --delay: 120ms;
-  --start: 0ms;
-  animation: keywords-enter 1s both 1;
-  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-}
-
-@for $i from 1 through 20 {
-  .data-fades > *:nth-child(#{$i}) {
-    --lv: #{$i};
-  }
-}
-
-[data-fade] {
-  --lv: 0;
-  --delay: 120ms;
-  --start: 0ms;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  [data-fade] {
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-}
-
-[data-fade-controller="false"] [data-fade] {
-  animation: none;
-}
-
 #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
@@ -146,11 +100,59 @@ html:hover .VPNav {
   box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px;
 }
 
-
-.VPContent  {
+.VPContent {
   .content-container {
     h1:nth-of-type(1) {
       text-align: center;
     }
   }
+}
+
+// 渐入动画
+/* 段落 */
+.VPDoc .content-container *,
+[data-fades] > * {
+  --lv: 0;
+  --delay: 120ms;
+  --start: 0ms;
+  animation: keywords-enter 1s both 1;
+  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+}
+
+@for $i from 1 through 20 {
+  [data-fades] > *:nth-child(#{$i}) {
+    --lv: #{$i};
+  }
+}
+
+[data-fade] {
+  --lv: 0;
+  --delay: 120ms;
+  --start: 0ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  [data-fade] {
+    animation: keywords-enter 0.4s both;
+    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  }
+}
+
+/* 渐进动画 */
+@keyframes keywords-enter {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+[data-fade-controller="false"] [data-fade] {
+  animation: none;
+}
+[data-fades-controller="false"] [data-fades] > * {
+  animation: none;
 }
