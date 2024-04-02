@@ -21,7 +21,7 @@ export default withPwa(defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: "",
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/KiWi233333/blog' }
+      { icon: 'github', link: 'https://github.com/KiWi233333/KiwiBlog' }
     ],
     search: {
       provider: 'local',

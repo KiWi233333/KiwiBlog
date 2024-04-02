@@ -1,7 +1,7 @@
 <template>
   <div class="content">
     <!-- 左侧 -->
-    <div class="left card-default card-df">
+    <div data-fade class="left card-default card-df">
       <div class="top">
         <img src="/logo.png" style='--lv: 0;' data-fade class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
@@ -16,7 +16,7 @@
       </div>
     </div>
     <!-- 右侧 -->
-    <div class="right card-default card-df data-fades" style='--lv: 1;'>
+    <div data-fade class="right card-default card-df data-fades" style='--lv: 1;'>
       <div>
         <h1 class="border-default">About Me
           <NavBarTitle class="kiwi" />
