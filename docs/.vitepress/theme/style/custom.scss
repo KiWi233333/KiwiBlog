@@ -39,7 +39,8 @@ html:hover .VPNav {
     --lv: 0;
     --delay: 100ms;
     --start: 0ms;
-    animation: keywords-enter 0.6s both;
+    --anima: latter-slice-top;
+    animation: var(--anima) 0.5s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
   }
   .actions .action {
@@ -53,30 +54,25 @@ html:hover .VPNav {
 #VPContent .VPHomeFeatures {
   --delay: 100ms;
   --start: 0ms;
-  .item:nth-child(1) {
-    --lv: 3;
-    animation: keywords-enter 0.6s both;
+  --anima: latter-slice-top;
+  .item {
+    animation: var(--anima) 0.5s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-  .item:nth-child(2) {
-    --lv: 4;
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-  .item:nth-child(3) {
-    --lv: 5;
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-  .item:nth-child(4) {
-    --lv: 6;
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-  .item:nth-child(5) {
-    --lv: 7;
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+    &:nth-child(1) {
+      --lv: 3;
+    }
+    &:nth-child(2) {
+      --lv: 4;
+    }
+    &:nth-child(3) {
+      --lv: 5;
+    }
+    &:nth-child(4) {
+      --lv: 6;
+    }
+    &:nth-child(5) {
+      --lv: 7;
+    }
   }
 }
 
@@ -104,26 +100,32 @@ html:hover .VPNav {
 }
 
 // 渐入动画
+#VPSidebarNav .VPSidebarItem {
+  --anima: latter-slice-right !important;
+}
+#VPContent .VPDocAsideOutline .content > * {
+  --anima: latter-slice-left !important;
+}
+
 /* 段落 */
-.VPFooter,
-#VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
+#VPSidebarNav .VPSidebarItem,
 #VPContent .VPDocAsideOutline .content > *,
-#VPContent > div > div > div.content > div > main > div > *,
-#VPSidebarNav .VPSidebarItem > *,
-.prev-next > .pager,
+#VPContent .content > div > main > div > div > *,
+#VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
   --lv: 0;
   --delay: 100ms;
   --start: 0ms;
-  animation: keywords-enter 0.8s both 1;
+  --anima: latter-slice-top;
+  animation: var(--anima) 0.5s both;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
 }
 
 @for $i from 1 through 20 {
   #VPContent .VPHero.has-image.VPHomeHero .main .actions > *:nth-child(#{$i}),
   #VPContent .VPDocAsideOutline .content > *:nth-child(#{$i}),
-  #VPContent > div > div > div.content > div > main > div > *:nth-child(#{$i}),
-  #VPContent > div > div > div.content > div > main > div > *:nth-child(#{$i}),
+  #VPSidebarNav .VPSidebarItem:nth-child(#{$i}),
+  #VPContent .content > div > main > div > div > *:nth-child(#{$i}),
   [data-fades] > *:nth-child(#{$i}) {
     --lv: #{$i};
   }
@@ -133,20 +135,22 @@ html:hover .VPNav {
   --lv: 0;
   --delay: 100ms;
   --start: 0ms;
+  --anima: latter-slice-top;
 }
 
 @media (prefers-reduced-motion: no-preference) {
+  [data-fades] > *,
   [data-fade] {
-    animation: keywords-enter 0.4s both;
+    animation: var(--anima) 0.5s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
   }
 }
 
 /* 渐进动画 */
-@keyframes keywords-enter {
+@keyframes latter-slice-top {
   0% {
     opacity: 0;
-    transform: translateY(10px);
+    transform: translateY(12px);
   }
 
   to {
@@ -154,13 +158,35 @@ html:hover .VPNav {
     transform: none;
   }
 }
-[data-fade-controller="false"] [data-fade] {
+/* 渐进动画 */
+@keyframes latter-slice-left {
+  0% {
+    opacity: 0;
+    transform: translateX(12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes latter-slice-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+[data-fade-controller="false"][data-fade] {
   animation: none;
 }
-[data-fades-controller="false"] [data-fades] > * {
+[data-fades-controller="false"][data-fades] > * {
   animation: none;
 }
 
-.VPSidebar {
-  --vp-sidebar-bg-color: transparent;
+.VPDoc {
+  max-width: 90vw;
+  margin: 0 auto;
 }
