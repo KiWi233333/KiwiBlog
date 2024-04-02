@@ -42,9 +42,9 @@ const projectList = ref<CardItem[]>([
 <template>
   <div class="content">
     <!-- 左侧 -->
-    <div data-fade class="left card-default card-df">
+    <div data-fades style="--delay: 20ms;" class="left card-default card-df">
       <div class="top">
-        <img src="/logo.png" style='--lv: 0;' data-fade class="avatar" alt="头像">
+        <img src="/logo.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
         <!-- 联系 -->
         <div class="contact border-default border-0 border-y-1px py-2" style='--lv: 2;' data-fade>
@@ -64,42 +64,37 @@ const projectList = ref<CardItem[]>([
       </div>
     </div>
     <!-- 右侧 -->
-    <div data-fade class="right card-default card-df ">
-      <div data-fades style='--lv: 1;'>
-        <h1>About Me
-          <NavBarTitle class="kiwi" />
-        </h1>
-        <p>💻 正在学习的独立开发者</p>
-        <p>🧠 有创意点子就会尝试</p>
-        <p>🐵 喜欢美食和旅游</p>
-      </div>
-      <div data-fades>
-        <h2>What have I been doing</h2>
-        <div class="project-list">
-          <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
-            <template #icon>
-              <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
-            </template>
-          </DefaultCard>
-        </div>
+    <div data-fades style="--delay: 20ms;" class="right card-default card-df ">
+      <!-- 关于我 -->
+      <h1>About Me
+        <NavBarTitle class="kiwi" />
+      </h1>
+      <p>💻 正在学习的独立开发者</p>
+      <p>🧠 有创意点子就会尝试</p>
+      <p>🐵 喜欢美食和旅游</p>
+      <!-- 最近在做什么 -->
+      <h2>What have I been doing</h2>
+      <div data-fades class="project-list">
+        <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
+          <template #icon>
+            <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
+          </template>
+        </DefaultCard>
       </div>
       <!-- 项目 -->
-      <div data-fades>
-        <h2>Projects</h2>
-        <div class="project-list">
-          <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
-        </div>
+      <h2>Projects</h2>
+      <div data-fades class="project-list">
+        <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
       </div>
       <a href="/blog" class="card-default p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
         Go！</a>
-
     </div>
   </div>
 </template>
 <style scoped lang="scss">
 .content {
   width: 100%;
-  margin: 4rem auto;
+  margin: 2rem auto;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 4fr;
@@ -108,12 +103,11 @@ const projectList = ref<CardItem[]>([
   position: relative;
 
   .card-df {
-    box-shadow: rgba(0, 0, 0, 0.08) 1px 1px 1px;
+    --at-apply: 'p-4 sm:p-10 border-default';
     border-radius: 1rem;
     background-color: #e4e4e410;
     backdrop-filter: blur(1rem);
     border: 1px solid #b9b9b927;
-    padding: 2.6rem;
 
     p {
       letter-spacing: 0.02em;
@@ -163,12 +157,12 @@ const projectList = ref<CardItem[]>([
       width: 100%;
 
       a {
-        width: 1.4em;
-        height: 1.4em;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 1px;
+        width: 1.6em;
+        height: 1.6em;
 
         img {
           object-fit: cover;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           border-radius: 6px;
           overflow: hidden;
         }
