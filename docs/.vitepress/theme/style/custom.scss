@@ -42,12 +42,7 @@ html:hover .VPNav {
     animation: keywords-enter 0.6s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
   }
-  .actions {
-    --lv: 1;
-    --delay: 120ms;
-    --start: 0ms;
-    animation: keywords-enter 0.6s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+  .actions .action {
     .VPButton {
       border: 1px solid #b9b9b910;
       padding: 1rem;
@@ -109,19 +104,24 @@ html:hover .VPNav {
 }
 
 // 渐入动画
-/* 段落 */
-#VPContent .aside-container .VPDocAsideOutline .content,
+/* 段落 */ 
+.VPFooter,
+#VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
+#VPContent .VPDocAsideOutline .content > *,
 #VPContent > div > div > div.content > div > main > div > *,
 #VPSidebarNav .VPSidebarItem > *,
 [data-fades] > * {
   --lv: 0;
   --delay: 120ms;
   --start: 0ms;
-  animation: keywords-enter 1s both 1;
+  animation: keywords-enter 0.8s both 1;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
 }
 
 @for $i from 1 through 20 {
+  #VPContent .VPHero.has-image.VPHomeHero .main .actions > *:nth-child(#{$i}),
+  #VPContent .VPDocAsideOutline .content > *:nth-child(#{$i}),
+  #VPContent > div > div > div.content > div > main > div > *:nth-child(#{$i}),
   #VPContent > div > div > div.content > div > main > div > *:nth-child(#{$i}),
   [data-fades] > *:nth-child(#{$i}) {
     --lv: #{$i};

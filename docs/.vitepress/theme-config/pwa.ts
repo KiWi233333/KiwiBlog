@@ -58,3 +58,4 @@ export const pwaConfig: any = {
     enabled: true,
   },
 };
+
