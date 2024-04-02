@@ -104,7 +104,7 @@ html:hover .VPNav {
 }
 
 // 渐入动画
-/* 段落 */ 
+/* 段落 */
 .VPFooter,
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 #VPContent .VPDocAsideOutline .content > *,
@@ -159,4 +159,8 @@ html:hover .VPNav {
 }
 [data-fades-controller="false"] [data-fades] > * {
   animation: none;
+}
+
+.VPSidebar {
+  --vp-sidebar-bg-color: transparent;
 }
