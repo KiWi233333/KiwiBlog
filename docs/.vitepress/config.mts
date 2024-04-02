@@ -12,6 +12,7 @@ export default withPwa(defineConfig({
   description: "Kiwi2333' blog🎉！",
   lang: appLang,
   pwa: pwaConfig,
+  lastUpdated: true,
   locales: {
     root: langCN,
     en: langEN
@@ -46,9 +47,8 @@ export default withPwa(defineConfig({
   // vite
   vite: {
     plugins: [
-      AutoSidebar(),
-
       UnoCSS(),
+      AutoSidebar(),
     ]
   },
   vue: {

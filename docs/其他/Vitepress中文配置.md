@@ -5,7 +5,7 @@ layout: doc
 
 # Vitepress中文配置
 
-```ts
+```Typescript
 import { defineConfig } from "vitepress";
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
