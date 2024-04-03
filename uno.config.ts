@@ -12,7 +12,7 @@ import {
 export default defineConfig({
   shortcuts: [
     ["card-df", "bg-[#ffffff93] dark:bg-dark-5 rounded-1.5"],
-    ["card-df-br", "bg-[#ffffff93] dark:(bg-dark-5 bg-op-60) rounded-1.5 backdrop-blur-12px backdrop-saturate-180"],
+    ["card-df-br", "bg-[#ffffff93] dark:(bg-dark-4 bg-op-80) rounded-1.5 backdrop-blur-12px backdrop-saturate-180"],
     ["blur-card", "backdrop-blur-4 bg-[#75757528] rounded-4px"],
     ["btn-default", "border-0 cursor-pointer rounded-4px hover:text-[var(--el-color-primary)] text-white"],
     ["btn-primary-bg", " cursor-pointer rounded-4px hover:bg-[var(--el-color-primary)]  hover:text-white"],

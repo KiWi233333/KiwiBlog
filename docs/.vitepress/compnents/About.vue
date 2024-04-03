@@ -103,7 +103,7 @@ const projectList = ref<CardItem[]>([
   grid-gap: 2rem;
   position: relative;
 
-  .card {
+  >.card {
     --at-apply: 'p-6 sm:p-10 border-default';
     border-radius: 1rem;
     backdrop-filter: blur(1rem);
