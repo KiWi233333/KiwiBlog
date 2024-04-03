@@ -92,7 +92,7 @@ onMounted(async () => {
     iterations = 0;
     ctx.clearRect(0, 0, width, height);
     ctx.lineWidth = 1;
-    ctx.strokeStyle = '#00000040';
+    ctx.strokeStyle = '#b9b9b930';
     prevSteps = [];
     steps = random() < 0.5
       ? [
@@ -112,7 +112,5 @@ onMounted(async () => {
 </script>
 
 <template>
-  <div class="fixed top-0 w-1920px min-h-100dvh overflow-hidden left-0 -z-1">
-    <canvas ref="canvasRef" class="min-w-1920px max-w-1920px block min-h-100dvh"></canvas>
-  </div>
+  <canvas ref="canvasRef" class="fixed top-0 w-1920px min-h-100dvh overflow-hidden left-0 -z-1"></canvas>
 </template>

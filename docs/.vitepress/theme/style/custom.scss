@@ -4,16 +4,11 @@
 }
 html:hover .VPNav {
   opacity: 1;
-  transform: none;
-  background-color: 0;
-
   .home {
-    background-color: transparent !important;
-    backdrop-filter: blur(12px);
     .top {
       border: 1px solid #b9b9b910;
-      background-color: #c0c0c010 !important;
-      backdrop-filter: blur(0);
+      background-color: transparent !important;
+      backdrop-filter: blur(12px);
     }
   }
 }
