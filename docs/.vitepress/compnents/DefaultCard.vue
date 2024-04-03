@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ?  'a': 'div' " :href="data.link" target="_blank" class="card"
+  <component :is="data.link ?  'a': 'div' " :href="data.link" target="_blank" class="card-df-br"
     :class="{ 'no-link': !data.link }">
     <slot name="icon">
       <div class="icon" v-if="data.icon?.startsWith('i-')" :class="data.icon" />
@@ -30,12 +30,11 @@ withDefaults(defineProps<{
 });
 </script>
 <style scoped lang="scss">
-.card {
+.card-df-br {
   display: flex;
   align-items: center;
   gap: 1em;
   padding: 1.2em;
-  background: #8d8d8d09;
   border: 0;
   border-radius: 10px;
   z-index: 1;
