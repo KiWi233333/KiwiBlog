@@ -19,7 +19,6 @@
     "@iconify-json/carbon": "^1.1.31",
     "@iconify-json/solar": "^1.1.9",
     "@vite-pwa/vitepress": "^0.4.0",
-    "netlify-cli": "^17.21.1",
     "unocss": "0.59.0-beta.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.0.2",
