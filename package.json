@@ -7,6 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "vitepress dev docs --port 4000",
     "build": "vitepress build docs --port 4000",
+    "login": "netlify login",
+    "link": "netlify link",
+    "build:prod": "netlify build",
     "pre": "vitepress preview docs --port 4000"
   },
   "keywords": [],
@@ -15,6 +18,7 @@
   "devDependencies": {
     "@iconify-json/solar": "^1.1.9",
     "@vite-pwa/vitepress": "^0.4.0",
+    "netlify-cli": "^17.21.1",
     "unocss": "0.59.0-beta.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.0.2",

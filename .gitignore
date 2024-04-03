@@ -5,3 +5,7 @@ docs/.vitepress/dist/**
 docs/.vitepress/cache/**
 
 docs/dev-dist/**
+
+docs/.vitepress/config.mts.timestamp-*
+# Local Netlify folder
+.netlify
