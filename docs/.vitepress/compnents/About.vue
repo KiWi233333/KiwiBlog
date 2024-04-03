@@ -42,14 +42,15 @@ const projectList = ref<CardItem[]>([
 <template>
   <div class="content" data-fade>
     <!-- 左侧 -->
-    <div data-fades style="--delay: 20ms;" class="left card-default card-df">
+    <div data-fades class="left card card-df-br">
       <div class="top">
         <img src="/logo.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
         <!-- 联系 -->
         <div class="contact border-default border-0 border-y-1px py-2" style='--lv: 2;' data-fade>
-          <small class="email flex ">
-            📧 <a href="mailto:kiwi2333@qq.com">kiwi2333@qq.com</a>
+          <small class="flex-row-c-c gap-1">
+            <i class="i-carbon:email"></i>
+            <a href="mailto:kiwi2333@qq.com" style="color: inherit;">kiwi2333@qq.com</a>
           </small>
         </div>
         <!-- 媒体 -->
@@ -64,17 +65,17 @@ const projectList = ref<CardItem[]>([
       </div>
     </div>
     <!-- 右侧 -->
-    <div data-fades style="--delay: 20ms;" class="right card-default card-df ">
+    <div data-fades style="--delay: 60ms;" class="right card card-df-br">
       <!-- 关于我 -->
       <h1>About Me
         <NavBarTitle class="kiwi" />
       </h1>
       <p>💻 正在学习的独立开发者</p>
       <p>🧠 有创意点子就会尝试</p>
-      <p>🏫 分享日常博客</p>
+      <p>🏫 分享日常<a href="/blog">博客</a></p>
       <!-- 最近在做什么 -->
       <h2>What have I been doing</h2>
-      <div data-fades class="project-list">
+      <div data-fades class=" project-list">
         <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
           <template #icon>
             <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
@@ -86,7 +87,7 @@ const projectList = ref<CardItem[]>([
       <div data-fades class="project-list">
         <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
       </div>
-      <a href="/blog" class="card-default p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
+      <a href="/blog" class="card-df p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
         Go！</a>
     </div>
   </div>
@@ -102,13 +103,10 @@ const projectList = ref<CardItem[]>([
   grid-gap: 2rem;
   position: relative;
 
-  .card-df {
-    --at-apply: 'p-4 sm:p-10 border-default';
+  .card {
+    --at-apply: 'p-6 sm:p-10 border-default';
     border-radius: 1rem;
-    background-color: #e4e4e410;
     backdrop-filter: blur(1rem);
-    border: 1px solid #b9b9b927;
-
     p {
       letter-spacing: 0.02em;
       height: 0.8em;
@@ -116,7 +114,7 @@ const projectList = ref<CardItem[]>([
   }
 
   .left {
-    position: sticky;
+    --at-apply: "bg-none static sm:sticky";
     top: 6rem;
     left: 0;
     display: flex;
@@ -131,7 +129,7 @@ const projectList = ref<CardItem[]>([
       justify-content: center;
 
       .avatar {
-        width: 70%;
+        --at-apply: "sm:(w-7/10 rounded-4) transition-all w-1/2 rounded-1/2";
       }
     }
 

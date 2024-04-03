@@ -8,4 +8,6 @@ layout: home
   const AboutCom = About
 </script>
 
-<AboutCom/>
+<div pb-20>
+  <AboutCom />
+</div>
