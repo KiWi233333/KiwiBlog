@@ -7,6 +7,7 @@ import PwaInstallBtn from './PwaInstallBtn.vue';
 import ObserverTool from './ObserverTool.vue';
 import NavBarTitle from './NavBarTitle.vue';
 import Comments from './Comments.vue';
+import AnFuTree from './AnFuTree.vue';
 const { isDark } = useData()
 
 const enableTransitions = () =>
@@ -62,6 +63,7 @@ const { Layout } = DefaultTheme
     </template>
     <template #layout-bottom>
       <ObserverTool />
+      <AnFuTree />
     </template>
     <template #doc-after>
       <Comments />

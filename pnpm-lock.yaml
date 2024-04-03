@@ -10,6 +10,9 @@ dependencies:
     version: 1.72.0
 
 devDependencies:
+  '@iconify-json/carbon':
+    specifier: ^1.1.31
+    version: 1.1.31
   '@iconify-json/solar':
     specifier: ^1.1.9
     version: 1.1.9
@@ -2290,6 +2293,12 @@ packages:
 
   /@iarna/toml@2.2.5:
     resolution: {integrity: sha512-trnsAYxU3xnS1gPHPyU961coFyLkh4gAD/0zQ5mymY4yOZ+CYvsPqUbOFSw0aDM4y0tV7tiFxL/1XfXPNC6IPg==}
+    dev: true
+
+  /@iconify-json/carbon@1.1.31:
+    resolution: {integrity: sha512-CAvECFfiwGyZmlcuM2JLMRDEN3VsIEZv6lml7Xf+3giQ5oXloADm0b5wiVPFZmONKM5jXERmx+E7YSvAtFJIbw==}
+    dependencies:
+      '@iconify/types': 2.0.0
     dev: true
 
   /@iconify-json/solar@1.1.9:
