@@ -43,7 +43,7 @@ export const pwaConfig: any = {
           cacheName: "jiwuquan-fonts-cache",
           expiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 31, // <== 365 days
+            maxAgeSeconds: 60 * 60 * 24 * 31, // <== 31 days
           },
           cacheableResponse: {
             statuses: [0, 200],
@@ -55,7 +55,7 @@ export const pwaConfig: any = {
   registerWebManifestInRouteRules: true,
   writePlugin: true,
   devOptions: {
-    enabled: false,
+    enabled: true,
   },
 };
 
