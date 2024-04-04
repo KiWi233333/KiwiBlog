@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ?  'a': 'div' " :href="data.link" target="_blank" class="card-df-br"
+  <component :is="data.link ?  'a': 'div' " :href="data.link" target="_blank" class="card-df-br link-cark"
     :class="{ 'no-link': !data.link }">
     <slot name="icon">
       <div class="icon" v-if="data.icon?.startsWith('i-')" :class="data.icon" />

@@ -104,7 +104,7 @@ html:hover .VPNav {
 
 /* 段落 */
 #VPSidebarNav .VPSidebarItem,
-#VPContent .VPDocAsideOutline .content > *,
+.VPDocOutlineItem > li,
 #VPContent .content > div > main > div > div > *,
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
@@ -117,12 +117,19 @@ html:hover .VPNav {
 }
 
 @for $i from 1 through 20 {
-  #VPContent .VPHero.has-image.VPHomeHero .main .actions > *:nth-child(#{$i}),
-  #VPContent .VPDocAsideOutline .content > *:nth-child(#{$i}),
+  #VPContent .VPHero.has-image.VPHomeHero .actions > *:nth-child(#{$i}),
   #VPSidebarNav .VPSidebarItem:nth-child(#{$i}),
   #VPContent .content > div > main > div > div > *:nth-child(#{$i}),
   [data-fades] > *:nth-child(#{$i}) {
     --lv: #{$i};
+  }
+}
+
+@for $i from 1 through 30 {
+  .VPDocOutlineItem > li:nth-child(#{$i}) {
+  --delay: 50ms;
+  --anima: latter-slice-left;
+  --lv: #{$i};
   }
 }
 

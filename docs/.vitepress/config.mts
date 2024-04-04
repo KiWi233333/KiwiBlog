@@ -32,7 +32,8 @@ export default withPwa(defineConfig({
   },
   //fav图标
   head: [
-    ['link', { rel: 'icon', href: '/kiwi_strong.svg' }], 
+    ['link', { rel: 'icon', href: '/kiwi.png' }],
+    ['link', { rel: 'icon', href: '/kiwi.svg' }], 
   ],
   // https://vitepress.dev/zh/reference/site-config#metachunk
   metaChunk: true,
