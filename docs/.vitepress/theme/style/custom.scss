@@ -32,7 +32,7 @@ html:hover .VPNav {
 #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
-    --delay: 100ms;
+    --delay: 0.1s;
     --start: 0ms;
     --anima: latter-slice-top;
     animation: var(--anima) 0.5s both;
@@ -47,7 +47,7 @@ html:hover .VPNav {
   }
 }
 #VPContent .VPHomeFeatures {
-  --delay: 100ms;
+  --delay: 0.1s;
   --start: 0ms;
   --anima: latter-slice-top;
   .item {
@@ -109,7 +109,7 @@ html:hover .VPNav {
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
   --lv: 0;
-  --delay: 100ms;
+  --delay: 0.1s;
   --start: 0ms;
   --anima: latter-slice-top;
   animation: var(--anima) 0.5s both;
@@ -128,7 +128,7 @@ html:hover .VPNav {
 
 [data-fade] {
   --lv: 0;
-  --delay: 100ms;
+  --delay: 0.1s;
   --start: 0ms;
   --anima: latter-slice-top;
 }
@@ -149,7 +149,6 @@ html:hover .VPNav {
   }
 
   to {
-    opacity: 1;
     transform: none;
   }
 }
@@ -160,7 +159,6 @@ html:hover .VPNav {
     transform: translateX(12px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
@@ -170,7 +168,6 @@ html:hover .VPNav {
     transform: translateX(-12px);
   }
   to {
-    opacity: 1;
     transform: none;
   }
 }
