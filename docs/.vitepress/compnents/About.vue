@@ -40,7 +40,7 @@ const projectList = ref<CardItem[]>([
 </script>
 
 <template>
-  <div class="content" data-fade>
+  <div class="content animate-fade-in">
     <!-- 左侧 -->
     <div data-fades class="left sm:w-full bg-transparent  w-2/3 mx-a card">
       <div class="top">

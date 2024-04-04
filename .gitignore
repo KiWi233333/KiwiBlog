@@ -9,3 +9,5 @@ docs/dev-dist/**
 docs/.vitepress/config.mts.timestamp-*
 # Local Netlify folder
 .netlify
+
+*.7z
