@@ -15,6 +15,5 @@ export default {
   enhanceApp({ app, router, siteData }) {
     app.component('HomeLayout', HomeLayout)
       .component("NavBarTitle", NavBarTitle)
-
   }
 } satisfies Theme
