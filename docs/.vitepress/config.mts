@@ -49,7 +49,17 @@ export default withPwa(defineConfig({
   vite: {
     plugins: [
       UnoCSS(),
-      AutoSidebar(),
+      AutoSidebar({
+        path: "/docs",
+        ignoreList: [
+          ".vitepress",
+          "dev-dist",
+          "public",
+        ], // 忽略的文件列表
+        sideBarItemsResolved(data) {
+          return data
+        }
+      }),
     ]
   },
   vue: {

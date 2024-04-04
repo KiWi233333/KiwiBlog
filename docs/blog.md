@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: alt
       text:  起始 🎨
-      link: /其他/开始
+      link: /其他/1.开始
     - theme: alt 
       text: github
       link: https://github.com/KiWi233333/KiwiBlog
@@ -18,7 +18,7 @@ features:
   - title: 开始
     icon: 🎊
     details: 开始阅读本博客 🎉
-    link: /其他/开始
+    link: /其他/1.开始
 
   - title: 前端
     icon: 🧪
@@ -33,7 +33,7 @@ features:
   - title: 其他
     icon: 📁
     details: 正在完善中...
-    link: /其他/开始
+    link: /其他/1.开始
 
   - title: 正在建设
     icon: 🛠
