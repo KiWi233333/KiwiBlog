@@ -44,7 +44,7 @@ const projectList = ref<CardItem[]>([
     <!-- 左侧 -->
     <div data-fades class="left sm:w-full bg-transparent  w-2/3 mx-a card">
       <div class="top">
-        <img src="/logo.png" class="avatar" alt="头像">
+        <img src="/avatar.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
         <!-- 联系 -->
         <div data-fades class="w-full border-default border-0 border-y-1px py-2" data-fade>
