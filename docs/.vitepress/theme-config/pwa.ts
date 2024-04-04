@@ -8,7 +8,7 @@ export const pwaConfig: any = {
   registerType: "autoUpdate",
   scope,
   base: scope,
-  includeAssets: ["logo.png"],
+  includeAssets: ["kiwi.png"],
   // https://developer.mozilla.org/zh-CN/docs/Web/Manifest#lang
   manifest: {
     id: scope,
@@ -21,7 +21,7 @@ export const pwaConfig: any = {
     theme_color: "#fff",
     icons: [
       {
-        src: "/logo.png",
+        src: "/kiwi.png",
         sizes: "200x200",
         type: "image/png",
       },

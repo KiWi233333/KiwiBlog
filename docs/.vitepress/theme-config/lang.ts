@@ -6,8 +6,20 @@ export const langCN: any = {
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     nav: [
-      { text: "首页", link: "/" },
-      { text: "博客", link: "/blog" },
+      { text: "首 页", link: "/" },
+      { text: "博 客", link: "/blog" },
+      {
+        text: '项 目',
+        items: [
+          { text: '极物圈', link: 'https://github.com/KiWi233333/jiwu-mall-web', },
+          { text: '极物聊天（Election）', link: 'https://github.com/KiWi233333/jiwu-mall-chat-electron', },
+          { text: '麦当劳（鸿蒙）', link: 'https://github.com/KiWi233333/McDonalds-Harmonry-Js', },
+          { text: 'Gs66-OC-EFI', link: 'https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore', },
+          { text: '美宜购（Mobile）', link: 'https://github.com/KiWi233333/shop-front-mobile-mall', },
+          { text: 'KiwiBlog', link: 'https://github.com/KiWi233333/KiwiBlog', },
+          { text: 'Kiwi博客', link: 'https://github.com/KiWi233333/kiwi-blog-while-simple', },
+        ]
+      }
     ],
     //页脚
     footer: {
