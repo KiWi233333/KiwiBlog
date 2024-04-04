@@ -6,6 +6,8 @@
 
 项目地址：[Netlify 部署](https://kiwi233.top)
 
-![首页](./public/image2.png)
+![首页](./public/image.png)
 
-![首页2](./public/image.png)
+![博客](./public/image2.png)
+
+![文章](./public/image3.png)
