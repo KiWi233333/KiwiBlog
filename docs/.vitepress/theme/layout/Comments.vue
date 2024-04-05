@@ -9,8 +9,10 @@ const comments = ref<HTMLElement>();
 
 // 非首页时加载评论组件
 watchEffect(() => {
+  console.log(page.value.relativePath);
+  
   if (page.value.relativePath && page.value.relativePath !== "index.md") {
-    setComments();
+    initComments();
   }
 });
 
@@ -29,14 +31,10 @@ onUnmounted(() => {
 });
 
 function watchMsg(msg: MessageEvent) {
-  console.log(msg);
-  
-  if (msg.origin === "https://beaudar.lipk.org") {
-    setTheme();
-  }
+  setTheme();
 }
 
-function setComments() {
+function initComments() {
   if (!inBrowser) {
     return;
   }
@@ -45,11 +43,9 @@ function setComments() {
     script.src = "https://beaudar.lipk.org/client.js";
     // TODO: 修改为自己的配置
     script.setAttribute("repo", "KiWi233333/KiwiBlog");
-    script.setAttribute("issue-term", "title");
-    script.setAttribute("issue-label", "url");
+    script.setAttribute("issue-term", "url");
     script.setAttribute("branch", "main");
     script.setAttribute("crossorigin", "anonymous");
-    script.setAttribute("label", "💬评论");
     script.setAttribute("theme", "preferred-color-scheme");
     script.setAttribute("comment-order", "desc");
     script.setAttribute("input-position", "top");
