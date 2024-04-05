@@ -29,6 +29,8 @@ onUnmounted(() => {
 });
 
 function watchMsg(msg: MessageEvent) {
+  console.log(msg);
+  
   if (msg.origin === "https://beaudar.lipk.org") {
     setTheme();
   }
@@ -44,13 +46,13 @@ function setComments() {
     // TODO: 修改为自己的配置
     script.setAttribute("repo", "KiWi233333/KiwiBlog");
     script.setAttribute("issue-term", "title");
-    script.setAttribute("label", "💬评论");
+    script.setAttribute("issue-label", "url");
     script.setAttribute("branch", "main");
-    script.setAttribute("issue-label", "pathname");
+    script.setAttribute("crossorigin", "anonymous");
+    script.setAttribute("label", "💬评论");
     script.setAttribute("theme", "preferred-color-scheme");
     script.setAttribute("comment-order", "desc");
     script.setAttribute("input-position", "top");
-    script.setAttribute("crossorigin", "anonymous");
     script.async = true;
     comments.value.innerHTML = "";
     comments.value.appendChild(script);

@@ -42,7 +42,7 @@ const projectList = ref<CardItem[]>([
 <template>
   <div class="content animate-fade-in">
     <!-- 左侧 -->
-    <div data-fades class="left sm:w-full bg-transparent  w-2/3 mx-a card">
+    <div data-fades class="left sm:w-full bg-transparent  w-2/3 mx-a card card-df-br">
       <div class="top">
         <img src="/avatar.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
@@ -111,7 +111,6 @@ const projectList = ref<CardItem[]>([
   >.card {
     --at-apply: 'p-6 sm:p-10 border-default';
     border-radius: 1rem;
-    backdrop-filter: blur(1rem);
 
     p {
       letter-spacing: 0.02em;
