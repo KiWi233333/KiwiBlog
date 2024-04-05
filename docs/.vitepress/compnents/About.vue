@@ -101,7 +101,6 @@ const projectList = ref<CardItem[]>([
 <style scoped lang="scss">
 .content {
   width: 100%;
-  margin-top: 2rem;
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: start;
