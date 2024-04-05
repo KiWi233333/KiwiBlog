@@ -6,10 +6,10 @@ export const langCN: any = {
     sidebarMenuLabel: "菜单",
     returnToTopLabel: "返回顶部",
     nav: [
-      { text: "首 页", link: "/" },
-      { text: "博 客", link: "/blog" },
+      { text: "首页", link: "/" },
+      { text: "博客", link: "/blog" },
       {
-        text: '项 目',
+        text: '项目',
         items: [
           { text: '极物圈', link: 'https://github.com/KiWi233333/jiwu-mall-web', },
           { text: '极物聊天（Election）', link: 'https://github.com/KiWi233333/jiwu-mall-chat-electron', },
