@@ -5,6 +5,7 @@ const isInstalled = ref<boolean>(false);
 onMounted(() => {
   isInstalled.value = Boolean(navigator.serviceWorker.controller);
   window.addEventListener('beforeinstallprompt', e => {
+    isInstalled.value = Boolean(navigator.serviceWorker.controller);
     // Prevent Chrome 67 and earlier from automatically showing the prompt
     e.preventDefault();
     // 保存事件
