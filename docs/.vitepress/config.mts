@@ -54,6 +54,7 @@ export default withPwa(defineConfig({
           ".vitepress",
           "dev-dist",
           "public",
+          "*.png",
         ], // 忽略的文件列表
         sideBarItemsResolved(data) {
           return data

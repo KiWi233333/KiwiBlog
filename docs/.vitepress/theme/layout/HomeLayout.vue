@@ -2,24 +2,53 @@
 <script setup lang="ts">
 import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide } from 'vue'
+import { nextTick, provide, onMounted, ref } from 'vue'
 import PwaInstallBtn from './PwaInstallBtn.vue';
 import ObserverTool from './ObserverTool.vue';
 import NavBarTitle from './NavBarTitle.vue';
 import Comments from './Comments.vue';
 import AnFuTree from './AnFuTree.vue';
 const { isDark } = useData()
+const isToggleLoading = ref(false)
 
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
-provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
+provide('toggle-appearance', toggleTheme)
+const { Layout } = DefaultTheme
+
+
+onMounted(() => {
+  window.addEventListener("keydown", keyToggleTheme)
+})
+
+function keyToggleTheme(e: KeyboardEvent) {
+  if (e?.altKey && e?.key && e?.key === "t") {
+    e.preventDefault()
+    // 计算屏幕中心坐标
+    const centerX = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2;
+    const centerY = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2;
+    toggleTheme({
+      clientX: +centerX,
+      clientY: +centerY,
+    } as MouseEvent);
+  }
+}
+
+/**
+ * 动画切换主题
+ * @param event 事件参数 
+ */
+async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
+  if (isToggleLoading.value) {
+    return
+  }
   if (!enableTransitions()) {
     isDark.value = !isDark.value
     return
   }
-
+  isToggleLoading.value = true
   const clipPath = [
     `circle(0px at ${x}px ${y}px)`,
     `circle(${Math.hypot(
@@ -43,9 +72,11 @@ provide('toggle-appearance', async ({ clientX: x, clientY: y }: MouseEvent) => {
       pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
     }
   )
+  // 结束动画
   document.documentElement.classList.remove("stop-transition");
-})
-const { Layout } = DefaultTheme 
+  isToggleLoading.value = false
+}
+
 </script>
 
 <template>
