@@ -32,7 +32,7 @@ const projectList = ref<CardItem[]>([
   },
   {
     title: "简约博客",
-    icon: "https://blogs.kiwi233.top/public/image/icon/favicon.ico",
+    icon: "/kiwi-fruit.svg",
     link: "https://blogs.kiwi233.top/",
     details: "H5C3+js+jq+bootstrap5响应式博客简约静态网站"
   },

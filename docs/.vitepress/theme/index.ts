@@ -13,7 +13,6 @@ export default {
   extends: DefaultTheme,
   Layout: HomeLayout,
   enhanceApp({ app, router, siteData }) {
-    app.component('HomeLayout', HomeLayout)
-      .component("NavBarTitle", NavBarTitle)
+    app.component("NavBarTitle", NavBarTitle)
   }
 } satisfies Theme
