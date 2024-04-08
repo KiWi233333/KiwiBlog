@@ -9,9 +9,4 @@ footer: true
   const AboutCom = About
 </script>
 
-<div >
-  <AboutCom class="mt-2rem"/>
-</div>
-
-<style  lang="scss">
-</style>
+<AboutCom class="mt-2rem"/>
