@@ -40,9 +40,9 @@ const projectList = ref<CardItem[]>([
 </script>
 
 <template>
-  <div class="content animate-fade-in">
+  <div class="content">
     <!-- 左侧 -->
-    <div data-fades class="left sm:(w-full card-df-br) w-2/3 mx-a card bg-transparent ">
+    <div data-fades data-fade class="left w-2/3 mx-a sm:(w-full) content-card  bg-transparent">
       <div class="top">
         <img src="/avatar.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
@@ -71,10 +71,12 @@ const projectList = ref<CardItem[]>([
       </div>
     </div>
     <!-- 右侧 -->
-    <div data-fades style="--delay: 60ms;" class="right card card-df-br">
+    <div data-fades data-fade style="--delay: 60ms;" class="content-card right">
       <!-- 关于我 -->
       <h1>About Me
-        <NavBarTitle class="kiwi" />
+        <div class=" hidden sm:block">
+          <NavBarTitle class="kiwi" />
+        </div>
       </h1>
       <p>💻 正在学习的独立开发者</p>
       <p>🧠 有创意点子就会尝试</p>
@@ -90,8 +92,8 @@ const projectList = ref<CardItem[]>([
       </div>
       <!-- 项目 -->
       <h2>Projects</h2>
-      <div data-fades class="project-list">
-        <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" />
+      <div data-fades class="project-list ">
+        <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" />
       </div>
       <a href="/blog" class="card-df p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
         Go！</a>
@@ -107,10 +109,7 @@ const projectList = ref<CardItem[]>([
   grid-gap: 2rem;
   position: relative;
 
-  >.card {
-    --at-apply: 'p-8 sm:p-10 border-default';
-    border-radius: 1rem;
-
+  >.content-card {
     p {
       letter-spacing: 0.02em;
       height: 0.8em;
@@ -118,12 +117,12 @@ const projectList = ref<CardItem[]>([
   }
 
   .left {
-    --at-apply: "bg-none static border-0 sm:(sticky border-default)";
     top: 6rem;
     left: 0;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    --at-apply: "bg-none static border-0 sm:(sticky border-default)";
 
     .top {
       display: flex;
@@ -152,8 +151,6 @@ const projectList = ref<CardItem[]>([
 
     // 链接
     .links {
-      border-top: var(--border-default);
-      padding: 1em 0 0 0;
       display: flex;
       gap: 0.4em;
       width: 100%;
@@ -163,6 +160,7 @@ const projectList = ref<CardItem[]>([
         height: 1.6em;
 
         img {
+          --at-apply: "border-default";
           object-fit: cover;
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           border-radius: 6px;
@@ -219,5 +217,9 @@ const projectList = ref<CardItem[]>([
       }
     }
   }
+}
+
+.content-card {
+  --at-apply: "p-8  border-default card-df-br rounded-3 sm:p-10"
 }
 </style>

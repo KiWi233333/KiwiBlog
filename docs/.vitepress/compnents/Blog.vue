@@ -39,8 +39,6 @@ const projectList = ref<CardItem[]>([
     details: "正在建设...",
   }
 ])
-
-
 </script>
 
 <template>
