@@ -63,7 +63,8 @@ export default withPwa(defineConfig({
         sideBarItemsResolved(data) {
           return data
         },
-      }),
+      }
+      ),
     ]
   },
   vue: {

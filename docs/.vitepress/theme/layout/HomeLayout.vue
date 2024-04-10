@@ -97,7 +97,7 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
       <AnFuTree />
     </template>
     <template #doc-after>
-      <Comments />
+      <Comments class="my-2" />
     </template>
   </Layout>
 </template>
