@@ -22,16 +22,16 @@ const projectList = ref<CardItem[]>([
     link: "/后端/Java/Java基础/Java基础-面向对象"
   },
   {
-    title: "其他",
-    icon: "📁",
-    details: "正在完善中...",
-    link: "/其他/1.开始"
-  },
-  {
     title: "架构",
     icon: "🧶",
     details: "系统框架设计、系统模式等",
     link: "/架构/什么是Sass系统"
+  },
+  {
+    title: "其他",
+    icon: "📁",
+    details: "Vitepress配置等",
+    link: "/其他/1.开始"
   },
   {
     title: "正在建设",
@@ -49,7 +49,7 @@ const projectList = ref<CardItem[]>([
     <div data-fades class="flex flex-col gap-4">
       <FilesCard :data="p" v-for="(p, i) in projectList" :key="i">
         <template #icon>
-          <strong text-2rem>{{ p.icon }}</strong>
+          <strong text-2rem class="icon">{{ p.icon }}</strong>
         </template>
       </FilesCard>
     </div>
