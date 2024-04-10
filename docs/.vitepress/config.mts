@@ -53,12 +53,16 @@ export default withPwa(defineConfig({
         ignoreList: [
           ".vitepress",
           "dev-dist",
+          "assets",
+          "asset",
+          "images",
           "public",
-          "*.png",
+          "image.png",
+
         ], // 忽略的文件列表
         sideBarItemsResolved(data) {
           return data
-        }
+        },
       }),
     ]
   },
