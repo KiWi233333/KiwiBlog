@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ?  'a': 'div' " :href="data.link" target="_blank" class="card-df-br link-cark"
+  <component :is="data.link ? 'a' : 'div'" :href="data.link" target="_blank" class="card-default"
     :class="{ 'no-link': !data.link }">
     <slot name="icon">
       <div class="icon" v-if="data.icon?.startsWith('i-')" :class="data.icon" />
@@ -11,7 +11,7 @@
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="name">
-        <small style="opacity: 0.8;">{{ data.details }}</small>
+        <small op-70>{{ data.details }}</small>
       </slot>
     </div>
   </component>
@@ -30,7 +30,7 @@ withDefaults(defineProps<{
 });
 </script>
 <style scoped lang="scss">
-.card-df-br {
+.card-default {
   display: flex;
   align-items: center;
   gap: 1em;
@@ -39,7 +39,14 @@ withDefaults(defineProps<{
   border-radius: 10px;
   z-index: 1;
   transition: all 0.2s ease-in-out 0s;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
+
+  text-decoration: none !important;
+  color: inherit;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.12) 0px -3px 0px inset;
+
+  &.no-link {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
+  }
 
   .active-dot {
     width: 1em;
@@ -48,17 +55,13 @@ withDefaults(defineProps<{
     background: var(--vp-c-indigo-3);
   }
 
-  a {
-    text-decoration: none !important;
-    color: inherit;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.12) 0px -3px 0px inset;
 
-    &:hover,
-    &:active {
-      box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
-    }
+  &:hover,
+  &:active {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
   }
-.icon,
+
+  .icon,
   img {
     width: 3em;
     height: 3em;
