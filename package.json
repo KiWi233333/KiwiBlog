@@ -1,5 +1,5 @@
 {
-  "name": "blog",
+  "name": "kiwi-blog",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -20,7 +20,7 @@
     "@iconify-json/solar": "^1.1.9",
     "@vite-pwa/vitepress": "^0.4.0",
     "@vueuse/core": "^10.9.0",
-    "unocss": "0.59.0",
+    "unocss": "0.59.1",
     "vite-plugin-vitepress-auto-sidebar": "^1.6.3",
     "vitepress": "^1.0.2",
     "vue": "^3.4.21"

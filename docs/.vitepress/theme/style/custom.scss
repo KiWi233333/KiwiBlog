@@ -200,5 +200,19 @@ html:hover .VPNav {
   --at-apply: "card-df"
 }
 
+.VPSidebar {
+  animation: fade-in-left-df 0.3s ease;
+}
 
 
+@keyframes fade-in-left-df {
+  0% {
+    opacity: 0;
+    transform: translateX(-20%);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+
+}

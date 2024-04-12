@@ -40,7 +40,7 @@ export const pwaConfig: any = {
         urlPattern: "/^(https|http)://*.kiwi2333.top/font/* /i",
         handler: "CacheFirst",
         options: {
-          cacheName: "jiwuquan-fonts-cache",
+          cacheName: "jiwu-fonts-cache",
           expiration: {
             maxEntries: 10,
             maxAgeSeconds: 60 * 60 * 24 * 31, // <== 31 days
