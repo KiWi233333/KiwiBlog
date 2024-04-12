@@ -155,18 +155,15 @@ const projectList = ref<CardItem[]>([
       gap: 0.4em;
       width: 100%;
 
-      a {
+      img {
         width: 1.6em;
         height: 1.6em;
-
-        img {
           --at-apply: "border-default";
           object-fit: cover;
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           border-radius: 6px;
           overflow: hidden;
         }
-      }
     }
   }
 
