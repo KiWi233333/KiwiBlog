@@ -48,14 +48,14 @@ const projectList = ref<CardItem[]>([
         <img src="/avatar.png" class="avatar" alt="头像">
         <h3 style='--lv: 1;margin: 0;' data-fade>{{ selfName }}</h3>
         <!-- 联系 -->
-        <div data-fades class="w-full border-default border-0 border-y-1px py-2" data-fade>
-          <small class="flex-row-c-c gap-1">
+        <div data-fades class="w-full border-default border-0 border-y-1px py-2 " data-fade>
+          <small class="flex-row-bt-c w-full h-2rem">
             <i class="i-carbon:location"></i>
             <a target="_blank"
               href="https://www.bing.com/maps?osid=414f6073-28b0-4f10-af33-92d146a2845c&cp=23.171926~113.203812&lvl=11&pi=0&imgid=2cf04fdd-6730-43f9-a96f-c9e0a91a8e11&v=2&sV=2&form=S00027"
               style="color: inherit;">广东省广州市天河</a>
           </small>
-          <small class="flex-row-c-c gap-1">
+          <small class="flex-row-bt-c w-full h-2rem">
             <i class="i-carbon:email"></i>
             <a target="_blank" href="mailto:kiwi2333@qq.com" style="color: inherit;">kiwi2333@qq.com</a>
           </small>

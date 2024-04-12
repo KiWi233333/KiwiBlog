@@ -1,16 +1,6 @@
-.VPNav {
-  opacity: 0.7;
-  transition: opacity 0.3s !important;
-}
-html:hover .VPNav {
-  opacity: 1;
-  .home {
-    .top {
-      border: 1px solid #b9b9b910;
-      background-color: transparent !important;
-      backdrop-filter: blur(12px);
-    }
-  }
+.VPNav .home {
+  background-color: transparent !important;
+  backdrop-filter: blur(1rem);
 }
 
 /* 搜索 */
@@ -24,7 +14,6 @@ html:hover .VPNav {
   .DocSearch-Button-Keys {
     border-radius: 4rem;
   }
-
 }
 #VPContent > div > div.VPHero.has-image.VPHomeHero > div > div.main > p {
   margin: 0.5em 0 0.2em 0;
@@ -128,9 +117,9 @@ html:hover .VPNav {
 
 @for $i from 1 through 30 {
   .VPDocOutlineItem > li:nth-child(#{$i}) {
-  --delay: 50ms;
-  --anima: latter-slice-left;
-  --lv: #{$i};
+    --delay: 50ms;
+    --anima: latter-slice-left;
+    --lv: #{$i};
   }
 }
 
@@ -191,19 +180,17 @@ html:hover .VPNav {
   margin: 0 auto;
 }
 
-
 .VPLink.link.VPNavBarMenuLink span {
   letter-spacing: 0.4em;
 }
 
 .pager .VPLink {
-  --at-apply: "card-df"
+  --at-apply: "card-df";
 }
 
 .VPSidebar {
   animation: fade-in-left-df 0.3s ease;
 }
-
 
 @keyframes fade-in-left-df {
   0% {
@@ -214,5 +201,4 @@ html:hover .VPNav {
     opacity: 1;
     transform: none;
   }
-
 }
