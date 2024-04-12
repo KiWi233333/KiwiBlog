@@ -42,7 +42,7 @@ const projectList = ref<CardItem[]>([
 </script>
 
 <template>
-  <div data-fades>
+  <div data-fades w-full>
     <h1 my-2em tracking-0.2em>Blog | 博客 </h1>
     <div data-fades class="flex flex-col gap-4">
       <FilesCard :data="p" v-for="(p, i) in projectList" :key="i">
