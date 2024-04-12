@@ -37,6 +37,7 @@ const projectList = ref<CardItem[]>([
     details: "H5C3+js+jq+bootstrap5响应式博客简约静态网站"
   },
 ])
+
 </script>
 
 <template>
@@ -158,7 +159,7 @@ const projectList = ref<CardItem[]>([
       img {
         width: 1.6em;
         height: 1.6em;
-          --at-apply: "border-default";
+        --at-apply: "border-default";
           object-fit: cover;
           box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
           border-radius: 6px;
@@ -184,8 +185,8 @@ const projectList = ref<CardItem[]>([
 
     .project-list {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
       gap: 1rem 1rem;
+      --at-apply: "grid grid-cols-1 lg:grid-cols-2"
     }
   }
 }
@@ -196,23 +197,15 @@ const projectList = ref<CardItem[]>([
     display: grid;
     grid-template-columns: 1fr;
 
-    .left.card-df {
+    .left {
       position: static;
-      background-color: transparent;
+      background-color: transparent !important;
+      
+        backdrop-filter: none;
       border: 0;
       margin: auto;
-
-      .avatar {
-        border-radius: 50%;
-      }
     }
 
-    .right {
-
-      .project-list {
-        grid-template-columns: 1fr;
-      }
-    }
   }
 }
 
