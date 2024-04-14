@@ -44,8 +44,8 @@ const projectList = ref<CardItem[]>([
 <template>
   <div data-fades w-full>
     <h1 my-2em tracking-0.2em>Blog | 博客 </h1>
-    <div data-fades class="flex flex-col gap-4">
-      <FilesCard :data="p" v-for="(p, i) in projectList" :key="i">
+    <div data-fades class="flex flex-col  gap-4">
+      <FilesCard class="overflow-hidden truncate w-full " :data="p" v-for="(p, i) in projectList" :key="i">
         <template #icon>
           <strong text-2rem class="icon">{{ p.icon }}</strong>
         </template>

@@ -1,7 +1,7 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: doc
-title: "Pwa配置"
+title: "Pwa日常配置"
 ---
 
 # PWA 配置初始化模板

@@ -17,10 +17,12 @@
   </component>
 </template>
 <script setup lang="ts">
+import { ComputedRef } from 'vue';
+
 export interface CardItem {
   icon?: string;
   link?: boolean | string;
-  title?: string;
+  title?: string | ComputedRef<string>;
   details?: string;
   active?: boolean;
 }
