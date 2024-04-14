@@ -28,6 +28,12 @@ const projectList = ref<CardItem[]>([
     link: "/架构/什么是Sass系统"
   },
   {
+    title: "项目",
+    icon: "🎃",
+    details: "项目开发、项目设计等",
+    link: "/项目/麦当劳"
+  },
+  {
     title: "其他",
     icon: "📁",
     details: "Vitepress配置等",
