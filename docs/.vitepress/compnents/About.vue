@@ -2,13 +2,27 @@
 import NavBarTitle from '../theme/layout/NavBarTitle.vue';
 import { selfName } from '../theme-config/constant';
 import DefaultCard, { CardItem } from './DefaultCard.vue';
-import { ref } from 'vue';
+import { computed, ref } from 'vue';
+
+const version = ref( "v0.0.0") 
+
+fetch('https://api.github.com/repos/KiWi233333/KiwiBlog/releases/latest').then((res)=>{
+  res.json().then((data)=>{
+    version.value = data.tag_name || "v0.0.0"
+  }).catch((err)=>{})
+})
+
 // @unocss-include
 const doingList = ref<CardItem[]>([
   {
     title: "Web Developer",
     icon: "i-solar:code-2-bold-duotone ",
     details: "A Developer with a passion for creating innovative and user-friendly web applications."
+  },
+  {
+    title: computed(()=>"V" + version.value),
+    icon: "i-solar:atom-linear",
+    details: "The blog is being updated to a new version, with a more modern and responsive design."
   },
 ])
 const projectList = ref<CardItem[]>([

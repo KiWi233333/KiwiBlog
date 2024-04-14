@@ -1,6 +1,10 @@
 .VPNav .home {
   background-color: transparent !important;
   backdrop-filter: blur(1rem);
+  transition: all 0.15s ease-in-out ;
+  &.top {
+    backdrop-filter: none;
+  }
 }
 
 /* 搜索 */
