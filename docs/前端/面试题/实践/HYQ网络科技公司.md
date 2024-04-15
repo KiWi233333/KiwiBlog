@@ -1,10 +1,10 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: doc
-title: "黑眼圈网路科技公司"
+title: "HYQ网络科技公司"
 ---
 
-# 黑眼圈网路科技公司
+# HYQ网络科技公司
 
 ## 1、`var` 、 `let` 和 `const` 区别
 
