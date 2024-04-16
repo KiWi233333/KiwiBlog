@@ -99,7 +99,7 @@ const projectList = ref<CardItem[]>([
       <!-- 最近在做什么 -->
       <h2>What have I been doing</h2>
       <div data-fades class=" project-list">
-        <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i">
+        <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df-br">
           <template #icon>
             <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
           </template>
@@ -108,7 +108,7 @@ const projectList = ref<CardItem[]>([
       <!-- 项目 -->
       <h2>Projects</h2>
       <div data-fades class="project-list ">
-        <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" />
+        <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" class="card-df-br" />
       </div>
       <a href="/blog" class="card-df p-2 px-4 hover:shadow mt-4 block ml-a border-default w-fit rounded-10px">Just
         Go！</a>
