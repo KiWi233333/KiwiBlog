@@ -47,7 +47,7 @@ chunkSplitPlugin({
 |成果|优化项|
 |---|---|
 |![成果](assets/nuxt优化/image-3.png)|vite分包、拆包|
-|![成果](assets/nuxt优化/image-4.png)|`lightnight`|
+|![成果](assets/nuxt优化/image-6.png)|`lightnight`|
 
 ## #最后考虑
 
