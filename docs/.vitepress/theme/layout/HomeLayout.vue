@@ -67,7 +67,7 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
   await document.documentElement.animate(
     { clipPath: isDark.value ? clipPath.reverse() : clipPath },
     {
-      duration: 300,
+      duration: 500,
       easing: 'ease-in',
       pseudoElement: `::view-transition-${isDark.value ? 'old' : 'new'}(root)`
     }
@@ -103,7 +103,6 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
 </template>
 
 <style>
-
 /* // 关闭所有动画渐变保证变化的流畅 */
 html.stop-transition * {
   transition: none !important;

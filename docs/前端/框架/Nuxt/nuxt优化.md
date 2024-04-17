@@ -49,6 +49,7 @@ chunkSplitPlugin({
 |![成果](assets/nuxt优化/image-3.png)|vite分包、拆包|
 |![成果](assets/nuxt优化/image-6.png)|`lightnight`|
 
-## #最后考虑
+## 其他优化待定
 
-### 1）web worker进程渲染 [Partytown🎉](https://zhuanlan.zhihu.com/p/452678872)
+### 1）web worker进程渲染优化聊天定时 [Partytown🎉](https://zhuanlan.zhihu.com/p/452678872)
+
