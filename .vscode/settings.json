@@ -2,5 +2,8 @@
   "editor.defaultFormatter": "antfu.vite",
   "[vue]": {
     "editor.defaultFormatter": "Vue.volar"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "vscode.typescript-language-features"
   }
 }
