@@ -1,0 +1,17 @@
+<script setup lang="ts">
+import UserInfoCard from './UserInfoCard.vue';
+import Container from './Container.vue';
+import Catalog from './Catalog.vue';
+
+</script>
+
+<template>
+  <div class="grid mb-20 grid-cols-1  md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_4fr_2fr] gap-8 items-start">
+    <!-- 左侧 -->
+    <UserInfoCard class="md:sticky top-6rem left-0 " />
+    <!-- 内容 -->
+    <Container />
+    <!-- 右侧 -->
+    <Catalog class="md:sticky top-6rem left-0 w-full" />
+  </div>
+</template>

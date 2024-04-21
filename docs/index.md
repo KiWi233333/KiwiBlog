@@ -5,8 +5,7 @@ footer: true
 ---
 
 <script setup lang="ts">
-  import About from './.vitepress/compnents/About.vue'
-  const AboutCom = About
+  import About from './.vitepress/compnents/About/index.vue'
 </script>
 
-<AboutCom class="mt-2rem"/>
+<About class="mt-2rem"/>

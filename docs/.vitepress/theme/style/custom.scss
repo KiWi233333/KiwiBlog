@@ -1,7 +1,7 @@
 .VPNav .home {
   background-color: transparent !important;
   backdrop-filter: blur(1rem);
-  transition: all 0.15s ease-in-out ;
+  transition: all 0.15s ease-in-out;
   &.top {
     backdrop-filter: none;
   }
@@ -10,19 +10,56 @@
 /* 搜索 */
 #local-search {
   margin-left: auto;
-  transform: scale(0.84);
+  transform: scale(0.75);
   button {
-    border-radius: 4rem;
+    border-radius: 0.6em;
     padding: 0.8rem 1rem;
   }
   .DocSearch-Button-Keys {
+    margin-left: auto;
     border-radius: 4rem;
   }
 }
+
+.VPLocalSearchBox {
+  --at-apply: "animate-fade-in animate-duration-300";
+  .shell {
+    --at-apply: "animate-fade-in-down animate-ease animate-duration-300";
+    ul {
+      li {
+        --at-apply: "animate-fade-in animate-ease animate-duration-200";
+      }
+    }
+  }
+}
+
+/* VPHomeFeatures  */
+.VPHomeFeatures .VPFeature {
+  border-color: #b9b9b910;
+  &:hover {
+    box-shadow: var(--default-shadow);
+  }
+}
+
+// 卡片
+.card-default {
+  backdrop-filter: blur(1rem);
+  border: 1px solid #b9b9b927;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px;
+}
+
+.VPContent {
+  .content-container {
+    h1:nth-of-type(1) {
+      text-align: center;
+    }
+  }
+}
+
+// 文档判断内容渐入
 #VPContent > div > div.VPHero.has-image.VPHomeHero > div > div.main > p {
   margin: 0.5em 0 0.2em 0;
 }
-
 #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
@@ -64,34 +101,12 @@
     }
   }
 }
-
-/* VPHomeFeatures */
-.VPHomeFeatures .VPFeature {
-  border-color: #b9b9b910;
-  &:hover {
-    box-shadow: var(--default-shadow);
-  }
-}
-
-// 卡片
-.card-default {
-  backdrop-filter: blur(1rem);
-  border: 1px solid #b9b9b927;
-  box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 1px;
-}
-
-.VPContent {
-  .content-container {
-    h1:nth-of-type(1) {
-      text-align: center;
-    }
-  }
-}
-
 // 渐入动画
+// 侧边菜单栏
 #VPSidebarNav .VPSidebarItem {
   --anima: latter-slice-right !important;
 }
+// 右边目录
 #VPContent .VPDocAsideOutline .content > * {
   --anima: latter-slice-left !important;
 }
@@ -106,7 +121,7 @@
   --delay: 0.1s;
   --start: 0ms;
   --anima: latter-slice-top;
-  animation: var(--anima) 0.5s both;
+  animation: var(--anima) 0.4s both;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
 }
 
@@ -179,8 +194,8 @@
   animation: none;
 }
 
-.VPDoc {
-  max-width: 90vw;
+.is-home .vp-doc {
+  max-width: 1500px !important;
   margin: 0 auto;
 }
 
@@ -205,4 +220,9 @@
     opacity: 1;
     transform: none;
   }
+}
+
+
+.VPHome {
+  margin-bottom: 0 !important;
 }
