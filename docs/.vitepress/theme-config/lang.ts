@@ -8,6 +8,7 @@ export const langCN: any = {
     nav: [
       { text: "首页", link: "/" },
       { text: "博客", link: "/blog" },
+      { text: "聊天", link: "/chat" },
       {
         text: '项目',
         items: [

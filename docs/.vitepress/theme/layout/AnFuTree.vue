@@ -112,5 +112,12 @@ onMounted(async () => {
 </script>
 
 <template>
-  <canvas ref="canvasRef" class="fixed top-0 w-1920px min-h-100dvh overflow-hidden left-0 -z-1"></canvas>
+  <canvas ref="canvasRef" id="treeCanvasRef" :class="{ 'drawing': !stopped }"
+    class="hidden sm:block fixed top-0 w-1920px min-h-100dvh overflow-hidden left-0 -z-1"></canvas>
 </template>
+
+<style lang="scss">
+html.stop-transition #treeCanvasRef.drawing {
+  display: none !important;
+}
+</style>

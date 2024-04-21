@@ -1,28 +1,46 @@
 <!-- https://vitepress.dev/guide/extending-default-theme#using-view-transitions-api -->
 <script setup lang="ts">
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import { nextTick, provide, onMounted, ref } from 'vue'
+import mediumZoom from "medium-zoom";
+import { nextTick, provide, watch, onMounted, ref } from 'vue'
 import PwaInstallBtn from './PwaInstallBtn.vue';
 import ObserverTool from './ObserverTool.vue';
 import NavBarTitle from './NavBarTitle.vue';
 import Comments from './Comments.vue';
+import "medium-zoom/dist/style.css";
 import AnFuTree from './AnFuTree.vue';
 const { isDark } = useData()
 const isToggleLoading = ref(false)
 
+//  图片缩放
+const route = useRoute();
+const initZoom = () => {
+  mediumZoom(".VPContent .content-container img", {
+    background: 'rgba(0, 0, 0, 0.35)',
+    container: document.body,
+  });
+};
+onMounted(() => {
+  initZoom();
+});
+watch(
+  () => route.path,
+  () => {
+    if (route && route.path !== '/') nextTick(() => initZoom())
+  }
+);
+
+// 全局按键
 const enableTransitions = () =>
   'startViewTransition' in document &&
   window.matchMedia('(prefers-reduced-motion: no-preference)').matches
 
 provide('toggle-appearance', toggleTheme)
 const { Layout } = DefaultTheme
-
-
 onMounted(() => {
   window.addEventListener("keydown", keyToggleTheme)
 })
-
 function keyToggleTheme(e: KeyboardEvent) {
   if (e?.altKey && e?.key && e?.key === "t") {
     e.preventDefault()
@@ -178,5 +196,13 @@ html.stop-transition-all *{
     stroke: var(--vp-c-text-1);
     animation-delay: 0s;
   }
-  
+
+  /* 图片遮挡 */
+.medium-zoom-overlay {
+  z-index: 999;
+  --at-apply: 'card-df-br'
+}
+.medium-zoom-image.medium-zoom-image--opened{
+  z-index: 1000;
+}
   </style>
