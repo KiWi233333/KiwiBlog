@@ -26,7 +26,7 @@ const doingList = [
 </script>
 
 <template>
-  <div data-fades data-fade style="--delay: 60ms;" class="p-8  border-default card-df-br rounded-3 sm:p-10 right">
+  <div data-fades data-fade style="--delay: 60ms;" class="p-6 border-default card-df-br rounded-3 sm:p-8 right">
     <!-- 关于我 -->
     <h1 clear-both>About Me
       <NavBarTitle class="hidden sm:inline float-right" />
