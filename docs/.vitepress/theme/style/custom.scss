@@ -22,12 +22,12 @@
 }
 
 .VPLocalSearchBox {
-  --at-apply: "animate-fade-in animate-duration-300";
+  --at-apply: "animate-fade-in animate-duration-200";
   .shell {
-    --at-apply: "animate-fade-in-down animate-ease animate-duration-300";
+    --at-apply: "animate-fade-in-down animate-ease-out animate-duration-300";
     ul {
       li {
-        --at-apply: "animate-fade-in animate-ease animate-duration-200";
+        --at-apply: "animate-fade-in animate-ease-out animate-duration-300";
       }
     }
   }

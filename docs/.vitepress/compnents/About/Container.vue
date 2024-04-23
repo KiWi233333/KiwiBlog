@@ -3,11 +3,11 @@ import DefaultCard from '../DefaultCard.vue';
 import { computed, ref } from 'vue';
 import { projectList } from '../../store/files'
 
-const version = ref("v0.0.0")
+const version = ref("0.0.0")
 
 fetch('https://api.github.com/repos/KiWi233333/KiwiBlog/releases/latest').then((res) => {
   res.json().then((data) => {
-    version.value = data.tag_name || "v0.0.0"
+    version.value = data.tag_name || "0.0.0"
   }).catch((err) => { })
 })
 
@@ -18,7 +18,7 @@ const doingList = [
     details: "A Developer with a passion for creating innovative and user-friendly web applications."
   },
   {
-    title: computed(() => "V" + version.value),
+    title: 'v' + version.value,
     icon: "i-solar:atom-linear",
     details: "The blog is being updated to a new version, with a more modern and responsive design."
   },
@@ -37,7 +37,7 @@ const doingList = [
     <!-- 最近在做什么 -->
     <h2>What have I been doing</h2>
     <div data-fades class=" project-list">
-      <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df-br">
+      <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df">
         <template #icon>
           <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
         </template>
@@ -46,7 +46,7 @@ const doingList = [
     <!-- 项目 -->
     <h2>Projects</h2>
     <div data-fades class="project-list">
-      <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" class="card-df-br" />
+      <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" class="card-df" />
     </div>
     <a href="/blog" class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-10px mt-6">Just
       Go！</a>
