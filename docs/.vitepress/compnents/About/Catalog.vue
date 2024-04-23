@@ -5,12 +5,12 @@ import FilesCard from './FilesCard.vue';
 
 <template>
   <div data-fades class="mx-a content-card">
-    <h3 style="margin: 0;" class="border-0 pb-6 border-default border-1px tracking-0.2em">Blog | 博客</h3>
-    <div data-fades class="flex flex-col gap-4">
-      <FilesCard class="overflow-hidden truncate op-80 hover:(op-100 p-2)" v-for="(p, i) in filesList" :key="i"
+    <h3 style="margin: 0;" class="border-0 px-2 pb-6 border-default border-1px tracking-0.2em">Blog | 博客</h3>
+    <div data-fades class="flex flex-col gap-2">
+      <FilesCard class="overflow-hidden truncate p-2 op-80 hover:(op-100)" v-for="(p, i) in filesList" :key="i"
         :data="p">
         <template #icon>
-          <strong class="text-5 group-hover:text-6 transition-font-size icon">{{ p.icon }}</strong>
+          <strong class="text-4 transition-font-size icon">{{ p.icon }}</strong>
         </template>
       </FilesCard>
     </div>
@@ -18,6 +18,6 @@ import FilesCard from './FilesCard.vue';
 </template>
 <style scoped lang="scss">
 .content-card {
-  --at-apply: "p-6  border-default sm:p-8 card-df-br rounded-3";
+  --at-apply: "p-4 border-default sm:p-6 card-df-br rounded-3";
 }
 </style>
