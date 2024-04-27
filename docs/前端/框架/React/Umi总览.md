@@ -1,12 +1,13 @@
 
 # Umi 学习
 
-> [!NOTE]
+> [!TIP]
 > 文档只针对学习中会遇到的问题以及方便理解umi的整体架构，具体使用请查看官方文档。
->
-> 学习视频：[千锋教育前端框架Umi3教程，企业级必学前端框架Umi3视频](https://www.bilibili.com/video/BV1pG411879j?p=18&vd_source=5a92b42b9c4477c241fa7717e9e8504a)
-> 文档：[Umi2 官方文档](https://v2.umijs.org/zh/)
-> 最新文档：[Umi4 官方文档](https://umijs.org/zh-CN/docs/introduce)
+---
+
+- 学习视频：[千锋教育前端框架Umi3教程，企业级必学前端框架Umi3视频](https://www.bilibili.com/video/BV1pG411879j?p=18&vd_source=5a92b42b9c4477c241fa7717e9e8504a)
+- 文档：[Umi2 官方文档](https://v2.umijs.org/zh/)
+- 最新文档：[Umi4 官方文档](https://umijs.org/zh-CN/docs/introduce)
 
 ## 1、Umi 总览
 
@@ -97,7 +98,17 @@ class App extends React.Component {
 // 连接 状态管理
 export default connect((state, ownProps) => {
     return {
-        loading: state.loading.global && !state.loading.models.Verify
+        loading: state.loading.global && !state.loading.models.Verify,
+        
+        loading: state.user.effects['user/info']
     }
 })(App);
+```
+
+```js
+// 基于注解
+@connect(({ login, loading }) => ({
+  login,
+  loginLoad: loading.effects['login/login'],
+}))
 ```

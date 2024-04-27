@@ -9,8 +9,6 @@ const comments = ref<HTMLElement>();
 
 // 非首页时加载评论组件
 watchEffect(() => {
-  console.log(page.value.relativePath);
-  
   if (page.value.relativePath && page.value.relativePath !== "index.md") {
     initComments();
   }

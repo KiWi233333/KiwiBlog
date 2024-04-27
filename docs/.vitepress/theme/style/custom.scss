@@ -106,14 +106,9 @@
 #VPSidebarNav .VPSidebarItem {
   --anima: latter-slice-right !important;
 }
-// 右边目录
-#VPContent .VPDocAsideOutline .content > * {
-  --anima: latter-slice-left !important;
-}
 
 /* 段落 */
-#VPSidebarNav .VPSidebarItem,
-.VPDocOutlineItem > li,
+#VPSidebarNav .VPSidebarItem .level-1,
 #VPContent .content > div > main > div > div > *,
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
@@ -123,22 +118,33 @@
   --anima: latter-slice-top;
   animation: var(--anima) 0.4s both;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-}
-
-@for $i from 1 through 20 {
-  #VPContent .VPHero.has-image.VPHomeHero .actions > *:nth-child(#{$i}),
-  #VPSidebarNav .VPSidebarItem:nth-child(#{$i}),
-  #VPContent .content > div > main > div > div > *:nth-child(#{$i}),
-  [data-fades] > *:nth-child(#{$i}) {
-    --lv: #{$i};
+  @for $i from 1 through 20 {
+    &:nth-child(#{$i}) {
+      --lv: #{$i};
+    }
   }
 }
 
-@for $i from 1 through 30 {
-  .VPDocOutlineItem > li:nth-child(#{$i}) {
-    --delay: 50ms;
+// 右边目录
+#VPContent .aside .aside-container {
+  --lv: 0;
+  --delay: 0.1s;
+  --start: 0ms;
+  --anima: latter-slice-left;
+  animation: var(--anima) 0.4s both;
+  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+  .VPDocAsideOutline ul > li {
+    --lv: 0;
+    --delay: 0.1s;
+    --start: 0ms;
     --anima: latter-slice-left;
-    --lv: #{$i};
+    animation: var(--anima) 0.4s both;
+    animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+    @for $i from 1 through 30 {
+      &:nth-child(#{$i}) {
+        --lv: #{$i};
+      }
+    }
   }
 }
 
@@ -221,7 +227,6 @@
     transform: none;
   }
 }
-
 
 .VPHome {
   margin-bottom: 0 !important;
