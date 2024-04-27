@@ -6,11 +6,11 @@
       <img class="icon" v-else :src="data.icon" :alt="data.icon">
     </slot>
     <div class="right">
-      <slot name="name">
+      <slot name="right">
         <h4>{{ data.title }}</h4>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
-      <slot name="name">
+      <slot name="details">
         <small op-70>{{ data.details }}</small>
       </slot>
     </div>
