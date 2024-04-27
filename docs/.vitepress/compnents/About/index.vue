@@ -2,6 +2,7 @@
 import UserInfoCard from './UserInfoCard.vue';
 import Container from './Container.vue';
 import Catalog from './Catalog.vue';
+import Other from './Other.vue';
 
 </script>
 
@@ -10,7 +11,10 @@ import Catalog from './Catalog.vue';
     <!-- 左侧 -->
     <UserInfoCard class="md:sticky top-6rem left-0 " />
     <!-- 内容 -->
-    <Container />
+    <main class="flex flex-col gap-8">
+      <Container />
+      <Other />
+    </main>
     <!-- 右侧 -->
     <Catalog class="md:sticky top-6rem left-0 w-full" />
   </div>

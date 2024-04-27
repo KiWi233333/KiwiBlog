@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DefaultCard from '../DefaultCard.vue';
-import { computed, ref } from 'vue';
+import { ref } from 'vue';
 import { projectList } from '../../store/files'
 
 const version = ref("0.0.0")
@@ -14,7 +14,7 @@ fetch('https://api.github.com/repos/KiWi233333/KiwiBlog/releases/latest').then((
 const doingList = [
   {
     title: "Web Developer",
-    icon: "i-solar:code-2-bold-duotone ",
+    icon: "i-solar:code-2-bold-duotone",
     details: "A Developer with a passion for creating innovative and user-friendly web applications."
   },
   {
@@ -23,6 +23,8 @@ const doingList = [
     details: "The blog is being updated to a new version, with a more modern and responsive design."
   },
 ]
+
+
 </script>
 
 <template>
