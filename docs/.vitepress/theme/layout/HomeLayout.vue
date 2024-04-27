@@ -1,7 +1,7 @@
 <!-- https://vitepress.dev/guide/extending-default-theme#using-view-transitions-api -->
 <script setup lang="ts">
 import { useData, useRoute } from 'vitepress'
-import DefaultTheme from 'vitepress/theme'
+import DefaultTheme, { useSidebar } from 'vitepress/theme'
 import mediumZoom from "medium-zoom";
 import { nextTick, provide, watch, onMounted, ref } from 'vue'
 import PwaInstallBtn from './PwaInstallBtn.vue';
@@ -94,7 +94,6 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
   document.documentElement.classList.remove("stop-transition");
   isToggleLoading.value = false
 }
-
 </script>
 
 <template>

@@ -50,6 +50,7 @@ export default withPwa(defineConfig({
       UnoCSS(),
       AutoSidebar({
         path: "/docs",
+        collapsed: true,
         ignoreList: [
           ".vitepress",
           "dev-dist",
@@ -58,7 +59,6 @@ export default withPwa(defineConfig({
           "images",
           "public",
           "image.png",
-
         ], // 忽略的文件列表
         sideBarItemsResolved(data) {
           return data
