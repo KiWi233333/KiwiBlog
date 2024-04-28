@@ -19,7 +19,7 @@ import DefaultCard from '../DefaultCard.vue';
       </DefaultCard>
     </div>
     <!-- 添加友情链接 -->
-    <a href="/apply" class="block ml-a v-card border-default  rounded-3 px-4 py-2">加入友链~</a>
+    <a href="/apply" class="block ml-a card-df border-default  rounded-2 px-4 py-2">Join Friends！</a>
   </div>
 </template>
 <style scoped lang="scss">

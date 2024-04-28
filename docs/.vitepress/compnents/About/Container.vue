@@ -50,8 +50,7 @@ const doingList = [
     <div data-fades class="project-list">
       <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit;" class="card-df" />
     </div>
-    <a href="/blog" class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-10px mt-6">Just
-      Go！</a>
+    <a href="/blog" class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-2 mt-6">Just Go！</a>
   </div>
 </template>
 <style scoped lang="scss">
