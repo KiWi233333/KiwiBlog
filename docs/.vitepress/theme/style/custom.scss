@@ -126,27 +126,27 @@
 }
 
 // 右边目录
-#VPContent .aside .aside-container {
-  --lv: 0;
-  --delay: 0.1s;
-  --start: 0ms;
-  --anima: latter-slice-left;
-  animation: var(--anima) 0.4s both;
-  animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-  .VPDocAsideOutline ul > li {
-    --lv: 0;
-    --delay: 0.1s;
-    --start: 0ms;
-    --anima: latter-slice-left;
-    animation: var(--anima) 0.4s both;
-    animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-    @for $i from 1 through 30 {
-      &:nth-child(#{$i}) {
-        --lv: #{$i};
-      }
-    }
-  }
-}
+// #VPContent .aside .aside-container {
+//   --lv: 0;
+//   --delay: 0.1s;
+//   --start: 0ms;
+//   --anima: latter-slice-left;
+//   animation: var(--anima) 0.4s both;
+//   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+//   .VPDocAsideOutline ul > li {
+//     --lv: 0;
+//     --delay: 0.1s;
+//     --start: 0ms;
+//     --anima: latter-slice-left;
+//     animation: var(--anima) 0.4s both;
+//     animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+//     @for $i from 1 through 30 {
+//       &:nth-child(#{$i}) {
+//         --lv: #{$i};
+//       }
+//     }
+//   }
+// }
 
 [data-fade] {
   --lv: 0;
