@@ -11,14 +11,15 @@ import DefaultCard from '../DefaultCard.vue';
     <!-- 友情链接 -->
     <h3 style="margin-top: 0;" mb-2>Friends</h3>
     <div class="project-list">
-      <DefaultCard :data="p" v-for="(p, i) in friendList" :key="i">
+      <DefaultCard :data="p" v-for="(p, i) in friendList" :key="i"
+        style="box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;">
         <template #icon>
           <img class="border-default w-3em h-3em rounded-2 mr-2" :src="p.avatar"></img>
         </template>
       </DefaultCard>
     </div>
-    <!-- Other -->
-    <h3 style="margin-top: 0;" mb-2>Other</h3>
+    <!-- 添加友情链接 -->
+    <a href="/apply" class="block ml-a v-card border-default  rounded-3 px-4 py-2">加入友链~</a>
   </div>
 </template>
 <style scoped lang="scss">
