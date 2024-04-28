@@ -15,15 +15,13 @@ function initCanvas(canvas: HTMLCanvasElement, width = 1920, height = 1000, _dpi
   ctx.scale(dpi, dpi);
   return { ctx, dpi };
 }
+const r90 = 2;
+const r15 = Math.PI / 12;
 const r180 = Math.PI;
-const r90 = Math.PI / 2;
 const r60 = Math.PI / 3;
 const r30 = Math.PI / 6;
-const r15 = Math.PI / 12;
 const r120 = Math.PI / 3 * 2;
 const r360 = Math.PI * 2;
-
-
 
 function polar2cart(x = 0, y = 0, r = 0, theta = 0) {
   const dx = r * Math.cos(theta);
@@ -38,21 +36,19 @@ const f = {
   start: () => { },
 };
 
-const init = ref(5);
-const len = ref(5);
+const init = ref(4);
+const len = ref(4);
 const stopped = ref(false);
 
 watch([init, len], () => f.start());
 
-onMounted(async () => {
+onMounted(() => {
   const canvas = canvasRef.value!;
   const { ctx } = initCanvas(canvas);
   const { width, height } = canvas;
   let steps: Function[] = [];
   let prevSteps: Function[] = [];
-
   let iterations = 0;
-
   const step = (x: number, y: number, rad: number) => {
     const length = random() * len.value;
     const [nx, ny] = polar2cart(x, y, length, rad);
@@ -63,8 +59,7 @@ onMounted(async () => {
 
     const rad1 = rad + random() * r15;
     const rad2 = rad - random() * r15;
-
-    if (nx < -100 || nx > 1920 || ny < -100 || ny > 1920)
+    if (nx < -200 || nx > 1920 || ny < -200 || ny > 1920)
       return;
 
     if (iterations <= init.value || random() > 0.5)
@@ -74,7 +69,7 @@ onMounted(async () => {
   };
 
   const frame = () => {
-    iterations += 1;
+    iterations += 0.65;
     prevSteps = steps;
     steps = [];
 
@@ -91,17 +86,17 @@ onMounted(async () => {
     controls.pause();
     iterations = 0;
     ctx.clearRect(0, 0, width, height);
-    ctx.lineWidth = 1;
+    ctx.lineWidth = 0.5;
     ctx.strokeStyle = '#b9b9b930';
     prevSteps = [];
     steps = random() < 0.5
       ? [
         () => step(0, random() * 1920, 0),
-        () => step(1920, random() * 1000, r90),
+        () => step(1920, random() * 980, r90),
       ]
       : [
         () => step(random() * 1920, 0, r90),
-        () => step(random() * 1920, 1000, -r90),
+        () => step(random() * 1920, 980, -r90),
       ];
     controls.resume();
     stopped.value = false;
