@@ -43,7 +43,8 @@
  *   in custom container, badges, etc.
  * -------------------------------------------------------------------------- */
 
- :root {
+:root {
+  --vp-sidebar-width: 300px;
   --default-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   --vp-c-gray-soft: rgba(101, 117, 133, 0.16);
   --vp-c-indigo-1: #8364ff;
@@ -190,3 +191,4 @@
   background-color: #9797971c !important;
   backdrop-filter: blur(10px);
 }
+
