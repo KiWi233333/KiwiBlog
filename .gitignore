@@ -1,10 +1,10 @@
-node_modules/**
+node_modules
 
-docs/.vitepress/dist/**
+docs/.vitepress/dist
 
-docs/.vitepress/cache/**
+docs/.vitepress/cache
 
-docs/dev-dist/**
+docs/dev-dist
 
 docs/.vitepress/config.mts.timestamp-*
 # Local Netlify folder
