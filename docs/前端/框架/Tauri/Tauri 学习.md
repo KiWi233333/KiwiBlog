@@ -163,7 +163,7 @@ function onToggleWindow(type: "min" | "max" | "close") {
 
 > [参考链接](https://github.com/tauri-apps/tauri/issues/7338)
 
-首先是msi中的wix安装的失败，网络上有很多答案
+1. 首先是msi中的wix安装的失败，网络上有很多答案
 手动下载文件，并解压到C:\Users\你的用户名\AppData\Local\tauri\WixTools下，
 下载地址 <https://github.com/wixtoolset/wix3/releases/download/wix3112rtm/wix311-binaries.zip>
 下载地址<https://github.com/wixtoolset/wix3/releases/download/wix3112rtm/wix311-binaries.zip>
@@ -174,7 +174,7 @@ function onToggleWindow(type: "min" | "max" | "close") {
 重点！！！
 msi.rs中 WIX_REQUIRED_FILES 会检查这里的文件是否存在，不存在会删除文件重新下载。接下来的nsis也是同样的问题。
 
-第二！！！ nsis
+1. 第二！！！ nsis
 手动下载文件nsis 解压到C:\Users\你的用户名\AppData\Local\tauri\NSIS
 下载地址 <https://github.com/tauri-apps/binary-releases/releases/download/nsis-3/nsis-3.zip>
 下载地址www.example.com
@@ -210,3 +210,63 @@ C：\Users\用户名\AppData\Local\tauri>
 │ │ └─x86-unicode 下载的插件放这里
 │ └─Stubs  中国─小作品
 └─WixTools  公司简介
+
+> 自动化ps脚本
+
+```shell
+mkdir temp
+cd temp
+
+
+curl  https://github.com/wixtoolset/wix3/releases/download/wix3112rtm/wix311-binaries.zip -LO 
+
+Expand-Archive ./wix311-binaries.zip -DestinationPath ./WixTools
+
+curl  https://github.com/tauri-apps/binary-releases/releases/download/nsis-3/nsis-3.zip -LO 
+
+Expand-Archive ./nsis-3.zip -DestinationPath ./NSIS
+
+mv .\NSIS\nsis-3.*\* .\NSIS
+rmdir .\NSIS\nsis-3.*
+
+
+curl https://github.com/tauri-apps/binary-releases/releases/download/nsis-plugins-v0/NSIS-ApplicationID.zip -LO
+
+Expand-Archive .\NSIS-ApplicationID.zip -DestinationPath .\NSIS-ApplicationID
+
+mv .\NSIS-ApplicationID\Release\* .\NSIS\Plugins\x86-unicode
+
+curl https://github.com/tauri-apps/nsis-tauri-utils/releases/download/nsis_tauri_utils-v0.1.1/nsis_tauri_utils.dll -LO
+
+mv .\nsis_tauri_utils.dll .\NSIS\Plugins\x86-unicode
+
+mv .\NSIS ~\AppData\Local\tauri\NSIS
+mv .\WixTools ~\AppData\Local\tauri\WixTools
+
+echo "rm temp dir"
+
+rm -r .\NSIS-ApplicationID
+rm .\nsis-3.zip
+rm .\NSIS-ApplicationID.zip
+rm .\wix311-binaries.zip
+rm .\temp
+
+echo "done"
+```
+
+3. 打包应用运行出现终端？
+
+```rust
+
+#![cfg_attr(
+    all(not(debug_assertions), target_os = "windows"),
+    windows_subsystem = "windows"
+)]
+
+fn main() {
+    tauri::Builder::default()
+        .run(tauri::generate_context!())
+        .expect("failed to run app");
+}
+
+```
