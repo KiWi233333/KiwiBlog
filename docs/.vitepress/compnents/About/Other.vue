@@ -14,7 +14,7 @@ import DefaultCard from '../DefaultCard.vue';
       <DefaultCard :data="p" v-for="(p, i) in friendList" :key="i"
         style="box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;">
         <template #icon>
-          <img class="border-default w-3em h-3em rounded-2 mr-2" :src="p.avatar"></img>
+          <img class="border-default w-3em h-3em rounded-2 mr-2" alt="头像" :src="p.avatar"></img>
         </template>
       </DefaultCard>
     </div>
