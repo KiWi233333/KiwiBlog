@@ -237,3 +237,11 @@
 .VPHome {
   margin-bottom: 0 !important;
 }
+
+#VPContent .content > div > main > div > div > div.vp-adaptive-theme {
+  max-width: 90vw;
+  border-radius: 6px;
+  margin: 0 auto; 
+  box-shadow: inset rgba(0, 0, 0, 0.1) 0px 2px 5px -1px, inset rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
+  --at-apply: "border-default dark:(shadow-lg shadow-inset)"
+}
