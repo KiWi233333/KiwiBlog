@@ -1,9 +1,15 @@
 .VPNav .home {
   background-color: transparent !important;
   backdrop-filter: blur(1rem);
-  transition: all 0.15s ease-in-out;
+  transition: 0.15s ease-in-out;
+  opacity: 1;
+
   &.top {
+    opacity: 0;
     backdrop-filter: none;
+  }
+  &:hover {
+    opacity: 1;
   }
 }
 

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <div data-fades data-fade class="flex flex-col items-center mx-a sm:(w-full) content-card">
+  <div data-fades data-fade class="flex flex-col items-center mx-a sm:(w-full)">
     <img src="/avatar.png"
       class="border-default hover:(rounded-1/2) rounded-1/2 sm:rounded-3 transition-border-radius  sm:(w-1/2) mx-a"
       alt="头像">
@@ -33,16 +33,11 @@
 </template>
 
 <style lang="scss" scoped>
-.content-card {
-  --at-apply: "p-6  border-default sm:p-8 card-df-br rounded-3";
-}
-
 @media (max-width: 640px) {
   .content-card {
     border: 0;
   }
 }
-
 .font-steps {
   overflow: hidden;
   width: 0;

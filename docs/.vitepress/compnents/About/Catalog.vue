@@ -4,7 +4,7 @@ import FilesCard from './FilesCard.vue';
 </script>
 
 <template>
-  <div data-fades class="mx-a content-card">
+  <div data-fades class="mx-a">
     <h3 style="margin: 0;" class="border-0 px-2 pb-6 border-default border-1px tracking-0.2em">Blog | 博客</h3>
     <div data-fades class="flex flex-col gap-2">
       <FilesCard class="overflow-hidden truncate p-2 op-80 hover:(op-100)" v-for="(p, i) in filesList" :key="i"
@@ -16,8 +16,3 @@ import FilesCard from './FilesCard.vue';
     </div>
   </div>
 </template>
-<style scoped lang="scss">
-.content-card {
-  --at-apply: "p-4 border-default sm:p-6 card-df-br rounded-3";
-}
-</style>

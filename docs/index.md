@@ -8,4 +8,4 @@ footer: true
   import About from './.vitepress/compnents/About/index.vue'
 </script>
 
-<About class="mt-2rem"/>
+<About class="mt-4"/>
