@@ -40,7 +40,6 @@ withDefaults(defineProps<{
     .icon {
       background-color: aqua;
     }
-
     background-color: #7c7c7c15;
   }
 }

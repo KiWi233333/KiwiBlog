@@ -6,8 +6,7 @@ import DefaultCard from '../DefaultCard.vue';
 </script>
 
 <template>
-  <div data-fades grid-(~ gap-4 cols-1) data-fade style="--delay: 60ms;"
-    class="p-6 border-default card-df-br rounded-3 sm:p-8 right">
+  <div data-fades grid-(~ gap-4 cols-1) data-fade style="--delay: 60ms;" class="p-6 sm:p-8 right">
     <!-- 友情链接 -->
     <h3 style="margin-top: 0;" mb-2>Friends</h3>
     <div class="project-list">
@@ -19,7 +18,7 @@ import DefaultCard from '../DefaultCard.vue';
       </DefaultCard>
     </div>
     <!-- 添加友情链接 -->
-    <a href="/apply" class="block ml-a card-df border-default  rounded-2 px-4 py-2">Join Friends！</a>
+    <a href="/apply" class="block ml-a card-df-br border-default  rounded-2 px-4 py-2">Join Friends！</a>
   </div>
 </template>
 <style scoped lang="scss">
