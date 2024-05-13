@@ -15,15 +15,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@iconify-json/carbon": "1.1.31",
+    "@iconify-json/carbon": "1.1.33",
     "@iconify-json/solar": "1.1.9",
-    "@vite-pwa/vitepress": "0.4.0",
+    "@vite-pwa/vitepress": "0.5.0",
     "@vueuse/core": "10.9.0",
-    "sass": "1.72.0",
-    "unocss": "0.59.4",
+    "sass": "1.77.1",
+    "unocss": "0.60.2",
     "vite-plugin-vitepress-auto-sidebar": "1.6.4",
     "vitepress": "1.1.4",
-    "vue": "3.4.25"
+    "vue": "3.4.27"
   },
   "dependencies": {
     "medium-zoom": "1.1.0"
