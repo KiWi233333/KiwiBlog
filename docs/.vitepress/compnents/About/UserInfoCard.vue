@@ -23,10 +23,10 @@
     <!-- 媒体 -->
     <div class="grid mt-4 w-full mx-a sm:grid-cols-5 grid-cols-6 gap-2" data-fades style='--lv: 2;'>
       <a href="https://github.com/KiWi233333" target="_blank">
-        <img src="/github.png" alt="github" class="rounded-2 object-cover shadow">
+        <img src="/github.png" alt="github" class="rounded-6px object-cover shadow">
       </a>
       <a href="https://space.bilibili.com/37574787" target="_blank">
-        <img src="/bilibili.png" alt="bilibili" class="rounded-2 object-cover shadow">
+        <img src="/bilibili.png" alt="bilibili" class="rounded-6px object-cover shadow">
       </a>
     </div>
   </div>
