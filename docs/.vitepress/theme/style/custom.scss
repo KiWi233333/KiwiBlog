@@ -72,7 +72,7 @@
     --delay: 0.1s;
     --start: 0ms;
     --anima: latter-slice-top;
-    animation: var(--anima) 0.5s both;
+    animation: var(--anima) 1s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
   }
   .actions .action {
@@ -88,7 +88,7 @@
   --start: 0ms;
   --anima: latter-slice-top;
   .item {
-    animation: var(--anima) 0.5s both;
+    animation: var(--anima) 1s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
     &:nth-child(1) {
       --lv: 3;
@@ -164,7 +164,7 @@
 @media (prefers-reduced-motion: no-preference) {
   [data-fades] > *,
   [data-fade] {
-    animation: var(--anima) 0.5s both;
+    animation: var(--anima) 1s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
   }
 }
@@ -241,7 +241,17 @@
 #VPContent .content > div > main > div > div > div.vp-adaptive-theme {
   max-width: 90vw;
   border-radius: 6px;
-  margin: 0 auto; 
-  box-shadow: inset rgba(0, 0, 0, 0.1) 0px 2px 5px -1px, inset rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
-  --at-apply: "border-default dark:(shadow-lg shadow-inset)"
+  margin: 0 auto;
+  box-shadow:
+    inset rgba(0, 0, 0, 0.1) 0px 2px 5px -1px,
+    inset rgba(0, 0, 0, 0.1) 0px 1px 3px -1px;
+  --at-apply: "border-default dark:(shadow-lg shadow-inset)";
+}
+
+// 代码块
+.vp-adaptive-theme,
+.vp-code-group {
+  .vp-adaptive-theme {
+    margin-bottom: 0 !important;
+  }
 }

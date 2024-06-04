@@ -10,6 +10,120 @@ Tauri 是一个跨平台的应用程序框架，它允许开发人员使用 Web 
 
 ## 步骤
 
+### 1、配置tauri.conf.json文件（src-tauri/tauri.conf.json）
+
+```jsonc
+{
+  "build": {
+    "devPath": "http://localhost:3000",
+    "distDir": "../.output/public",
+    "withGlobalTauri": true
+  },
+  "package": {
+    "productName": "JiwuChat",
+    "version": "../package.json"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "process": {
+        "all": false,
+        "exit": true,
+        "relaunch": true,
+        "relaunchDangerousAllowSymlinkMacos": false
+      },
+      "notification": {
+        "all": true
+      },
+      "window": {
+        "all": false,
+        "close": true,
+        "hide": true,
+        "show": true,
+        "maximize": true,
+        "create": true,
+        "setAlwaysOnTop": true,
+        "minimize": true,
+        "unmaximize": true,
+        "unminimize": true,
+        "startDragging": true
+      },
+      "shell": {
+        "all": false,
+        "execute": false,
+        "open": true,
+        "scope": [],
+        "sidecar": false
+      }
+    },
+    "bundle": {
+      "active": true,
+      "category": "SocialNetworking",
+      "copyright": "Kiwi2333",
+      "deb": {
+        "depends": []
+      },
+      "externalBin": [],
+      "icon": ["icons/32x32.png", "icons/128x128.png", "icons/128x128@2x.png", "icons/icon.icns", "icons/icon.ico"],
+      "identifier": "Kiwi2333",
+      "longDescription": "",
+      "macOS": {
+        "entitlements": null,
+        "exceptionDomain": "",
+        "frameworks": [],
+        "providerShortName": null,
+        "signingIdentity": null,
+        "license": "./LICENSE/LICENSE.txt",
+        "minimumSystemVersion": "10.13"
+      },
+      "resources": [],
+      "shortDescription": "",
+      "targets": "all",
+      "windows": {
+        "nsis": {
+          "license": "./LICENSE/LICENSE.txt",
+          "installMode": "both",
+          "installerIcon": "./icons/128x128@2x.png"
+        },
+        "wix": {
+          "language": "zh-CN",
+          "license": "./LICENSE/LICENSE.txt"
+        }
+      }
+    },
+    "security": {
+      "csp": null
+    },
+    "updater": {
+      "active": true,
+      "endpoints": ["https://release.jiwu.kiwi2333.top/application/jiwuchat"],
+      "dialog": false,
+      "pubkey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDU3RjREQTA3MkU1MzNEMzkKUldRNVBWTXVCOXIwVjlBVXhBY0J3WEVNZW5ZTWZSYXJNdlM4VmpoaXBrSDFiOU1QYk85RDBkYW0K"
+    },
+    "windows": [
+      {
+        "label": "main",
+        "height": 820,
+        "resizable": true,
+        "title": "极物聊天",
+        "width": 1290,
+        "center": true,
+        "minWidth": 442,
+        "minHeight": 788,
+        "decorations": false,
+        "hiddenTitle": true,
+        "transparent": true
+      }
+    ],
+    "systemTray": {
+      "iconPath": "icons/icon.png",
+      "iconAsTemplate": true
+    }
+  }
+}
+
+```
+
 ### 2、GitHub Actions 配置文件（.github/workflows/release.yml）
 
 ```yml
