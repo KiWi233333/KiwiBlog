@@ -22,6 +22,9 @@ devDependencies:
   '@vueuse/core':
     specifier: 10.9.0
     version: 10.9.0(vue@3.4.27)
+  busuanzi.pure.js:
+    specifier: ^1.0.3
+    version: 1.0.3
   sass:
     specifier: 1.77.2
     version: 1.77.2
@@ -2834,6 +2837,10 @@ packages:
   /builtin-modules@3.3.0:
     resolution: {integrity: sha512-zhaCDicdLuWN5UbN5IMnFqNMhNfo919sH85y2/ea+5Yg9TsTkeZxpL+JLbp6cgYFS4sRLp3YV4S6yDuqVWHYOw==}
     engines: {node: '>=6'}
+    dev: true
+
+  /busuanzi.pure.js@1.0.3:
+    resolution: {integrity: sha512-tPULdyx+8NNb9geZYDpktKmHAYx9f2LEOBaHyWCaM7iPEMIa/43KgYAUluuU7YG9UFSOFpj4dO7Nj2Vlu3V9Rg==}
     dev: true
 
   /cac@6.7.14:
