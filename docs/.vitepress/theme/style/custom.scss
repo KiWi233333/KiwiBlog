@@ -255,3 +255,8 @@
     margin-bottom: 0 !important;
   }
 }
+
+.VPContent .content-container img {
+  border-radius: 0.375rem;
+  --at-apply: "border-default";
+}
