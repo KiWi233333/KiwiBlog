@@ -69,7 +69,7 @@ onMounted(() => {
   };
 
   const frame = () => {
-    iterations += 0.65;
+    iterations += 0.68;
     prevSteps = steps;
     steps = [];
 
@@ -101,7 +101,6 @@ onMounted(() => {
     controls.resume();
     stopped.value = false;
   };
-
   f.start();
 });
 </script>
