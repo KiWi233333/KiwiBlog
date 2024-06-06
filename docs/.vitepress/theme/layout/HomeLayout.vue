@@ -81,8 +81,8 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
   await document.documentElement.animate(
     { clipPath: isDark.value ? clipPath.reverse() : clipPath },
     {
-      duration: 500,
-      easing: "ease-in",
+      duration: 800,
+      easing: "ease-in-out",
       pseudoElement: `::view-transition-${isDark.value ? "old" : "new"}(root)`,
     }
   );
