@@ -66,7 +66,12 @@
 #VPContent > div > div.VPHero.has-image.VPHomeHero > div > div.main > p {
   margin: 0.5em 0 0.2em 0;
 }
-#VPContent .VPHero.has-image.VPHomeHero .main {
+#VPContent .main {
+  h1 {
+    padding: 1.5rem 0;
+  }
+}
+  #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
     --delay: 0.1s;
@@ -260,3 +265,4 @@
   border-radius: 0.375rem;
   --at-apply: "border-default";
 }
+
