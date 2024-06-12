@@ -14,8 +14,10 @@ export default {
   extends: DefaultTheme,
   Layout: HomeLayout,
   enhanceApp({ app, router, siteData }) {
-    if (inBrowser) {
-      busuanzi.fetch()
+    router.onBeforeRouteChange = () => {
+      if (inBrowser) {
+        busuanzi.fetch()
+      }
     }
     app.component("NavBarTitle", NavBarTitle)
   }

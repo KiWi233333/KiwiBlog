@@ -51,7 +51,6 @@ provide("toggle-appearance", toggleTheme);
 const { Layout } = DefaultTheme;
 onMounted(() => {
   window.addEventListener("keydown", keyToggleTheme);
-  
 }); 
 /**
  * 动画切换主题
