@@ -9,7 +9,8 @@
     "build": "vitepress build docs --port 5000",
     "build:mpa": "vitepress build docs --mpa --port 5000",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "pre": "vitepress preview docs --port 5000"
+    "pre": "vitepress preview docs --port 5000",
+    "release": "npm version patch && git push --tag && git fetch && git push"
   },
   "keywords": [],
   "author": "",
