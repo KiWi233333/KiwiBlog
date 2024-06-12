@@ -1,11 +1,11 @@
 
 <div align="center">
-<img src="./docs/public/kiwi.gif" width="300" style="margin:20px 0;" alt="预览"/>
+<img src="./docs/public/kiwi.gif" width="300" style="margin:30px 0;" alt="预览"/>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/21d806d7-2127-4d4c-8e27-083b59fc10af/deploy-status)](https://app.netlify.com/sites/kiwiblog/deploys)
 
-项目地址：[Kiwi2333](https://kiwi233.top)
-
+体验地址：[Kiwi2333](https://kiwi233.top)
+语言：中文 | [English](./README.en.md)
 </div>
 
 ## ☕ 演示
