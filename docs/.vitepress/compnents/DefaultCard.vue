@@ -7,7 +7,7 @@
     </slot>
     <div class="right">
       <slot name="right">
-        <h4>{{ data.title }}</h4>
+        <h4>{{ typeof data.title === 'string' ? data.title : data.title()}}</h4>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="details">
