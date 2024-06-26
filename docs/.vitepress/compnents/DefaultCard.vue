@@ -7,7 +7,7 @@
     </slot>
     <div class="right">
       <slot name="right">
-        <h4>{{ data.title }}</h4>
+        <h4>{{ typeof data.title === 'function' ? data.title() : data.title }}</h4>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="details">
@@ -22,7 +22,7 @@ import { ComputedRef } from 'vue';
 export interface CardItem {
   icon?: string;
   link?: boolean | string;
-  title?: string | ComputedRef<string>;
+  title?: string | ComputedRef<string> | (() => string);
   details?: string;
   active?: boolean;
 }
