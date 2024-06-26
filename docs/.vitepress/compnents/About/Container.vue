@@ -1,19 +1,9 @@
 <script setup lang="ts">
 import DefaultCard from "../DefaultCard.vue";
-import { ref } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { projectList } from "../../store/files";
 
-const version = ref("0.0.0");
-
-fetch("https://api.github.com/repos/KiWi233333/KiwiBlog/releases/latest").then(res => {
-  res
-    .json()
-    .then(data => {
-      version.value = data.tag_name || "0.0.0";
-    })
-    .catch(err => {});
-});
-
+const version = ref("v0.0.0");
 const doingList = [
   {
     title: "Web Developer",
@@ -21,11 +11,21 @@ const doingList = [
     details: "A Developer with a passion for creating innovative and user-friendly web applications.",
   },
   {
-    title: "v" + version.value,
+    title: ()=> version.value,
     icon: "i-solar:atom-linear",
     details: "The blog is being updated to a new version, with a more modern and responsive design.",
   },
 ];
+onMounted(() => {
+  fetch("https://api.github.com/repos/KiWi233333/KiwiBlog/releases/latest").then(res => {
+    res
+      .json()
+      .then(data => {
+        version.value = data.tag_name || "v0.0.0";
+      })
+      .catch(err => {});
+  });
+})
 </script>
 
 <template>
