@@ -3,15 +3,15 @@
 export const projectList = [
   {
     title: "极物圈社区商城",
-    icon: "https://jiwu.kiwi2333.top/logo.png",
+    icon: "../../assets/index/image.png",
     link: "https://jiwu.kiwi2333.top/",
     details: "极物圈，是一个集商城、ai聊天、沟通、社区功能于一体的平台。"
   },
   {
-    title: "Jiwu聊天应用",
-    icon: "i-solar:ghost-bold p-4",
-    link: "https://github.com/KiWi233333/jiwu-mall-chat-electron",
-    details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的桌面应用。"
+    title: "JiwuChat 聊天应用",
+    icon: "../../assets/index/jiwuchat-tauri.png",
+    link: "https://github.com/KiWi233333/jiwu-mall-chat-tauri",
+    details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
   },
   {
     title: "MSI",
