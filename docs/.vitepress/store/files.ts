@@ -4,13 +4,13 @@ import { withBase } from 'vitepress'
 export const projectList = [
   {
     title: "极物圈社区商城",
-    icon: withBase("../../assets/index/jiwuquan.png"),
+    icon: "/index/jiwuquan.png",
     link: "https://jiwu.kiwi2333.top/",
     details: "极物圈，是一个集商城、ai聊天、沟通、社区功能于一体的平台。"
   },
   {
     title: "JiwuChat 聊天应用",
-    icon: withBase("../../assets/index/jiwuchat-tauri.png"),
+    icon: "/index/jiwuchat-tauri.png",
     link: "https://github.com/KiWi233333/jiwu-mall-chat-tauri",
     details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
   },
