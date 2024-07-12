@@ -36,8 +36,8 @@ const f = {
   start: () => { },
 };
 
-const init = ref(4);
-const len = ref(4);
+const init = ref(3);
+const len = ref(3);
 const stopped = ref(false);
 
 watch([init, len], () => f.start());
