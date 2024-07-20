@@ -12,22 +12,25 @@ withDefaults(defineProps<{
 <template>
   <div class="flex-row-c-c gap-4 flex-col flex-wrap">
     <div flex-row-c-c gap-4 flex-wrap>
-      <a :href="`https://github.com/${author}/${repoUrl}`" target="_blank"><img
-          src="https://img.shields.io/badge/Github-项目地址-blueviolet.svg?style=plasticr">
+      <a :href="`https://github.com/${author}/${repoUrl}`" target="_blank">
+        <img class="disabled-img-view" src="https://img.shields.io/badge/Github-项目地址-blueviolet.svg?style=plasticr">
       </a>
       <a :href="`https://github.com/${author}/${repoUrl}/stargazers`" target="_blank">
-        <img alt="License" :src="`https://img.shields.io/github/stars/${author}/${repoUrl}.svg?style=social`">
+        <img class="disabled-img-view" alt="License"
+          :src="`https://img.shields.io/github/stars/${author}/${repoUrl}.svg?style=social`">
       </a>
     </div>
     <div class="flex-row-c-c gap-4">
       <a :href="`https://github.com/${author}/${repoUrl}/commits`" target="_blank">
-        <img alt="Commit" :src="`https://img.shields.io/github/commit-activity/m/${author}/${repoUrl}`">
+        <img class="disabled-img-view" alt="Commit"
+          :src="`https://img.shields.io/github/commit-activity/m/${author}/${repoUrl}`">
       </a>
       <a :href="`https://github.com/${author}/${repoUrl}/issues`" target="_blank">
-        <img alt="Issues" :src="`https://img.shields.io/github/issues/${author}/${repoUrl}`">
+        <img class="disabled-img-view" alt="Issues" :src="`https://img.shields.io/github/issues/${author}/${repoUrl}`">
       </a>
       <a :href="`https://github.com/${author}/${repoUrl}/blob/master/LICENSE`" target="_blank">
-        <img alt="License: Apache-2.0" src="https://img.shields.io/badge/License-Apache--2.0-blue.svg">
+        <img class="disabled-img-view" alt="License: Apache-2.0"
+          src="https://img.shields.io/badge/License-Apache--2.0-blue.svg">
       </a>
     </div>
   </div>
