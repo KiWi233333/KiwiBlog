@@ -16,13 +16,8 @@
   </component>
 </template>
 <script setup lang="ts">
-export interface CardItem {
-  icon?: string;
-  link?: boolean | string;
-  title?: string;
-  details?: string;
-  active?: boolean;
-}
+import { CardItem } from '../../store/files';
+
 withDefaults(defineProps<{
   data: CardItem
 }>(), {

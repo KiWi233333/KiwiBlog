@@ -42,7 +42,7 @@ export default defineConfig({
     presetAttributify(),
     presetIcons({
       scale: 1.2,
-      warn: true,
+      warn: false,
       collections: {
         solar: () =>
           import("@iconify-json/solar").then(i => i.icons as any),

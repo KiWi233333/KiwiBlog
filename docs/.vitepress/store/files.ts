@@ -1,7 +1,8 @@
 
 import { withBase } from 'vitepress'
+import { ComputedRef } from 'vue';
 // @unocss-include
-export const projectList = [
+export const projectList: CardItem[] = [
   {
     title: "极物圈社区商城",
     icon: "/index/jiwuquan.png",
@@ -11,7 +12,8 @@ export const projectList = [
   {
     title: "JiwuChat 聊天应用",
     icon: "/index/jiwuchat-tauri.png",
-    link: "https://github.com/KiWi233333/jiwu-mall-chat-tauri",
+    link: "/项目/极物聊天",
+    linkTarget: "_self",
     details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
   },
   {
@@ -27,6 +29,16 @@ export const projectList = [
     details: "H5C3+js+jq+bootstrap5响应式博客简约静态网站"
   },
 ]
+
+
+export interface CardItem {
+  icon?: string;
+  link?: boolean | string;
+  linkTarget?: string;
+  title?: string | ComputedRef<string> | (() => string);
+  details?: string;
+  active?: boolean;
+}
 
 // @unocss-include
 export const filesList = [
@@ -58,7 +70,7 @@ export const filesList = [
     title: "项目",
     icon: "🎃",
     details: "项目开发、项目设计等",
-    link: "/项目/麦当劳"
+    link: "/项目/极物圈"
   },
   {
     title: "其他",
