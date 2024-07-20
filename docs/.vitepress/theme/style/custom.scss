@@ -136,6 +136,7 @@
   }
 }
 
+
 // 右边目录
 // #VPContent .aside .aside-container {
 //   --lv: 0;
@@ -266,3 +267,7 @@
   --at-apply: "border-default";
 }
 
+
+.VPLocalNav .VPLocalNavOutlineDropdown .items {
+  --at-apply: "card-df"
+}

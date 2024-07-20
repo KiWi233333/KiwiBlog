@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import DefaultCard from "../DefaultCard.vue";
-import { computed, onMounted, ref } from "vue";
+import { onMounted, ref } from "vue";
 import { projectList } from "../../store/files";
 
 const version = ref("v0.0.0");

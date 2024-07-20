@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ? 'a' : 'div'" :href="data.link" target="_blank" class="card-default"
+  <component :is="data.link ? 'a' : 'div'" :href="data.link" :target="data.linkTarget || '_blank'" class="card-default"
     :class="{ 'no-link': !data.link }">
     <slot name="icon">
       <div class="icon" v-if="data.icon?.startsWith('i-')" :class="data.icon" />
@@ -17,15 +17,9 @@
   </component>
 </template>
 <script setup lang="ts">
-import { ComputedRef } from 'vue';
+import { CardItem } from '../store/files';
 
-export interface CardItem {
-  icon?: string;
-  link?: boolean | string;
-  title?: string | ComputedRef<string> | (() => string);
-  details?: string;
-  active?: boolean;
-}
+
 withDefaults(defineProps<{
   data: CardItem
 }>(), {

@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ? 'a' : 'div'" :href="data.link"
+  <component :is="data.link ? 'a' : 'div'" :href="data.link" :target="data.linkTarget || '_blank'"
     class="group truncate backdrop-blur-2 transition-all rounded-2  p-4 flex items-center gap-4 link-cark"
     :class="{ 'hover:(border-default)': data.link }">
     <slot name="icon">
@@ -19,13 +19,8 @@
   </component>
 </template>
 <script setup lang="ts">
-export interface CardItem {
-  icon?: string;
-  link?: boolean | string;
-  title?: string;
-  details?: string;
-  active?: boolean;
-}
+import { CardItem } from '../store/files';
+
 withDefaults(defineProps<{
   data: CardItem
 }>(), {
