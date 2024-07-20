@@ -61,18 +61,61 @@ export const langCN: any = {
 
 export const langEN: any = {
   label: 'English',
-  lang: 'en',
-  link: "/",
+  lang: 'en-US',
   themeConfig: {
-    //本地搜索
+    darkModeSwitchLabel: "Dark/Light",
+    sidebarMenuLabel: "Menu",
+    returnToTopLabel: "Return to Top",
+    nav: [
+      { text: "Home", link: "/" },
+      { text: "Blog", link: "/blog" },
+      { text: "Chat", link: "/chat" },
+      {
+        text: 'Projects',
+        items: [
+          { text: 'JiWu Circle', link: 'https://github.com/KiWi233333/jiwu-mall-web', },
+          { text: 'JiWu Chat (Election)', link: 'https://github.com/KiWi233333/jiwu-mall-chat-electron', },
+          { text: 'McDonald\'s (Harmony)', link: 'https://github.com/KiWi233333/McDonalds-Harmonry-Js', },
+          { text: 'Gs66-OC-EFI', link: 'https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore', },
+          { text: 'MeiYiGou (Mobile)', link: 'https://github.com/KiWi233333/shop-front-mobile-mall', },
+          { text: 'KiwiBlog', link: 'https://github.com/KiWi233333/KiwiBlog', },
+          { text: 'Kiwi Blog', link: 'https://github.com/KiWi233333/kiwi-blog-while-simple', },
+        ]
+      }
+    ],
+    // Footer
+    footer: {
+      message: "Licensed under the Apache-2.0 license",
+      copyright: 'Copyright © 2024 Record Number: <a href="https://beian.miit.gov.cn/" target="_blank">Beijing **** Number</a>',
+    },
+    // Local search
     search: {
       provider: 'local',
+      options: {
+        translations: {
+          button: {
+            buttonText: "Search"
+          },
+          modal: {
+            displayDetails: "Display Details",
+            resetButtonTitle: "Reset",
+            backButtonTitle: "Back",
+            noResultsText: "No results found",
+            footer: {
+              selectText: "Select",
+              navigateText: "Navigate",
+              closeText: "Close",
+            }
+          }
+        }
+      }
     },
-    //页脚
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © 2024 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">京****号</a>',
+    // Font
+    outlineTitle: "Article Navigation",
+    lastUpdatedText: "Last Updated",
+    docFooter: {
+      prev: "Previous Page",
+      next: "Next Page",
     },
-  },
-
+  }
 }

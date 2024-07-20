@@ -1,94 +1,21 @@
 <!-- https://vitepress.dev/guide/extending-default-theme#using-view-transitions-api -->
 <script setup lang="ts">
-import { useData, useRoute } from "vitepress";
 import DefaultTheme, { useSidebar } from "vitepress/theme";
-import mediumZoom from "medium-zoom";
-import { nextTick, provide, watch, onMounted, ref } from "vue";
 import PwaInstallBtn from "./PwaInstallBtn.vue";
 import ObserverTool from "./ObserverTool.vue";
 import NavBarTitle from "./NavBarTitle.vue";
 import Comments from "./Comments.vue";
 import "medium-zoom/dist/style.css";
 import AnFuTree from "./AnFuTree.vue";
-const { isDark } = useData();
-const isToggleLoading = ref(false);
+import { useToggleTheme } from "../../utils/useToggleTheme";
+import { useImageView } from "../../utils/useImageView";
+const { Layout } = DefaultTheme;
+// 切换动画
+useToggleTheme()
 
 //  图片缩放
-const route = useRoute();
-const initZoom = () => {
-  mediumZoom(".VPContent .content-container img", {
-    background: "rgba(0, 0, 0, 0.35)",
-    container: document.body,
-  });
-};
-onMounted(() => {
-  initZoom();
-});
-watch(
-  () => route.path,
-  () => {
-    if (route && route.path !== "/") nextTick(() => initZoom());
-  }
-);
+useImageView() 
 
-// 全局按键
-const enableTransitions = () =>
-  "startViewTransition" in document && window.matchMedia("(prefers-reduced-motion: no-preference)").matches;
- 
-function keyToggleTheme(e: KeyboardEvent) {
-  if (e?.altKey && e?.key && e?.key === "t") {
-    e.preventDefault();
-    // 计算屏幕中心坐标
-    const centerX = (window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth) / 2;
-    const centerY = (window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight) / 2;
-    toggleTheme({
-      clientX: +centerX,
-      clientY: +centerY,
-    } as MouseEvent);
-  }
-}
-provide("toggle-appearance", toggleTheme);
-const { Layout } = DefaultTheme;
-onMounted(() => {
-  window.addEventListener("keydown", keyToggleTheme);
-}); 
-/**
- * 动画切换主题
- * @param event 事件参数
- */
-async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
-  if (isToggleLoading.value) {
-    return;
-  }
-  if (!enableTransitions()) {
-    isDark.value = !isDark.value;
-    return;
-  }
-  isToggleLoading.value = true;
-  const clipPath = [
-    `circle(0px at ${x}px ${y}px)`,
-    `circle(${Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))}px at ${x}px ${y}px)`,
-  ];
-  document.documentElement.classList.add("stop-transition");
-  // @ts-ignore
-  await document.startViewTransition(async () => {
-    // 关闭所有渐变（优化性能）
-    isDark.value = !isDark.value;
-    await nextTick();
-  }).ready;
-
-  await document.documentElement.animate(
-    { clipPath: isDark.value ? clipPath.reverse() : clipPath },
-    {
-      duration: 800,
-      easing: "ease-in-out",
-      pseudoElement: `::view-transition-${isDark.value ? "old" : "new"}(root)`,
-    }
-  );
-  // 结束动画
-  document.documentElement.classList.remove("stop-transition");
-  isToggleLoading.value = false;
-}
 </script>
 
 <template>
@@ -97,9 +24,7 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
       <NavBarTitle class="add-button" />
     </template>
     <template #home-hero-image>
-      <div
-        data-fade
-        style="--lv: 2; width: 100%">
+      <div data-fade style="--lv: 2; width: 100%">
         <NavBarTitle style="margin: auto" />
       </div>
     </template>
@@ -113,7 +38,8 @@ async function toggleTheme({ clientX: x, clientY: y }: MouseEvent) {
     <template #doc-after>
       <Comments class="my-2" />
       <div class="flex-row-c-c py-4">
-        <div id="busuanzi_container_site_pv" class="flex-row-c-c text-center op-40 hover:op-100 transition-opacity" ><i class="i-solar:eye-outline p-2 mr-2"/><span id="busuanzi_value_site_pv"></span></div>
+        <div id="busuanzi_container_site_pv" class="flex-row-c-c text-center op-40 hover:op-100 transition-opacity"><i
+            class="i-solar:eye-outline p-2 mr-2" /><span id="busuanzi_value_site_pv"></span></div>
       </div>
     </template>
   </Layout>
