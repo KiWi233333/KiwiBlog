@@ -89,8 +89,9 @@ export const filesList = [
 export const friendList = [
   {
     title: "Kiwi2333",
-    link: "https://kiwi2333.top",
+    link: "https://kiwi233.top",
     details: "一个正在学习的独立开发者...",
-    avatar: "https://kiwi233.top/avatar.png"
+    avatar: "https://kiwi233.top/avatar.png",
+    linkTarget: "_blank"
   },
 ]
