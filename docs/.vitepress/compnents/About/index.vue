@@ -15,9 +15,7 @@ import Other from "./Other.vue";
       <Other class="content-card" />
     </main>
     <!-- 右侧 -->
-    <Catalog
-      data-fade
-      style="--lv: 3; --anima: latter-slice-left"
+    <Catalog data-fade style="--lv: 3; --anima: latter-slice-left"
       class="content-card md:sticky top-6rem left-0 w-full" />
   </div>
 </template>

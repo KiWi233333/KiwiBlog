@@ -1,6 +1,6 @@
 <!-- https://vitepress.dev/guide/extending-default-theme#using-view-transitions-api -->
 <script setup lang="ts">
-import DefaultTheme, { useSidebar } from "vitepress/theme";
+import DefaultTheme from "vitepress/theme";
 import PwaInstallBtn from "./PwaInstallBtn.vue";
 import ObserverTool from "./ObserverTool.vue";
 import NavBarTitle from "./NavBarTitle.vue";
