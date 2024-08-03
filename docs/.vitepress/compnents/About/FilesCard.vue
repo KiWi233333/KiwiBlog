@@ -7,7 +7,7 @@
     </slot>
     <div class="flex flex-col flex-1">
       <slot name="name">
-        <h4 overflow-hidden truncate>{{ data.title }}</h4>
+        <h4 class="!mt-0 overflow-hidden truncate">{{ data.title }}</h4>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
     </div>

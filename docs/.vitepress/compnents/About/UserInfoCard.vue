@@ -2,10 +2,8 @@
 </script>
 
 <template>
-  <div data-fades data-fade class="flex flex-col items-center mx-a sm:(w-full)">
-    <img src="/avatar.png"
-      class="border-default hover:(rounded-1/2) rounded-1/2 sm:rounded-3 transition-border-radius  sm:(w-1/2) mx-a"
-      alt="头像">
+  <div data-fades data-fade class="flex gap-4 sm:gap-2 flex-col items-center mx-a sm:(w-full)">
+    <img src="/avatar.png" class="hover:(rounded-1/2) transition-border-radius  w-1/3 sm:(w-1/2) mx-a" alt="头像">
     <h3 class="font-steps" style='--lv: 1;margin: 0.6em 0;text-align: center;' data-fade>{{ "Kiwi2333" }}</h3>
     <!-- 联系 -->
     <div data-fades class="mx-a w-4/5 border-default border-0 border-y-1px w-full" data-fade>
@@ -21,7 +19,7 @@
       </small>
     </div>
     <!-- 媒体 -->
-    <div class="grid mt-4 w-full mx-a sm:grid-cols-5 grid-cols-6 gap-2" data-fades style='--lv: 2;'>
+    <div class="grid mt-2 w-full mx-a sm:grid-cols-5 grid-cols-6 gap-2" data-fades style='--lv: 2;'>
       <a href="https://github.com/KiWi233333" target="_blank">
         <img src="/github.png" alt="github" class="rounded-6px object-cover shadow">
       </a>

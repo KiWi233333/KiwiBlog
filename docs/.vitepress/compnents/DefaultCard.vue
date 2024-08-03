@@ -7,7 +7,7 @@
     </slot>
     <div class="right">
       <slot name="right">
-        <h4>{{ typeof data.title === 'function' ? data.title() : data.title }}</h4>
+        <h4 class="!mt-0">{{ typeof data.title === 'function' ? data.title() : data.title }}</h4>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="details">
