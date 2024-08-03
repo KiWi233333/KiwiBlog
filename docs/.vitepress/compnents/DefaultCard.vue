@@ -7,7 +7,8 @@
     </slot>
     <div class="right">
       <slot name="right">
-        <h4 class="!mt-0">{{ typeof data.title === 'function' ? data.title() : data.title }}</h4>
+        <strong class="!mt-0 overflow-hidden truncate">{{ typeof data.title === 'function' ? data.title() : data.title
+          }}</strong>
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="details">
