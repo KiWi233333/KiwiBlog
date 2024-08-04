@@ -3,7 +3,7 @@
 
 <template>
   <div class="flex-row-c-c">
-    <iframe class="mt-4 overflow-hidden w-80vw sm:w-75vw h-80vh sm:h-85vh border-0"
+    <iframe class="mt-4 card-df overflow-hidden overflow-hidden w-80vw sm:w-75vw h-80vh sm:h-85vh border-0"
       src="https://chat.jiwu.kiwi233.top"></iframe>
   </div>
 </template>

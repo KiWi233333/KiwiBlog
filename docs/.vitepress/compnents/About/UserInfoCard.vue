@@ -2,11 +2,11 @@
 </script>
 
 <template>
-  <div data-fades data-fade class="flex gap-4 sm:gap-2 flex-col items-center mx-a sm:(w-full)">
+  <div data-fades class="flex gap-4 sm:gap-2 flex-col items-center mx-a sm:(w-full)">
     <img src="/avatar.png" class="hover:(rounded-1/2) transition-border-radius  w-1/3 sm:(w-1/2) mx-a" alt="头像">
-    <h3 class="font-steps" style='--lv: 1;margin: 0.6em 0;text-align: center;' data-fade>{{ "Kiwi2333" }}</h3>
+    <h3 class="font-steps" style='--lv: 1;margin: 0.6em 0;text-align: center;'>{{ "Kiwi2333" }}</h3>
     <!-- 联系 -->
-    <div data-fades class="mx-a w-4/5 border-default border-0 border-y-1px w-full" data-fade>
+    <div class="mx-a w-4/5 border-default border-0 border-y-1px w-full">
       <small class="flex gap-4 items-center w-full h-2rem">
         <i class="i-carbon:location"></i>
         <a target="_blank"

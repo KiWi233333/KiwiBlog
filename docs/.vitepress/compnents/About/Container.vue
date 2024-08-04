@@ -29,11 +29,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div
-    data-fades
-    data-fade
-    style="--delay: 60ms"
-    class="p-6 sm:p-8 right">
+  <div class="p-6 sm:p-8 right">
     <!-- 关于我 -->
     <h1 clear-both>
       About Me
@@ -44,39 +40,19 @@ onMounted(() => {
     <p>🏫 分享日常<a href="/blog">博客</a></p>
     <!-- 最近在做什么 -->
     <h2>What have I been doing</h2>
-    <div
-      data-fades
-      class="project-list">
-      <DefaultCard
-        :data="p"
-        v-for="(p, i) in doingList"
-        :key="i"
-        class="card-df">
+    <div class="project-list">
+      <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df">
         <template #icon>
-          <span
-            class="p-4 mr-2"
-            :class="p.icon"
-            v-if="p.icon"></span>
+          <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
         </template>
       </DefaultCard>
     </div>
     <!-- 项目 -->
     <h2>Projects</h2>
-    <div
-      data-fades
-      class="project-list">
-      <DefaultCard
-        :data="p"
-        v-for="(p, i) in projectList"
-        :key="i"
-        style="color: inherit"
-        class="card-df" />
+    <div class="project-list">
+      <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit" class="card-df" />
     </div>
-    <a
-      href="/blog"
-      class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-2 mt-6"
-      >Just Go！</a
-    >
+    <a href="/blog" class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-2 mt-6">Just Go！</a>
   </div>
 </template>
 <style scoped lang="scss">
