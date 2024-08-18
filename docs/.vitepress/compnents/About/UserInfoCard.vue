@@ -19,7 +19,7 @@
       </small>
     </div>
     <!-- 媒体 -->
-    <div class="grid mt-2 w-full mx-a sm:grid-cols-5 grid-cols-6 gap-2" data-fades style='--lv: 2;'>
+    <div class="grid mt-2 w-full mx-a sm:grid-cols-5 grid-cols-8 gap-2" data-fades style='--lv: 2;'>
       <a href="https://github.com/KiWi233333" target="_blank">
         <img src="/github.png" alt="github" class="rounded-6px object-cover shadow">
       </a>
