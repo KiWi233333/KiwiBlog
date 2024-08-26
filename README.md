@@ -52,13 +52,13 @@ pnpm get registry
 临时修改
 
 ```sh
-pnpm --registry https://registry.npm.taobao.org install any-touch
+pnpm --registry https://registry.npmmirror.com install any-touch
 ```
 
 持久使用
 
 ```sh
-pnpm config set registry https://registry.npm.taobao.org
+pnpm config set registry https://registry.npmmirror.com
 ```
 
 还原

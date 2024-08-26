@@ -39,8 +39,3 @@ To package the project, run `pnpm run build`.
 ## 🎉 Deployment
 
 For static hosting, you can upload the built files to a web server or use services like Netlify, Vercel, or GitHub Pages.
-
-## 🔗 Links
-
-- Source Code: <https://github.com/kiwi2333/kiwi2333.github.io>
-- Deployment: <https://app.netlify.com/sites/kiwiblog/deploys>
