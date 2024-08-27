@@ -1,7 +1,8 @@
 {
   "editor.defaultFormatter": "antfu.vite",
   "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.formatOnSave": true
   },
   "[typescript]": {
     "editor.defaultFormatter": "vscode.typescript-language-features"
