@@ -57,6 +57,7 @@ onMounted(() => {
 </template>
 <style scoped lang="scss">
 .project-list {
-  --at-apply: "grid sm:grid-cols-2 gap-4 grid-cols-1";
+  --at-apply: "grid grid-cols-1 lg:grid-cols-2 gap-4";
 }
+
 </style>
