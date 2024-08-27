@@ -1,6 +1,9 @@
 
-import { withBase } from 'vitepress'
 import { ComputedRef } from 'vue';
+/**
+ * 项目列表
+ * @type {CardItem[]}
+ */
 // @unocss-include
 export const projectList: CardItem[] = [
   {
@@ -40,6 +43,9 @@ export interface CardItem {
   active?: boolean;
 }
 
+/**
+ * blog列表类文件夹
+ */
 // @unocss-include
 export const filesList = [
   {
@@ -85,7 +91,9 @@ export const filesList = [
   }
 ];
 
-
+/**
+ * 友情链接
+ */
 export const friendList = [
   {
     title: "Kiwi2333",
