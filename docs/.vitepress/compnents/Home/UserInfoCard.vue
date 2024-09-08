@@ -13,7 +13,7 @@
           href="https://www.bing.com/maps?osid=414f6073-28b0-4f10-af33-92d146a2845c&cp=23.171926~113.203812&lvl=11&pi=0&imgid=2cf04fdd-6730-43f9-a96f-c9e0a91a8e11&v=2&sV=2&form=S00027"
           style="color: inherit;">广东省广州市天河</a>
       </small>
-      <small class="flex gap-4 items-center w-full h-2rem">
+      <small class="flex gap-4 items-center w-full h-2rem" title="email:kiwi2333@qq.com">
         <i class="i-carbon:email"></i>
         <a target="_blank" href="mailto:kiwi2333@qq.com" style="color: inherit;">kiwi2333@qq.com</a>
       </small>
