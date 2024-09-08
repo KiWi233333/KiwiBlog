@@ -5,7 +5,7 @@ footer: true
 ---
 
 <script setup lang="ts">
-  import About from './.vitepress/compnents/About/index.vue'
+  import Home from './.vitepress/compnents/Home/index.vue'
 </script>
 
-<About class="mt-4"/>
+<Home class="mt-4"/>
