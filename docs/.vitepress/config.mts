@@ -71,7 +71,7 @@ export default withPwa(defineConfig({
   },
   // 站点地图
   sitemap: {
-    hostname: 'https://kiwi233.top/'
+    hostname: 'https://kiwi233.top/',
   },
 }))
 
