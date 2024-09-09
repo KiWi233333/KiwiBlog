@@ -12,7 +12,8 @@ export const langCN: any = {
       {
         text: '项目',
         items: [
-          { text: '极物圈', link: 'https://github.com/KiWi233333/jiwu-mall-web', },
+          { text: '极物圈', link: 'https://github.com/KiWi233333/jiwu-mall-sites', },
+          { text: '极物聊天（Tauri）', link: 'https://github.com/KiWi233333/jiwu-mall-chat-tauri', },
           { text: '极物聊天（Election）', link: 'https://github.com/KiWi233333/jiwu-mall-chat-electron', },
           { text: '麦当劳（鸿蒙）', link: 'https://github.com/KiWi233333/McDonalds-Harmonry-Js', },
           { text: 'Gs66-OC-EFI', link: 'https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore', },
@@ -73,7 +74,8 @@ export const langEN: any = {
       {
         text: 'Projects',
         items: [
-          { text: 'JiWu Circle', link: 'https://github.com/KiWi233333/jiwu-mall-web', },
+          { text: 'JiWu Circle', link: 'https://github.com/KiWi233333/jiwu-mall-sites', },
+          { text: 'JiWu Chat Taurin)', link: 'https://github.com/KiWi233333/jiwu-mall-chat-tauri', },
           { text: 'JiWu Chat (Election)', link: 'https://github.com/KiWi233333/jiwu-mall-chat-electron', },
           { text: 'McDonald\'s (Harmony)', link: 'https://github.com/KiWi233333/McDonalds-Harmonry-Js', },
           { text: 'Gs66-OC-EFI', link: 'https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore', },
