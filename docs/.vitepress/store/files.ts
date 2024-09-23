@@ -68,6 +68,12 @@ export const filesList = [
     link: "/架构/什么是Sass系统"
   },
   {
+    title: "工具",
+    icon: "🔧",
+    details: "Git、Vscode、Markdown、Typora...",
+    link: "/工具/Git/Tag更新指针位置"
+  },
+  {
     title: "项目",
     icon: "🎃",
     details: "项目开发、项目设计等",
