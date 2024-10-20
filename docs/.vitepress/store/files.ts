@@ -11,7 +11,7 @@ export const projectList: CardItem[] = [
   },
   {
     title: "JiwuChat 聊天应用",
-    icon: "/index/jiwuchat-tauri.png",
+    icon: "/index/jiwuchat-tauri.webp",
     link: "/项目/极物聊天",
     details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
   },
