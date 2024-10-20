@@ -6,7 +6,6 @@ import FilesCard from './FilesCard.vue';
 
 <template>
   <div sm:px-10vw>
-
     <h1 my-2em tracking-0.2em>Blog | 博客 </h1>
     <div data-fades class="flex flex-col gap-4 ">
       <FilesCard :data="p" v-for="(p, i) in filesList" :key="i">

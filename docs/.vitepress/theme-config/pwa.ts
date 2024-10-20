@@ -56,7 +56,7 @@ export const pwaConfig: any = {
   registerWebManifestInRouteRules: true,
   writePlugin: true,
   devOptions: {
-    enabled: true,
+    enabled: false,
   },
 };
 
