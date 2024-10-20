@@ -21,7 +21,7 @@ useImageView()
 <template>
   <Layout>
     <template #nav-bar-title-after>
-      <NavBarTitle class="add-button" />
+      <NavBarTitle class="add-button" title="Kiwi Blog HOME" />
     </template>
     <template #home-hero-image>
       <div data-fade style="--lv: 2; width: 100%">
