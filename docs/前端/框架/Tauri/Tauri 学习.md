@@ -1,5 +1,10 @@
 # Tauri 学习
 
+## 参考
+
+- [Tauri 官方文档](https://www.tauri.net.cn/)
+- [Github Tauri 教程](https://github.com/lencx/tauri-tutorial/discussions)
+
 ## 基本自定义配置
 
 ```json
