@@ -36,6 +36,9 @@
         --at-apply: "animate-fade-in animate-ease-out animate-duration-300";
       }
     }
+    .search-bar {
+      border-radius: 0.4rem;
+    }
   }
 }
 
@@ -71,7 +74,7 @@
     padding: 1.5rem 0;
   }
 }
-  #VPContent .VPHero.has-image.VPHomeHero .main {
+#VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
     --delay: 0.1s;
@@ -135,7 +138,6 @@
     }
   }
 }
-
 
 // 右边目录
 // #VPContent .aside .aside-container {
@@ -267,9 +269,13 @@
   --at-apply: "border-default";
 }
 
-
-.VPLocalNav .VPLocalNavOutlineDropdown .items {
-  --at-apply: "card-df"
+.VPLocalNav .VPLocalNavOutlineDropdown {
+  .items {
+    .header {
+      display: none;
+    }
+    --at-apply: "card-df";
+  }
 }
 .vp-doc h3 {
   margin: 1.6rem 0 1rem 0;
