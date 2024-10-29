@@ -14,11 +14,13 @@ export default {
   extends: DefaultTheme,
   Layout: HomeLayout,
   enhanceApp({ app, router, siteData }) {
-    router.onBeforeRouteChange = () => {
-      if (inBrowser) {
+    // 博客访问量统计
+    router.onBeforeRouteChange = (to) => {
+      if (to !== '/' && inBrowser) {
         busuanzi.fetch()
       }
     }
+    // 注册全局组件
     app.component("NavBarTitle", NavBarTitle)
   }
 } satisfies Theme
