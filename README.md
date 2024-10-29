@@ -17,6 +17,10 @@
 
 ![文章](./assets/image3.png)
 
+## 🎉 Lighthouse 评分
+
+![Lighthouse 评分](./.doc/score.png)
+
 ## ⏳ 起步 | Project Setup
 
 ```sh

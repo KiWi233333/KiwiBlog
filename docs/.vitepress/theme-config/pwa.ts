@@ -35,6 +35,7 @@ export const pwaConfig: any = {
   },
   workbox: {
     globPatterns: ["**\/*.{js,css,html,png,jpg,svg,woff,woff2,ttf}"],
+    maximumFileSizeToCacheInBytes: 10000000,
     runtimeCaching: [
       {
         urlPattern: "/^(https|http)://*.kiwi2333.top/font/* /i",
@@ -55,7 +56,7 @@ export const pwaConfig: any = {
   registerWebManifestInRouteRules: true,
   writePlugin: true,
   devOptions: {
-    enabled: true,
+    enabled: false,
   },
 };
 
