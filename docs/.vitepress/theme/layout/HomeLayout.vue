@@ -37,10 +37,10 @@ useImageView()
     </template>
     <template #doc-after>
       <Comments class="my-2" />
-      <div class="flex-row-c-c py-4">
+      <!-- <div class="flex-row-c-c py-4">
         <div id="busuanzi_container_site_pv" class="flex-row-c-c text-center op-40 hover:op-100 transition-opacity"><i
             class="i-solar:eye-outline p-2 mr-2" /><span id="busuanzi_value_site_pv"></span></div>
-      </div>
+      </div> -->
     </template>
   </Layout>
 </template>
