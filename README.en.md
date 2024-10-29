@@ -20,6 +20,10 @@ Kiwi2333 is a personal blog built with Next.js and Tailwind CSS. It provides a s
 
 ![Post Page](./assets/image3.png)
 
+## 🎉 Lighthouse 评分
+
+![Lighthouse 评分](./.doc/score.png)
+
 ## 🚀 Getting Started
 
 To get started with Kiwi2333, follow these steps:
