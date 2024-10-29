@@ -62,6 +62,10 @@ export const langCN: any = {
 
 export const langEN: any = {
   label: 'English',
+  root: {
+    label: 'English',
+    lang: 'en'
+  },
   lang: 'en-US',
   themeConfig: {
     darkModeSwitchLabel: "Dark/Light",
