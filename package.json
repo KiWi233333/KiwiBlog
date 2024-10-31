@@ -19,11 +19,11 @@
     "@iconify-json/carbon": "1.2.4",
     "@iconify-json/solar": "1.2.1",
     "@vite-pwa/vitepress": "0.5.3",
-    "@vueuse/core": "11.1.0",
+    "@vueuse/core": "11.2.0",
     "sass": "1.77.5",
     "unocss": "0.63.6",
     "vite-plugin-vitepress-auto-sidebar": "1.7.0",
-    "vitepress": "1.4.2",
+    "vitepress": "1.4.3",
     "vue": "3.5.12"
   },
   "dependencies": {
