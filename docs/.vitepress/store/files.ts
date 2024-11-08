@@ -107,4 +107,11 @@ export const friendList = [
     avatar: "https://kiwi233.top/avatar.png",
     linkTarget: "_blank"
   },
+  {
+    title: "YIKE时光",
+    link: "https://huohuo90.com",
+    details: "一个想写代码的设计师",
+    avatar: "/index/yike.png",
+    linkTarget: "_blank"
+  },
 ]
