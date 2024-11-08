@@ -105,7 +105,6 @@ export const friendList = [
     link: "https://kiwi233.top",
     details: "一个正在学习的独立开发者...",
     avatar: "https://kiwi233.top/avatar.png",
-    linkTarget: "_blank"
   },
   {
     title: "YIKE时光",
@@ -114,4 +113,11 @@ export const friendList = [
     avatar: "/index/yike.png",
     linkTarget: "_blank"
   },
+]
+
+export const friendListKeywords = [
+  ...filesList.map(item => item.title),
+  ...projectList.map(item => item.title),
+  ...friendList.map(item => item.title),
+  ...["博客", "技术"]
 ]

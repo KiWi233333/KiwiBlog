@@ -6,7 +6,7 @@ import DefaultCard from '../DefaultCard.vue';
 </script>
 
 <template>
-  <div data-fades grid-(~ gap-4 cols-1) data-fade style="--delay: 60ms;" class="p-6 sm:p-8 right">
+  <div class="grid-(~ gap-4 cols-1) p-6 sm:p-8 right">
     <!-- 友情链接 -->
     <h3 style="margin-top: 0;" mb-2>Friends</h3>
     <div class="project-list">
