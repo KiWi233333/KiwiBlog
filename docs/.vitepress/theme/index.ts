@@ -6,6 +6,7 @@ import './style/index.scss'
 import './style/init.scss'
 import './style/custom.scss'
 import NavBarTitle from './layout/NavBarTitle.vue'
+import PublicResource from '../compnents/PublicResource.vue'
 import 'uno.css'
 // import 'virtual:unocss-devtools'
 
@@ -21,5 +22,6 @@ export default {
     // }
     // 注册全局组件
     app.component("NavBarTitle", NavBarTitle)
+    app.component("PublicResource", PublicResource)
   }
 } satisfies Theme

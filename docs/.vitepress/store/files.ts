@@ -16,6 +16,13 @@ export const projectList: CardItem[] = [
     details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
   },
   {
+    title: "Hamburger Harmony APP",
+    linkTarget: "_blank",
+    icon: "/index/kiwi-burger.png",
+    link: "/项目/Hamburger Harmony APP",
+    details: "仿麦当劳，一个基于HarmonyOS的应用，可以实现汉堡商品购买、订单管理、个人中心等功能。"
+  },
+  {
     title: "MSI",
     linkTarget: "_blank",
     icon: "https://www.apple.com/favicon.ico",

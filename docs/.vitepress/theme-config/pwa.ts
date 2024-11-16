@@ -44,7 +44,7 @@ export const pwaConfig: any = {
           cacheName: "jiwu-fonts-cache",
           expiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 31, // <== 31 days
+            maxAgeSeconds: 60 * 60 * 24 * 1, // <== 1 days
           },
           cacheableResponse: {
             statuses: [0, 200],
