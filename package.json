@@ -21,11 +21,12 @@
     "@vite-pwa/vitepress": "0.5.3",
     "@vueuse/core": "11.2.0",
     "sass": "1.77.5",
-    "unocss": "0.63.6",
-    "vite-plugin-pwa": "^0.20.5",
+    "unocss": "0.64.1",
+    "vite-plugin-pwa": "^0.21.0",
     "vite-plugin-vitepress-auto-sidebar": "1.7.0",
-    "vitepress": "1.4.3",
-    "vue": "3.5.12"
+    "vitepress": "1.5.0",
+    "vue": "3.5.13",
+    "workbox-window": "^7.3.0"
   },
   "dependencies": {
     "medium-zoom": "1.1.0"
