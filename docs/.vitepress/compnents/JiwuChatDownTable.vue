@@ -16,6 +16,9 @@ interface VersionInfoVO {
     'linux-x86_64': {
       url: string
     }
+    'android': {
+      url: string
+    }
   }
 }
 
@@ -34,39 +37,51 @@ function getVersionInfo(version = 'latest') {
 getVersionInfo()
 </script>
 <template>
-  <!-- 写一个表格 -->
-  <table>
-    <caption class="text-left mb-4">最新版本：v{{ versionInfo.version }}</caption>
-    <thead>
-      <tr>
-        <th>平台</th>
-        <th>下载地址</th>
-      </tr>
-    </thead>
+  <div>
+    <table>
+      <caption class="text-left mb-4">最新版本：v{{ versionInfo.version }}</caption>
+      <thead>
+        <tr>
+          <th>平台</th>
+          <th>下载地址</th>
+        </tr>
+      </thead>
 
-    <tbody>
-      <tr>
-        <td>Windows x86_64</td>
-        <td><a :href="versionInfo?.platforms?.['windows-x86_64']?.url">{{
-          versionInfo?.platforms?.['windows-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
-      </tr>
-      <tr>
-        <td>Mac M系列</td>
-        <td><a :href="versionInfo?.platforms?.['darwin-aarch64']?.url">{{
-          versionInfo?.platforms?.['darwin-aarch64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
-      </tr>
-      <tr>
-        <td>Mac Intel系列</td>
-        <td><a :href="versionInfo?.platforms?.['darwin-x86_64']?.url">{{
-          versionInfo?.platforms?.['darwin-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
-      </tr>
-      <tr>
-        <td>Linux x86_64</td>
-        <td><a :href="versionInfo?.platforms?.['linux-x86_64']?.url">{{
-          versionInfo?.platforms?.['linux-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
-      </tr>
-    </tbody>
-  </table>
+      <tbody>
+        <tr>
+          <td>Windows x86_64</td>
+          <td><a :href="versionInfo?.platforms?.['windows-x86_64']?.url">{{
+            versionInfo?.platforms?.['windows-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
+        </tr>
+        <tr>
+          <td>Mac M系列</td>
+          <td><a :href="versionInfo?.platforms?.['darwin-aarch64']?.url">{{
+            versionInfo?.platforms?.['darwin-aarch64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
+        </tr>
+        <tr>
+          <td>Mac Intel系列</td>
+          <td><a :href="versionInfo?.platforms?.['darwin-x86_64']?.url">{{
+            versionInfo?.platforms?.['darwin-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
+        </tr>
+        <tr>
+          <td>Linux x86_64</td>
+          <td><a :href="versionInfo?.platforms?.['linux-x86_64']?.url">{{
+            versionInfo?.platforms?.['linux-x86_64']?.url?.split('/')?.pop() || '暂无' }}</a></td>
+        </tr>
+        <tr>
+          <td>Android ARM64</td>
+          <td>
+            <a :href="versionInfo?.platforms?.['android']?.url">{{
+              versionInfo?.platforms?.['android']?.url?.split('/')?.pop() || '暂无' }}</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <span>安卓下载：v{{ versionInfo.version }}.apk</span>
+    <img
+      src="https://api.jiwu.kiwi2333.top/res/qrcode/stream?content=https://quang.kiwi2333.top/app/1.4.0/JiwuChat_1.4.0.apk&w=200&h=200"
+      alt="二维码" class="mt-4">
+  </div>
 
 </template>
 <style scoped lang="scss"></style>
