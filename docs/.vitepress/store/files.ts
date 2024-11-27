@@ -1,5 +1,4 @@
 
-import { withBase } from 'vitepress'
 import { ComputedRef } from 'vue';
 // @unocss-include
 export const projectList: CardItem[] = [
@@ -109,7 +108,7 @@ export const filesList = [
 export const friendList = [
   {
     title: "Kiwi2333",
-    link: "https://kiwi233.top",
+    link: "/",
     details: "一个正在学习的独立开发者...",
     avatar: "https://kiwi233.top/avatar.png",
   },
