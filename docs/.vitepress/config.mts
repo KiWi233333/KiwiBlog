@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 import { pwaConfig } from './theme-config/pwa'
 import { withPwa } from '@vite-pwa/vitepress'
-import { appLang, appName } from './theme-config/constant'
+import { appDescription, appLang, appName } from './theme-config/constant'
 import { langCN, langEN } from './theme-config/lang';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import UnoCSS from 'unocss/vite'
@@ -9,7 +9,7 @@ import UnoCSS from 'unocss/vite'
 // https://vitepress.dev/reference/site-config
 export default withPwa(defineConfig({
   title: appName,
-  description: "Kiwi2333' blog🎉！",
+  description: appDescription,
   lang: appLang,
   pwa: pwaConfig,
   lastUpdated: true,
