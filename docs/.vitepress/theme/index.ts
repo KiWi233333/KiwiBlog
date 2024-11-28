@@ -7,6 +7,7 @@ import './style/init.scss'
 import './style/custom.scss'
 import NavBarTitle from './layout/NavBarTitle.vue'
 import PublicResource from '../compnents/PublicResource.vue'
+import Lenis from 'lenis'
 import 'uno.css'
 // import 'virtual:unocss-devtools'
 
@@ -21,6 +22,16 @@ export default {
     //   }
     // }
     if (inBrowser) {
+      // 滚动动画
+      const lenis = new Lenis({
+        duration: 1.0,
+      })
+
+      function raf(time) {
+        lenis.raf(time)
+        requestAnimationFrame(raf)
+      }
+      requestAnimationFrame(raf)
     }
     // 注册全局组件
     app.component("NavBarTitle", NavBarTitle)
