@@ -132,3 +132,15 @@ body {
   -webkit-line-clamp: 5;
   -webkit-box-orient: vertical;
 }
+
+
+
+@keyframes scroll-inifinite-swiper {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-50%));
+  }
+}

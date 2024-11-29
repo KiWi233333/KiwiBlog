@@ -10,7 +10,7 @@ import Other from "./Other.vue";
     <!-- 左侧 -->
     <UserInfoCard style="--delay: 40ms;--lv: 0;" class="md:sticky top-6rem left-0" />
     <!-- 内容 -->
-    <main style="--delay: 60ms;--lv: 2;" class="mb-20 grid gap-4 cols-1 p-6 sm:p-8">
+    <main style="--delay: 60ms;--lv: 2;" class="mb-20 grid gap-4 cols-1 p-0 sm:p-8">
       <Container />
       <Other />
     </main>
