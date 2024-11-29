@@ -4,10 +4,12 @@ import { computed, VNode } from 'vue';
 const {
   data = [],
   animationSpeed = 40,
+  isHoverPaused = true,
   offsetX = "0px"
 } = defineProps<{
   data: SlideItem[]
   animationSpeed?: number
+  isHoverPaused?: boolean
   offsetX?: string
 }>()
 const animationSpeedText = computed(() => `${animationSpeed}s`)
@@ -22,7 +24,7 @@ export interface SlideItem {
 
 <template>
   <div class="slider">
-    <div class="slide-track">
+    <div class="slide-track" :class="{ 'is-hover-paused': isHoverPaused }">
       <div class="slide" v-for="(item, i) in data" :key="`slide-first-${i}`" v-html="item.template" :style="{
         width: `${item.width}px`,
       }">
@@ -87,7 +89,7 @@ $offsetX: v-bind(offsetX);
     width: calc($allDataWidth * 2);
     will-change: transform;
 
-    &:hover {
+    .is-hover-paused:hover {
       animation-play-state: paused;
     }
   }
