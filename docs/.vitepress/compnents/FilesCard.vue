@@ -34,8 +34,9 @@ withDefaults(defineProps<{
   color: inherit;
 
   &:hover {
-    background-color: #9b9b9b15;
     backdrop-filter: blur(10px);
+    color: inherit;
+      --at-apply: 'border-default card-df-br';
   }
 }
 </style>

@@ -1,7 +1,7 @@
 :root {
   --font-family: "Alimama";
   font-family: var(--font-family); 
-}
+} 
 
 * {
   padding: 0;
@@ -13,9 +13,9 @@
 }
 
 a {
-  text-decoration: none;
-  transition: color 300ms;
+  text-decoration: none; 
 }
+
 
 span {
   line-height: 100%;
@@ -91,7 +91,6 @@ body {
 .disabled-img-view {
   cursor: inherit;
 }
-
 
 // 文本折叠
 .text-truncate-2 {

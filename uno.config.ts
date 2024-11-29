@@ -18,8 +18,11 @@ export default defineConfig({
     // 颜色
     ["text-color", "text-dark dark:text-white"],
     ["bg-color", "bg-white dark:bg-dark"],
+    ["bg-color-br", "bg-[#ffffff93] dark:(bg-dark-5 bg-op-60) backdrop-blur-12px"],
+    ["bg-menu-color", "bg-white  dark:bg-dark-8"],
+    ["bg-color-second", "bg-light-5 dark:bg-dark"],
     // 边框
-    ["border-default", "border-1px border-solid border-gray-200 dark:border-dark-300"],
+    ["border-default", "border-1px border-solid border-light-700 dark:border-dark-500"],
     ["border-default-dashed", "hover:shadow-sm border-2px  border-default border-dashed"],
     ["border-default-hover", `transition-200 hover:shadow hover:border-solid hover:border-[var(--el-color-primary)]  border-default-dashed
     `],
