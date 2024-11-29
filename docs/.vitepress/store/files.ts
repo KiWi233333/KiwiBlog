@@ -119,6 +119,13 @@ export const friendList = [
     avatar: "/index/yike.png",
     linkTarget: "_blank"
   },
+  {
+    title: "ZLX STUDIO",
+    link: "https://blog.iooioio.com",
+    details: "为音乐创作发电！",
+    avatar: "https://blog.iooioio.com/upload/ZLXSTUDIO.png",
+    linkTarget: "_blank"
+  }
 ]
 
 export const friendListKeywords = [
