@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { friendList } from "../../store/files";
-import InfiniteSwiper from "../Swiper/InfiniteSwiper.vue";
 import InfiniteSwiperV2 from "../Swiper/InfiniteSwiperV2.vue";
 
 const friendDomList = friendList.map(item => {
@@ -63,6 +62,7 @@ const friendDomList = friendList.map(item => {
         </div>
       </InfiniteSwiperV2>
     </div>
+    <h2>All Links</h2>
     <h2>All Links</h2>
     <div class="project-list mt-4">
       <a v-for="(data, i) in friendList" :href="data.link" :target="data.linkTarget || '_self'"
