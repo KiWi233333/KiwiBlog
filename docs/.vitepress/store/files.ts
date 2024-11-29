@@ -105,12 +105,12 @@ export const filesList = [
 ];
 
 
-export const friendList = [
+export const friendList: FriendItem[] = [
   {
     title: "Kiwi2333",
     link: "/",
-    details: "一个正在学习的独立开发者...",
-    avatar: "https://kiwi233.top/avatar.png",
+    details: "一个正在学习的独立开发者",
+    avatar: "/avatar.png",
   },
   {
     title: "YIKE时光",
@@ -123,10 +123,19 @@ export const friendList = [
     title: "ZLX STUDIO",
     link: "https://blog.iooioio.com",
     details: "为音乐创作发电！",
-    avatar: "https://blog.iooioio.com/upload/ZLXSTUDIO.png",
+    avatar: "index/ZLX_STUDIO.png",
     linkTarget: "_blank"
   }
 ]
+
+export interface FriendItem {
+  title: string;
+  link: string;
+  details: string;
+  avatar: string;
+  linkTarget?: string;
+}
+
 
 export const friendListKeywords = [
   ...filesList.map(item => item.title),
