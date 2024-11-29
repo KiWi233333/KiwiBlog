@@ -42,6 +42,7 @@ withDefaults(defineProps<{
   box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 2px, rgba(0, 0, 0, 0.2) 0px 7px 13px -3px, rgba(0, 0, 0, 0.12) 0px -3px 0px inset;
 
   &.no-link {
+    transform: translateY(2px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
   }
 
@@ -76,11 +77,16 @@ withDefaults(defineProps<{
 .dark .card-default {
   box-shadow: rgba(24, 24, 24, 0.1) 0px 2px 2px, rgba(29, 29, 29, 0.2) 0px 6px 8px -3px, rgba(39, 39, 39, 0.12) 0px -3px 0px inset;
 
+  &.no-link {
+      transform: translateY(2px);
+      box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
+    }
 
   &:hover,
   &:active {
     transform: translateY(2px);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 0 0, rgba(0, 0, 0, 0.2) 0px 0 0 1px, rgba(0, 0, 0, 0.12) 0px 0 0px inset;
   }
+
 }
 </style>
