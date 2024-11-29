@@ -85,6 +85,7 @@ $offsetX: v-bind(offsetX);
     animation: scroll $animationSpeed linear infinite;
     display: flex;
     width: calc($allDataWidth * 2);
+    will-change: transform;
 
     &:hover {
       animation-play-state: paused;
