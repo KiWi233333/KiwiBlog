@@ -63,7 +63,6 @@ const friendDomList = friendList.map(item => {
       </InfiniteSwiperV2>
     </div>
     <h2>All Links</h2>
-    <h2>All Links</h2>
     <div class="project-list mt-4">
       <a v-for="(data, i) in friendList" :href="data.link" :target="data.linkTarget || '_self'"
         class="flex items-center gap-2 card card-df border-default rounded-10px shadow-sm p-3 hover:shadow transition-all"
