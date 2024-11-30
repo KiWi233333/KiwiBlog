@@ -16,7 +16,6 @@ export const projectList: CardItem[] = [
   },
   {
     title: "Hamburger Harmony APP",
-    linkTarget: "_blank",
     icon: "/index/kiwi-burger.png",
     link: "/项目/Hamburger Harmony APP",
     details: "仿麦当劳，一个基于HarmonyOS的应用，可以实现汉堡商品购买、订单管理、个人中心等功能。"
