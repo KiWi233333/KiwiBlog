@@ -13,8 +13,6 @@ const {
 
 const allDataWidth = ref(0);
 const slideTrack = ref<HTMLElement | null>(null);
-// let resizeObserver: ResizeObserver | null = null;
-
 function initAnimation() {
   if (!slideTrack.value) {
     return
@@ -40,31 +38,10 @@ function initAnimation() {
     slideTrack.value.append(...originalChildren, ...originalChildren.map(child => child.cloneNode(true)));
   });
 }
-function adjustAnimation() {
-  if (slideTrack.value) {
-    nextTick(() => {
-      let childWidth = 0;
-      for (const child of slideTrack?.value?.children || []) {
-        childWidth += child.clientWidth;
-      }
-      allDataWidth.value = childWidth;
-      // 设置动画样式
-      if (slideTrack.value) {
-        slideTrack.value.style.animation = `${animationName} ${animationSpeed}s linear infinite`;
-        slideTrack.value.style.width = `${allDataWidth.value * 2}px`; // 设置总宽度为两倍子元素宽度
-      }
-    });
-  }
-}
 
 // 在组件挂载时初始化动画
 onMounted(() => {
   initAnimation();
-  // 监听窗口大小变化重新调整动画
-  // resizeObserver = new ResizeObserver(adjustAnimation);
-  // if (slideTrack.value) {
-  // resizeObserver.observe(slideTrack.value);
-  // }
 });
 
 // 在组件卸载时清理
@@ -72,7 +49,6 @@ onBeforeUnmount(() => {
   if (slideTrack.value) {
     slideTrack.value.style.animation = 'none';
   }
-  // resizeObserver?.disconnect();
 });
 
 </script>
@@ -88,7 +64,7 @@ onBeforeUnmount(() => {
 <style lang="scss">
 @keyframes scroll-inifinite-swiper {
   0% {
-    transform: translateX(0);
+    transform: translateX(v-bind(offsetX));
   }
 
   100% {

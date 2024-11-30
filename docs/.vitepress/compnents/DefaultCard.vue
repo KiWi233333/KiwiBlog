@@ -1,6 +1,6 @@
 <template>
   <component :is="data.link ? 'a' : 'div'" :href="data.link" :target="data.linkTarget || '_self'" class="card-default"
-    :class="{ 'no-link': !data.link }">
+    :title="data.title + '-' + data.details" :class="{ 'no-link': !data.link }">
     <slot name="icon">
       <div class="icon" v-if="data.icon?.startsWith('i-')" :class="data.icon" />
       <img class="icon" v-else :src="data.icon" :alt="data.icon">
