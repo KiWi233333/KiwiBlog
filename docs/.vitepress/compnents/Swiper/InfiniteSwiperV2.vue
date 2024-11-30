@@ -1,16 +1,19 @@
 <script setup lang="ts">
 import { ref, onMounted, watch, onBeforeUnmount, nextTick } from 'vue';
 
-const props = defineProps<{
+const {
+  animationSpeed = 40,
+  offsetX = '0px',
+  animationName = 'scroll-inifinite-swiper'
+} = defineProps<{
   animationSpeed?: number;
   offsetX?: string;
+  animationName?: string;
 }>();
 
-const animationSpeed = ref(props.animationSpeed || 40);
-const offsetX = ref(props.offsetX || '0px');
 const allDataWidth = ref(0);
 const slideTrack = ref<HTMLElement | null>(null);
-let resizeObserver: ResizeObserver | null = null;
+// let resizeObserver: ResizeObserver | null = null;
 
 function initAnimation() {
   if (!slideTrack.value) {
@@ -28,7 +31,7 @@ function initAnimation() {
     allDataWidth.value = childWidth;
     // 设置动画样式
     if (slideTrack.value) {
-      slideTrack.value.style.animation = `scroll-inifinite-swiper ${animationSpeed.value}s linear infinite`;
+      slideTrack.value.style.animation = `${animationName} ${animationSpeed}s linear infinite`;
       slideTrack.value.style.width = `${allDataWidth.value * 2}px`; // 设置总宽度为两倍子元素宽度
     }
     // 获取原始子元素并克隆一次
@@ -47,7 +50,7 @@ function adjustAnimation() {
       allDataWidth.value = childWidth;
       // 设置动画样式
       if (slideTrack.value) {
-        slideTrack.value.style.animation = `scroll-inifinite-swiper ${animationSpeed.value}s linear infinite`;
+        slideTrack.value.style.animation = `${animationName} ${animationSpeed}s linear infinite`;
         slideTrack.value.style.width = `${allDataWidth.value * 2}px`; // 设置总宽度为两倍子元素宽度
       }
     });
@@ -57,7 +60,6 @@ function adjustAnimation() {
 // 在组件挂载时初始化动画
 onMounted(() => {
   initAnimation();
-
   // 监听窗口大小变化重新调整动画
   // resizeObserver = new ResizeObserver(adjustAnimation);
   // if (slideTrack.value) {
@@ -76,25 +78,36 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <div class="slider">
-    <div class="slide-track" ref="slideTrack">
+  <div class="infinite-swiper-slider">
+    <div class="infinite-swiper-slide-track" ref="slideTrack">
       <slot />
     </div>
   </div>
 </template>
 
-<style scoped lang="scss">
-.slider {
+<style lang="scss">
+@keyframes scroll-inifinite-swiper {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.infinite-swiper-slider {
   margin: auto;
   overflow: hidden;
   position: relative;
   width: 100%;
   height: fit-content;
 
-  .slide-track {
+  .infinite-swiper-slide-track {
     display: flex;
     flex-shrink: 0;
     will-change: transform;
+    animation: scroll-inifinite-swiper 40s linear infinite;
 
     &:hover {
       animation-play-state: paused;
