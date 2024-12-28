@@ -32,7 +32,7 @@ withDefaults(defineProps<{
   display: flex;
   align-items: center;
   gap: 1em;
-  padding: 1.2em;
+  padding: 1em 1.4em;
   border: 0;
   border-radius: 10px;
   z-index: 1;
@@ -62,14 +62,14 @@ withDefaults(defineProps<{
 
   .icon,
   img {
-    width: 3em;
-    height: 3em;
+    width: 3.2em;
+    height: 3.2em;
     object-fit: contain;
   }
 
   small {
     display: inline-block;
-    height: 3em;
+    height: 3.2em;
     text-overflow: ellipsis;
   }
 }
