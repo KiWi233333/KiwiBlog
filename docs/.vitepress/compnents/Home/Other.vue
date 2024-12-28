@@ -24,7 +24,7 @@ const friendDomList = friendList.map(item => {
   <section class="grid cols-1">
     <!-- 友情链接 -->
     <h2>Friends</h2>
-    <div class="card-df rounded-10px pb-6 border-default">
+    <div class="card-df rounded-10px pb-10 border-default">
       <div class="text-sm flex-row-bt-c p-4 op-60 hover:op-100 transition-opacity">
         <span>友情链接</span>
         <a href="/apply"

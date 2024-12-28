@@ -13,7 +13,7 @@
         <span v-if="data.active" class=" active-dot"></span>
       </slot>
       <slot name="details">
-        <small class="text-truncate-2 leading-20px mt-2 op-60">{{ data.details }}</small>
+        <div class="mt-2 op-60 text-truncate-2 leading-1.5em text-sm">{{ data.details }}</div>
       </slot>
     </div>
   </component>
