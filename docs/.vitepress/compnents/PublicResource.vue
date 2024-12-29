@@ -28,10 +28,10 @@ withDefaults(defineProps<{
       <a :href="`https://github.com/${author}/${repoUrl}/issues`" target="_blank">
         <img class="disabled-img-view" alt="Issues" :src="`https://img.shields.io/github/issues/${author}/${repoUrl}`">
       </a>
-      <!-- <a :href="`https://github.com/${author}/${repoUrl}/blob/master/LICENSE`" target="_blank">
-        <img class="disabled-img-view" alt="License: Apache-2.0"
-          src="https://img.shields.io/badge/License-Apache--2.0-blue.svg">
-      </a> -->
+      <a :href="`https://github.com/${author}/${repoUrl}/blob/master/LICENSE`" target="_blank">
+        <img class="disabled-img-view" alt="License"
+          :src="`https://img.shields.io/github/license/${author}/${repoUrl}`">
+      </a>
     </div>
   </div>
 </template>
