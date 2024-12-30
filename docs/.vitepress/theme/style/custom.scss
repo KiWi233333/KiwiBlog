@@ -1,15 +1,18 @@
-.VPNav .home {
-  background-color: transparent !important;
-  backdrop-filter: blur(1rem);
-  transition: 0.15s ease-in-out;
-  opacity: 1;
-
-  &.top {
-    opacity: 0;
-    backdrop-filter: none;
-  }
-  &:hover {
+.VPNav {
+  position: sticky !important;
+  .home {
+    background-color: transparent !important;
+    backdrop-filter: blur(1rem);
+    transition: 0.15s ease-in-out;
     opacity: 1;
+
+    &.top {
+      opacity: 0;
+      backdrop-filter: none;
+    }
+    &:hover {
+      opacity: 1;
+    }
   }
 }
 
@@ -39,6 +42,10 @@
     .search-bar {
       border-radius: 0.4rem;
     }
+  }
+  .backdrop {
+    transition: backdrop-filter, opacity 0.15s ease-in-out;
+    backdrop-filter: blur(0.5rem);
   }
 }
 
@@ -220,8 +227,9 @@
   --at-apply: "card-df";
 }
 
-.VPSidebar {
-  animation: fade-in-left-df 0.3s ease;
+
+.VPSidebar { 
+  --at-apply: "lg:animate-[fade-in-left-df_0.3s_ease]"
 }
 
 @keyframes fade-in-left-df {

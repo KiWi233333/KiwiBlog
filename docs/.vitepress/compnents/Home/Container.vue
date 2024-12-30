@@ -61,6 +61,6 @@ onMounted(() => {
   }
 }
 .project-list {
-  --at-apply: "grid grid-cols-1 lg:grid-cols-2 gap-4";
+  --at-apply: "grid grid-cols-1 md:grid-cols-2 gap-4";
 }
 </style>

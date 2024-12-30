@@ -21,7 +21,6 @@
 <script setup lang="ts">
 import { CardItem } from '../store/files';
 
-
 withDefaults(defineProps<{
   data: CardItem
 }>(), {

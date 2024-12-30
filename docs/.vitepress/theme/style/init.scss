@@ -58,7 +58,8 @@ body {
 
 // 全局滚动条
 ::-webkit-scrollbar {
-  width: 6px;
+  // width: 6px;
+  width: 0;
   height: 0;
   background-color: #fbfbfc00;
 }
