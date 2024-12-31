@@ -1,5 +1,6 @@
 .VPNav {
-  position: sticky !important;
+  // position: sticky !important;
+  position: fixed !important;
   .home {
     background-color: transparent !important;
     backdrop-filter: blur(1rem);
