@@ -144,7 +144,6 @@ function onToggleWindow(type: "min" | "max" | "close") {
           circle plain
           class="cursor-pointer btn-danger"
           transition="all cubic-bezier(0.61, 0.225, 0.195, 1.3)"
-          i-solar:logout-3-broken
           p-2 @click="user.exitLogin()"
         />
       </div>

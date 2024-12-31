@@ -13,24 +13,36 @@ export const projectList: CardItem[] = [
     details: "极物圈，是一个集商城、ai聊天、沟通、社区功能于一体的平台。"
   },
   {
-    title: "JiwuChat 聊天应用",
+    title: "极物聊天 | JiwuChat",
     icon: "/index/jiwuchat-tauri.webp",
     link: "/项目/极物聊天",
-    details: "Jiwu聊天应用，是一个ai聊天、社交功能于一体的Tauri桌面应用。"
+    details: "Jiwu聊天应用，是一个AI聊天、社交功能于一体的Tauri多端应用，支持Android、iOS、Windows、MacOS、Linux、Web等多平台。"
+  },
+  {
+    title: "悦读时光 | Read Joy",
+    icon: "/index/read-joy.png",
+    link: "/项目/悦读时光",
+    details: "悦读时光，一个简约而不简单的阅读平台。无论您是书籍爱好者，还是寻找灵感的创作者，这里都能满足您的需求。"
+  },
+  {
+    title: "Hamburger Harmony APP",
+    icon: "/index/kiwi-burger.png",
+    link: "/项目/Hamburger Harmony APP",
+    details: "仿麦当劳，一个基于HarmonyOS的应用，可以实现汉堡商品购买、订单管理、个人中心等功能。"
   },
   {
     title: "MSI",
     linkTarget: "_blank",
     icon: "https://www.apple.com/favicon.ico",
     link: "https://github.com/KiWi233333/MSI-GS66-Stealth-OC-Hackintosh-opencore/releases/tag/1.0.1",
-    details: "微星GS66黑苹果EFI文件 OC-Hackintosh-opencore"
+    details: "微星GS66黑苹果EFI文件，支持macOS Big Sur 11.4"
   },
   {
     title: "简约博客",
     linkTarget: "_blank",
     icon: "/kiwi-fruit.svg",
     link: "https://blogs.kiwi233.top/",
-    details: "H5C3+js+jq+bootstrap5响应式博客简约静态网站"
+    details: "H5C3、JavaScript、jQuery、Bootstrap5 构建的响应式简约静态博客网站"
   },
 ]
 
@@ -104,15 +116,42 @@ export const filesList = [
   }
 ];
 
-/**
- * 友情链接
- */
-export const friendList = [
+
+export const friendList: FriendItem[] = [
   {
     title: "Kiwi2333",
-    link: "https://kiwi233.top",
-    details: "一个正在学习的独立开发者...",
-    avatar: "https://kiwi233.top/avatar.png",
+    link: "/",
+    details: "一个正在学习的独立开发者",
+    avatar: "/avatar.png",
+  },
+  {
+    title: "YIKE时光",
+    link: "https://huohuo90.com",
+    details: "一个想写代码的设计师",
+    avatar: "/index/yike.png",
     linkTarget: "_blank"
   },
+  {
+    title: "ZLX STUDIO",
+    link: "https://blog.iooioio.com",
+    details: "为音乐创作发电！",
+    avatar: "index/ZLX_STUDIO.png",
+    linkTarget: "_blank"
+  }
+]
+
+export interface FriendItem {
+  title: string;
+  link: string;
+  details: string;
+  avatar: string;
+  linkTarget?: string;
+}
+
+
+export const friendListKeywords = [
+  ...filesList.map(item => item.title),
+  ...projectList.map(item => item.title),
+  ...friendList.map(item => item.title),
+  ...["博客", "技术"]
 ]
