@@ -1,4 +1,5 @@
-export const appDescription = "A Kiwi2333 的个人博客 | Self Blog"
-export const appName = "Kiwi2333"
+export const appDescription = "Kiwi2333 的个人博客 | Kiwi2333's Blog ，一个分享日常的博客，这个平台上可以找到很多有趣的博客内容 🎉"
+export const appName = "Kiwi2333's Blog 🎉"
+export const appPWAName = "Kiwi2333's Blog 🎉"
 export const selfName = "Kiwi2333"
 export const appLang = "zh-CN"

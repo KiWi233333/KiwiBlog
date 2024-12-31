@@ -1,6 +1,6 @@
 
 // https://vite-pwa-org.netlify.app/frameworks/nuxt
-import { appDescription, appName } from "./constant";
+import { appDescription, appPWAName } from "./constant";
 
 // https://www.jianshu.com/p/0a07bd528e08
 const scope = "/";
@@ -14,8 +14,8 @@ export const pwaConfig: any = {
     id: scope,
     background_color: "#fff",
     display: "standalone",
-    name: appName,
-    short_name: appName,
+    name: appPWAName,
+    short_name: appPWAName,
     start_url: scope,
     description: appDescription,
     theme_color: "#fff",
@@ -44,7 +44,7 @@ export const pwaConfig: any = {
           cacheName: "jiwu-fonts-cache",
           expiration: {
             maxEntries: 10,
-            maxAgeSeconds: 60 * 60 * 24 * 31, // <== 31 days
+            maxAgeSeconds: 60 * 60 * 24 * 1, // <== 1 days
           },
           cacheableResponse: {
             statuses: [0, 200],

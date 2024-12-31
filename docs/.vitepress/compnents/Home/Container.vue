@@ -11,7 +11,7 @@ const doingList = [
     details: "A Developer with a passion for creating innovative and user-friendly web applications.",
   },
   {
-    title: ()=> version.value,
+    title: () => version.value,
     icon: "i-solar:atom-linear",
     details: "The blog is being updated to a new version, with a more modern and responsive design.",
   },
@@ -23,13 +23,13 @@ onMounted(() => {
       .then(data => {
         version.value = data.tag_name || "v0.0.0";
       })
-      .catch(err => {});
+      .catch(err => { });
   });
 })
 </script>
 
 <template>
-  <div class="p-6 sm:p-8 right">
+  <section>
     <!-- 关于我 -->
     <h1 clear-both>
       About Me
@@ -41,7 +41,7 @@ onMounted(() => {
     <!-- 最近在做什么 -->
     <h2>What have I been doing</h2>
     <div class="project-list">
-      <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df">
+      <DefaultCard :data="p" v-for="(p, i) in doingList" :key="i" class="card-df card text-color">
         <template #icon>
           <span class="p-4 mr-2" :class="p.icon" v-if="p.icon"></span>
         </template>
@@ -50,14 +50,18 @@ onMounted(() => {
     <!-- 项目 -->
     <h2>Projects</h2>
     <div class="project-list">
-      <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" style="color: inherit" class="card-df" />
+      <DefaultCard :data="p" v-for="(p, i) in projectList" :key="i" class="card-df card text-color" />
     </div>
-    <a href="/blog" class="card-df block p-2 px-4 hover:shadow ml-a border-default w-fit rounded-2 mt-6">Just Go！</a>
-  </div>
+  </section>
 </template>
 <style scoped lang="scss">
+.card {
+  &:hover {
+    color: inherit;
+  }
+}
 .project-list {
-  --at-apply: "grid grid-cols-1 lg:grid-cols-2 gap-4";
+  --at-apply: "grid grid-cols-1 md:grid-cols-2 gap-4";
 }
 
 </style>
