@@ -71,13 +71,13 @@ export const filesList = [
     title: "前端",
     icon: "🧪",
     details: "Web、Ts、Vue、Nuxt、React、Uniapp...",
-    link: "/前端/Css/1.签名动画svg"
+    link: "/前端/Css/1.勋章无限轮播图"
   },
   {
     title: "后端",
     icon: "💊",
     details: "Java、MySQL、Redis、Spring全家桶、Node开发...",
-    link: "/后端/Java/Java基础/Java基础-面向对象"
+    link: "/后端/Java/框架/SpringCloud入门"
   },
   {
     title: "嵌入式",
