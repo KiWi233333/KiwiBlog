@@ -77,7 +77,7 @@
 #VPContent .VPHero.has-image.VPHomeHero .main {
   & > h1 {
     --lv: 0;
-    --delay: 0.1s;
+    --delay: 50ms;
     --start: 0ms;
     --anima: latter-slice-top;
     animation: var(--anima) 1s both;
@@ -92,7 +92,7 @@
   }
 }
 #VPContent .VPHomeFeatures {
-  --delay: 0.1s;
+  --delay: 50ms;
   --start: 0ms;
   --anima: latter-slice-top;
   .item {
@@ -127,7 +127,7 @@
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
   --lv: 0;
-  --delay: 0.1s;
+  --delay: 50ms;
   --start: 0ms;
   --anima: latter-slice-top;
   animation: var(--anima) 0.4s both;
@@ -142,14 +142,14 @@
 // 右边目录
 // #VPContent .aside .aside-container {
 //   --lv: 0;
-//   --delay: 0.1s;
+//   --delay: 50ms;
 //   --start: 0ms;
 //   --anima: latter-slice-left;
 //   animation: var(--anima) 0.4s both;
 //   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
 //   .VPDocAsideOutline ul > li {
 //     --lv: 0;
-//     --delay: 0.1s;
+//     --delay: 50ms;
 //     --start: 0ms;
 //     --anima: latter-slice-left;
 //     animation: var(--anima) 0.4s both;
@@ -164,7 +164,7 @@
 
 [data-fade] {
   --lv: 0;
-  --delay: 0.1s;
+  --delay: 50ms;
   --start: 0ms;
   --anima: latter-slice-top;
 }
