@@ -7,7 +7,7 @@ import { selfName } from '../../theme-config/constant';
   <div class="flex gap-4 sm:gap-2 flex-col items-center mx-a sm:(w-full)">
     <img src="/avatar.png" class="hover:(rounded-1/2) transition-border-radius  w-1/3 sm:(w-1/2) mx-a" alt="头像">
     <div class="flex-row-c-c">
-      <h3 class="font-steps" style='--lv: 1;margin: 0.6em 0;text-align: center;'>{{ selfName }}</h3>
+      <h3 class="font-steps h-1.2em" style='--lv: 1;margin: 0.6em 0;text-align: center;'>{{ selfName }}</h3>
     </div>
     <!-- 联系 -->
     <div class="mx-a w-4/5 border-default border-0 border-y-1px w-full">
