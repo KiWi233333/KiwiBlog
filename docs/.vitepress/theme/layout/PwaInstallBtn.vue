@@ -31,7 +31,7 @@ function onInstall() {
 </script>
 
 <template>
-  <div @click="onInstall" v-if="!isInstalled" style="cursor:pointer;padding-left: 1em;opacity: 0.8;">
+  <div title="PWA 应用安装" @click="onInstall" v-if="!isInstalled" style="cursor:pointer;opacity: 0.8;">
     <svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24">
       <g stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <path fill="none" stroke-dasharray="14" stroke-dashoffset="14" d="M6 19h12">

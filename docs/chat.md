@@ -8,4 +8,4 @@ footer: false
 import Chat from './.vitepress/compnents/Chat/index.vue'
 </script>
 
-<Chat data-fade/>
+<Chat />
