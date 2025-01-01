@@ -14,7 +14,7 @@ const { Layout } = DefaultTheme;
 useToggleTheme()
 
 //  图片缩放
-useImageView() 
+useImageView()
 
 </script>
 
@@ -29,14 +29,14 @@ useImageView()
       </div>
     </template>
     <template #nav-bar-content-after>
-      <PwaInstallBtn />
+      <PwaInstallBtn class="sm:(border-default-l ml-4 pl-4) ml-0 " />
     </template>
     <template #layout-bottom>
       <ObserverTool />
       <AnFuTree />
     </template>
     <template #doc-after>
-      <Comments class="my-2" />
+      <Comments class="my-2 animate-[fade-in_0.5s_ease-in-out]" />
       <!-- <div class="flex-row-c-c py-4">
         <div id="busuanzi_container_site_pv" class="flex-row-c-c text-center op-40 hover:op-100 transition-opacity"><i
             class="i-solar:eye-outline p-2 mr-2" /><span id="busuanzi_value_site_pv"></span></div>

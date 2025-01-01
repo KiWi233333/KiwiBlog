@@ -21,12 +21,11 @@ export default {
     //     busuanzi.fetch()
     //   }
     // }
-    if (inBrowser) {
+    if (inBrowser && localStorage.getItem("isSmoothScroll") !== 'false') {
       // 滚动动画
       const lenis = new Lenis({
-        duration: 1.0,
+        duration: 0.68,
       })
-
       function raf(time) {
         lenis.raf(time)
         requestAnimationFrame(raf)
