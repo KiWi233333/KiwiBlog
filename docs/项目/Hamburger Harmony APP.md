@@ -12,15 +12,15 @@ index: 4
 
 # Hamburger Harmony APP
 
-## 项目介绍
+## 🎈 项目介绍
 
 > 项目基于鸿蒙系统，使用Js语言开发，实现了Hamburger Harmony APP外卖的点餐功能。用户可以通过该应用浏览菜单、选择菜品、添加到购物车，并完成下单支付。项目使用鸿蒙系统提供的UI组件和API。
 
-## 项目链接
+## ☕ 项目链接
 
 [Hamburger Harmony APP 项目地址](https://github.com/KiWi233333/McDonalds-Harmonry-Js)
 
-## 效果展示
+## 📸 效果展示
 
 <div class="img-list">
 <img alt="图片" src="./assets/Hamburger Harmony APP/0.1 开屏.png" />
