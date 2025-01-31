@@ -60,10 +60,11 @@ withDefaults(defineProps<{
   }
 
   .icon,
-  img {
-    width: 3.2em;
-    height: 3.2em;
-    object-fit: contain;
+  img.icon {
+    display: block;
+    width: 3.2rem;
+    height: 3.2rem;
+    object-fit: cover;
   }
 
   small {
