@@ -25,6 +25,8 @@ export default {
       // 滚动动画
       const lenis = new Lenis({
         duration: 0.68,
+        // wrapper: window,
+        prevent: (node) => node.id === 'VPSidebarNav',
       })
       function raf(time) {
         lenis.raf(time)
