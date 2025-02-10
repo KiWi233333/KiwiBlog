@@ -45,7 +45,9 @@
     }
   }
   .backdrop {
-    transition: backdrop-filter, opacity 0.15s ease-in-out;
+    transition:
+      backdrop-filter,
+      opacity 0.15s ease-in-out;
     backdrop-filter: blur(0.5rem);
   }
 }
@@ -64,6 +66,9 @@
       text-align: center;
     }
   }
+}
+#VPContent {
+  padding-top: var(--vp-nav-height) !important;
 }
 
 // 文档判断内容渐入
@@ -229,9 +234,14 @@
   --at-apply: "card-df";
 }
 
+.VPNavScreenMenu.menu {
+  .VPNavScreenMenuGroup {
+    height: 42px;
+  }
+}
 
-.VPSidebar { 
-  --at-apply: "lg:animate-[latter-slice-blur-left_0.3s_ease]"
+.VPSidebar {
+  --at-apply: "lg:animate-[latter-slice-blur-left_0.3s_ease]";
 }
 
 @keyframes fade-in-left-df {
@@ -253,7 +263,7 @@
     filter: blur(0.5em);
   }
 
-  80%  {
+  80% {
     filter: none;
   }
   100% {
@@ -269,7 +279,7 @@
     filter: blur(0.5em);
   }
 
-  80%  {
+  80% {
     filter: none;
   }
   100% {
