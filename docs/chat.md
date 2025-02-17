@@ -8,4 +8,4 @@ footer: false
 import Chat from './.vitepress/compnents/Chat/index.vue'
 </script>
 
-<Chat class="animate-[fade-in_1s_ease-in-out]" />
+<Chat />

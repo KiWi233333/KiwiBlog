@@ -6,11 +6,11 @@ import Other from "./Other.vue";
 </script>
 
 <template>
-  <div class="grid grid-cols-1 lg:grid-cols-[1fr_7fr_2fr] gap-10 items-start main">
+  <div class="grid py-12 grid-cols-1 lg:grid-cols-[1fr_7fr_2fr] gap-10 items-start main">
     <!-- 左侧 -->
     <UserInfoCard style="--delay: 40ms;--lv: 0;" class="md:hidden lg:block md:sticky top-6rem left-0" />
     <!-- 内容 -->
-    <main style="--delay: 60ms;--lv: 2;" class="mb-20 grid gap-4 cols-1 p-0 sm:p-8">
+    <main style="--delay: 40ms;--lv: 0;" class="mb-20 grid gap-4 cols-1 p-0 sm:(p-8 pt-0)">
       <Container />
       <Other />
     </main>

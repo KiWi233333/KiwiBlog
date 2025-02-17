@@ -1,18 +1,19 @@
 .VPNav {
-  position: sticky !important;
+  // position: sticky !important;
+  position: fixed !important;
   .home {
     background-color: transparent !important;
     backdrop-filter: blur(1rem);
     transition: 0.15s ease-in-out;
     opacity: 1;
 
-    &.top {
-      opacity: 0;
-      backdrop-filter: none;
-    }
-    &:hover {
-      opacity: 1;
-    }
+    // &.top {
+    //   // opacity: 0;
+    //   backdrop-filter: none;
+    // }
+    // &:hover {
+    //   opacity: 1;
+    // }
   }
 }
 
@@ -44,7 +45,9 @@
     }
   }
   .backdrop {
-    transition: backdrop-filter, opacity 0.15s ease-in-out;
+    transition:
+      backdrop-filter,
+      opacity 0.15s ease-in-out;
     backdrop-filter: blur(0.5rem);
   }
 }
@@ -64,6 +67,9 @@
     }
   }
 }
+#VPContent {
+  padding-top: var(--vp-nav-height) !important;
+}
 
 // 文档判断内容渐入
 #VPContent > div > div.VPHero.has-image.VPHomeHero > div > div.main > p {
@@ -74,27 +80,27 @@
     padding: 1.5rem 0;
   }
 }
-#VPContent .VPHero.has-image.VPHomeHero .main {
-  & > h1 {
-    --lv: 0;
-    --delay: 50ms;
-    --start: 0ms;
-    --anima: latter-slice-top;
-    animation: var(--anima) 1s both;
-    animation-delay: calc(var(--lv) * var(--delay) + var(--start));
-  }
-  .actions .action {
-    .VPButton {
-      border: 1px solid #b9b9b910;
-      padding: 1rem;
-      line-height: 0;
+#VPContent .VPHero.has-image.VPHomeHero {
+  .main {
+    & > h1 {
+      --lv: 0;
+      --delay: 100ms;
+      --start: 0ms;
+      animation: var(--anima) 1s both;
+      animation-delay: calc(var(--lv) * var(--delay) + var(--start));
+    }
+    .actions .action {
+      .VPButton {
+        border: 1px solid #b9b9b910;
+        padding: 1rem;
+        line-height: 0;
+      }
     }
   }
 }
 #VPContent .VPHomeFeatures {
-  --delay: 50ms;
+  --delay: 100ms;
   --start: 0ms;
-  --anima: latter-slice-top;
   .item {
     animation: var(--anima) 1s both;
     animation-delay: calc(var(--lv) * var(--delay) + var(--start));
@@ -116,20 +122,34 @@
   }
 }
 // 渐入动画
-// 侧边菜单栏
+/* 左边目录 */
+.VPSidebar {
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 0.25rem;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #85858538;
+    }
+  }
+  &::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+}
 #VPSidebarNav .VPSidebarItem {
   --anima: latter-slice-right !important;
 }
-
-/* 段落 */
-#VPSidebarNav .VPSidebarItem .level-1,
+// #VPSidebarNav .VPSidebarItem .level-1, // 目录
 #VPContent .content > div > main > div > div > *,
 #VPContent .VPHero.has-image.VPHomeHero .main .actions > *,
 [data-fades] > * {
   --lv: 0;
-  --delay: 50ms;
+  --delay: 100ms;
   --start: 0ms;
-  --anima: latter-slice-top;
   animation: var(--anima) 0.4s both;
   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
   @for $i from 1 through 20 {
@@ -140,33 +160,37 @@
 }
 
 // 右边目录
-// #VPContent .aside .aside-container {
-//   --lv: 0;
-//   --delay: 50ms;
-//   --start: 0ms;
-//   --anima: latter-slice-left;
-//   animation: var(--anima) 0.4s both;
-//   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-//   .VPDocAsideOutline ul > li {
-//     --lv: 0;
-//     --delay: 50ms;
-//     --start: 0ms;
-//     --anima: latter-slice-left;
-//     animation: var(--anima) 0.4s both;
-//     animation-delay: calc(var(--start) + var(--lv) * var(--delay));
-//     @for $i from 1 through 30 {
-//       &:nth-child(#{$i}) {
-//         --lv: #{$i};
-//       }
-//     }
-//   }
-// }
+#VPContent .aside .aside-container {
+  --lv: 0;
+  --delay: 100ms;
+  --start: 0ms;
+  --anima: latter-slice-blur-left;
+  // animation: var(--anima) 0.4s both;
+  // animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+  // .VPDocAsideOutline ul > li {
+  //   --lv: 0;
+  //   --delay: 100ms;
+  //   --start: 0ms;
+  //   --anima: latter-slice-left;
+  //   animation: var(--anima) 0.4s both;
+  //   animation-delay: calc(var(--start) + var(--lv) * var(--delay));
+  //   @for $i from 1 through 30 {
+  //     &:nth-child(#{$i}) {
+  //       --lv: #{$i};
+  //     }
+  //   }
+  // }
+}
 
+:root {
+  --anima: latter-slice-blur-top;
+}
 [data-fade] {
   --lv: 0;
-  --delay: 50ms;
+  --delay: 100ms;
   --start: 0ms;
-  --anima: latter-slice-top;
+  --anima: latter-slice-blur-top;
+  // --anima: latter-slice-top;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -227,9 +251,14 @@
   --at-apply: "card-df";
 }
 
+.VPNavScreenMenu.menu {
+  .VPNavScreenMenuGroup {
+    height: 42px;
+  }
+}
 
-.VPSidebar { 
-  --at-apply: "lg:animate-[fade-in-left-df_0.3s_ease]"
+.VPSidebar {
+  --at-apply: "lg:animate-[latter-slice-blur-left_0.3s_ease]";
 }
 
 @keyframes fade-in-left-df {
@@ -243,6 +272,38 @@
   }
 }
 
+// 模糊渐入
+@keyframes latter-slice-blur-top {
+  0% {
+    opacity: 0;
+    transform: translateY(0.5rem);
+    filter: blur(0.5em);
+  }
+
+  80% {
+    filter: none;
+  }
+  100% {
+    transform: none;
+    filter: none;
+  }
+}
+
+@keyframes latter-slice-blur-left {
+  0% {
+    opacity: 0;
+    transform: translateX(-0.5rem);
+    filter: blur(0.5em);
+  }
+
+  80% {
+    filter: none;
+  }
+  100% {
+    transform: none;
+    filter: none;
+  }
+}
 .VPHome {
   margin-bottom: 0 !important;
 }
