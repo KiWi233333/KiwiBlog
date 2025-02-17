@@ -46,6 +46,11 @@ export default withPwa(defineConfig({
   },
   // vite
   vite: {
+    css: {
+      preprocessorOptions: {
+        silenceDeprecations: ["legacy-js-api"],
+      }
+    },
     plugins: [
       UnoCSS(),
       AutoSidebar({

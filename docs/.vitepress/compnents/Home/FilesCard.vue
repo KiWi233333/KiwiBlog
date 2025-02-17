@@ -1,5 +1,5 @@
 <template>
-  <component :is="data.link ? 'a' : 'div'" :href="data.link"
+  <component :is="data.link ? 'a' : 'div'" :href="data.link" :target="data.linkTarget"
     class="group truncate backdrop-blur-2 transition-all  rounded-2 flex items-center gap-3 link-cark"
     :class="{ 'hover:(border-default)': data.link }">
     <slot name="icon">

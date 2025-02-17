@@ -16,7 +16,7 @@ withDefaults(defineProps<{
         <img class="disabled-img-view" src="https://img.shields.io/badge/Github-项目地址-blueviolet.svg?style=plasticr">
       </a>
       <a :href="`https://github.com/${author}/${repoUrl}/stargazers`" target="_blank">
-        <img class="disabled-img-view" alt="License"
+        <img class="disabled-img-view" alt="Stars"
           :src="`https://img.shields.io/github/stars/${author}/${repoUrl}.svg?style=social`">
       </a>
     </div>

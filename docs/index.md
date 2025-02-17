@@ -8,4 +8,4 @@ footer: true
   import Home from './.vitepress/compnents/Home/index.vue'
 </script>
 
-<Home class="mt-4"/>
+<Home class="mt-36 sm:mt-12"/>
