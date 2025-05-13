@@ -11,3 +11,4 @@ docs/.vitepress/config.mts.timestamp-*
 .netlify
 
 *.7z
+.env.production
