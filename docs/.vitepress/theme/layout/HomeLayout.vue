@@ -9,6 +9,7 @@ import "medium-zoom/dist/style.css";
 import AnFuTree from "./AnFuTree.vue";
 import { useToggleTheme } from "../../utils/useToggleTheme";
 import { useImageView } from "../../utils/useImageView";
+import { computed } from "vue";
 const { Layout } = DefaultTheme;
 // 切换动画
 useToggleTheme()
@@ -19,6 +20,11 @@ useImageView()
 // 环境变量或者屏蔽的域名则不显示评论
 const showComments = import.meta.env.VITE_DISABLED_COMMENTS !== 'true' && !window.location.hostname.includes('jiwuhub.top')
 // console.log(typeof import.meta.env.VITE_DISABLED_COMMENTS, import.meta.env.VITE_ICP_CODE)
+const icpInfo = computed(() => {
+  const icpCode = import.meta.env.VITE_ICP_CODE
+  const icpLink = import.meta.env.VITE_ICP_LINK
+  return { icpCode, icpLink }
+})
 </script>
 
 <template>
@@ -35,6 +41,9 @@ const showComments = import.meta.env.VITE_DISABLED_COMMENTS !== 'true' && !windo
       <PwaInstallBtn class="sm:(border-default-l ml-4 pl-4) ml-0 " />
     </template>
     <template #layout-bottom>
+      <div class="text-center py-2 text-sm" v-if="icpInfo.icpCode">
+        备案号：<a :href="icpInfo.icpLink || 'http://beian.miit.gov.cn/'" target="_blank">{{ icpInfo.icpCode }}</a>
+      </div>
       <ObserverTool />
       <AnFuTree />
     </template>
