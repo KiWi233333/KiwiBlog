@@ -44,6 +44,7 @@ export default withPwa(defineConfig({
       lazyLoading: true
     }
   },
+  ignoreDeadLinks: true,
   // vite
   vite: {
     css: {

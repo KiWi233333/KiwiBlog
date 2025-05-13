@@ -1,6 +1,6 @@
 # Ollama windows安装教程
 
-> Ollama 现在作为本机 Windows 应用程序运行，包括 NVIDIA 和 AMD Radeon GPU 支持。 安装 Ollama for Windows 后，Ollama 将在后台运行，并且 这ollama命令行在cmd,powershell或您的最爱 终端应用程序。像往常一样，Ollama api 将在<http://localhost:11434>.
+> Ollama 现在作为本机 Windows 应用程序运行，包括 NVIDIA 和 AMD Radeon GPU 支持。 安装 Ollama for Windows 后，Ollama 将在后台运行，并且 这ollama命令行在cmd,powershell或您的最爱 终端应用程序。像往常一样，Ollama api 将在`http://localhost:11434`.
 
 ## 系统要求
 
@@ -41,4 +41,10 @@ OllamaSetup.exe /DIR="d:\some\location"
 
 ```sh
 ollama run deepseek-r1:7b
+```
+
+## 3. 使用Ollama API
+
+```powershell
+ (Invoke-WebRequest -method POST -Body '{"model":"deepseek-r1:7b", "prompt":"你好", "stream": false}' -uri http://localhost:11434/api/generate ).Content | ConvertFrom-json
 ```
