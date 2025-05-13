@@ -25,8 +25,10 @@ export const langCN: any = {
     ],
     //页脚
     footer: {
-      message: "采用 Apache-2.0 license 协议",
-      copyright: 'Copyright © 2024 备案号：<a href="https://beian.miit.gov.cn/" target="_blank">京****号</a>',
+      message: "",
+      copyright: import.meta?.env?.VITE_ICP_CODE ?
+        `备案号：<a href="${import.meta?.env?.VITE_ICP_LINK || 'https://beian.miit.gov.cn/'}" target="_blank">${import.meta?.env?.VITE_ICP_CODE || '京ICP备*****号'}</a>`
+        : "",
     },
     //本地搜索
     search: {

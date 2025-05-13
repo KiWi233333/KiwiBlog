@@ -16,6 +16,9 @@ useToggleTheme()
 //  图片缩放
 useImageView()
 
+// 环境变量或者屏蔽的域名则不显示评论
+const showComments = import.meta.env.VITE_DISABLED_COMMENTS !== 'true' && !window.location.hostname.includes('jiwuhub.top')
+// console.log(typeof import.meta.env.VITE_DISABLED_COMMENTS, import.meta.env.VITE_ICP_CODE)
 </script>
 
 <template>
@@ -36,7 +39,7 @@ useImageView()
       <AnFuTree />
     </template>
     <template #doc-after>
-      <Comments class="my-2 animate-[fade-in_0.5s_ease-in-out]" />
+      <Comments v-if="showComments" class="my-2 animate-[fade-in_0.5s_ease-in-out]" />
       <!-- <div class="flex-row-c-c py-4">
         <div id="busuanzi_container_site_pv" class="flex-row-c-c text-center op-40 hover:op-100 transition-opacity"><i
             class="i-solar:eye-outline p-2 mr-2" /><span id="busuanzi_value_site_pv"></span></div>
