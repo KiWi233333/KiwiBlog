@@ -41,7 +41,7 @@ const icpInfo = computed(() => {
       <PwaInstallBtn class="sm:(border-default-l ml-4 pl-4) ml-0 " />
     </template>
     <template #layout-bottom>
-      <div class="text-center py-2 text-sm" v-if="icpInfo.icpCode">
+      <div class="text-center py-2 bg-[--vp-c-bg] text-sm" v-if="icpInfo.icpCode">
         备案号：<a :href="icpInfo.icpLink || 'http://beian.miit.gov.cn/'" target="_blank">{{ icpInfo.icpCode }}</a>
       </div>
       <ObserverTool />
